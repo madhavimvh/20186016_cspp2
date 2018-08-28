@@ -3,6 +3,8 @@ import java.util.Scanner;
 *To take the input from the user.
 */
 public final class Solution {
+
+    public static int FOUR = 4;
     /**
     *Do not modify this main function.
     *@param args as variable
@@ -24,7 +26,7 @@ public final class Solution {
     public static void rootsOfQuadraticEquation(final int a,
                                                 final int b,
                                                 final int c) {
-        int determinant = (b * b) - (4 * a * c);
+        int determinant = (b * b) - (FOUR * a * c);
         if (determinant > 0) {
             double root1 = (-b + Math.sqrt(determinant)) / (2 * a);
             double root2 = (-b - Math.sqrt(determinant)) / (2 * a);
