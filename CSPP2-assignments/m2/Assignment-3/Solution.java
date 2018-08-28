@@ -9,7 +9,7 @@ public class Solution {
         int base = s.nextInt();
         int exponent = s.nextInt();
         double result=power(base,exponent);
-        System.out.println(result);
+        System.out.println((long)result);
 	}
 	/*
 	Need to write the power function and print the output.
