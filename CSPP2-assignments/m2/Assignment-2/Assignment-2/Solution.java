@@ -6,7 +6,7 @@ public final class Solution {
     /**
     *Empty constructor.
     */
-    private Solution(){
+    private Solution() {
     }
     /**
     *@FOUR variable.
