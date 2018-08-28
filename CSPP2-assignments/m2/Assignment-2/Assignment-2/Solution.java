@@ -20,7 +20,7 @@ public class Solution {
 			System.out.println(root1 + " " + root2);
 		}
 		else if(determinant == 0) {
-			double root = -b/(2*a);
+			double root = (-b/(2*a));
 			System.out.println(root + " " + root);
 		}
 	}
