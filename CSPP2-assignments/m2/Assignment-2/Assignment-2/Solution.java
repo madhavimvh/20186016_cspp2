@@ -19,7 +19,7 @@ public class Solution {
 			double root2 = (-b - Math.sqrt(determinant))/(2*a);
 			System.out.println(root1 + " " + root2);
 		}
-		else if (determinant == 0){
+		else if(determinant == 0) {
 			double root = -b/2*a;
 			System.out.println(root + " " + root);
 		}
