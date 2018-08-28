@@ -6,20 +6,20 @@ public class Solution {
 	*/
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);      
-        long base = s.nextLong();
+        int base = s.nextInt();
         int exponent = s.nextInt();
-        long result=power(base,exponent);
+        double result=power(base,exponent);
         System.out.println(result);
 	}
 	/*
 	Need to write the power function and print the output.
 	*/
-	public static long power(long base, int exponent) {
+	public static double power(int base, int exponent) {
 		if (exponent == 0 ){
 			return(1);
 		} else {
-			base = base * power(base, exponent - 1);
-			return (base);
+			double result = base * power(base, exponent - 1);
+			return result;
 		}
 		
 		
