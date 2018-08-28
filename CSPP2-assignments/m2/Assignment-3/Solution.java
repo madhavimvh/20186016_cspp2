@@ -2,12 +2,11 @@ import java.util.Scanner;
 /**
 *importing scanner.
 */
-public class Solution {
+public final class Solution {
     /**
-    *empty constructor
+    *empty constructor.
     */
-    private Solution(){
-        
+    private Solution() {
     }
     /*
     Do not modify this main function.
@@ -17,7 +16,7 @@ public class Solution {
         int base = s.nextInt();
         int exponent = s.nextInt();
         //double result=power(base,exponent);
-        long result = power(base,exponent);
+        long result = power(base, exponent);
         System.out.println((long)result);
     }
     /*
