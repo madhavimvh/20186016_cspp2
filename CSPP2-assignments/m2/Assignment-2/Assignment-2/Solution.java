@@ -3,15 +3,10 @@ import java.util.Scanner;
 *To take the input from the user.
 */
 public final class Solution {
-    /**
-    *@variable FOUR.
+    /*
+    Do not modify this main function.
     */
-    private static final int FOUR = 4;
-    /**
-    *Do not modify this main function.
-    *@param args as variable
-    */
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -19,23 +14,17 @@ public final class Solution {
         rootsOfQuadraticEquation(a, b, c);
         //System.out.println(a + " " + b);
     }
-    /**
-    *To print the roots of a quadratic equation.
-    *@param a variable
-    *@param b variable
-    *@param c variable
-    */
-    public static void rootsOfQuadraticEquation(final int a,
-                                                final int b,
-                                                final int c) {
-        int determinant = (b * b) - (FOUR * a * c);
-        if (determinant > 0) {
+    public static void rootsOfQuadraticEquation(int a, int b, int c) {
+        int determinant = (b * b) - (4 * a * c);
+        if (determinant > 0){
             double root1 = (-b + Math.sqrt(determinant)) / (2 * a);
             double root2 = (-b - Math.sqrt(determinant)) / (2 * a);
             System.out.println(root1 + " " + root2);
-        } else if (determinant == 0) {
+        }
+        else if(determinant == 0) {
+            System.out.println(determinant + " " + b);
             double doubleB = b;
-            double root = -doubleB / (2 * a);
+            double root = -doubleB / (2.0 * a);
             System.out.println(root + " " + root);
         }
     }
@@ -43,3 +32,4 @@ public final class Solution {
     Need to write the rootsOfQuadraticEquation function and print the output.
     */
 }
+
