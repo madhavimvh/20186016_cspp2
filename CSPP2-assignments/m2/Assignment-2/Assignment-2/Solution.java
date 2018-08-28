@@ -3,8 +3,10 @@ import java.util.Scanner;
 *To take the input from the user.
 */
 public final class Solution {
-
-    public static int FOUR = 4;
+    /**
+    *@variable FOUR.
+    */
+    private static int FOUR = 4;
     /**
     *Do not modify this main function.
     *@param args as variable
