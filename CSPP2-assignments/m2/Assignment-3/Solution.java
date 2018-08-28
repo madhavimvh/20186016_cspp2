@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/**
+*importing scanner 
+*/
 public class Solution {
 	/*
 	Do not modify this main function.
