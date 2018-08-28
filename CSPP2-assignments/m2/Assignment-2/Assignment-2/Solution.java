@@ -33,10 +33,9 @@ public final class Solution {
             double root1 = (-b + Math.sqrt(determinant)) / (2 * a);
             double root2 = (-b - Math.sqrt(determinant)) / (2 * a);
             System.out.println(root1 + " " + root2);
-        }
-        else if(determinant == 0) {
-            double b_double = b;
-            double root = -b_double / (2 * a);
+        } else if (determinant == 0) {
+            double doubleB = b;
+            double root = -doubleB / (2 * a);
             System.out.println(root + " " + root);
         }
     }
