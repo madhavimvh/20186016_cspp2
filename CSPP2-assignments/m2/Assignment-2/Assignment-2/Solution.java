@@ -15,7 +15,7 @@ public final class Solution {
         rootsOfQuadraticEquation(a, b, c);
         //System.out.println(a + " " + b);
     }
-    public static void rootsOfQuadraticEquation(int a, int b, int c) {
+    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         int determinant = (b * b) - (4 * a * c);
         if (determinant > 0){
             double root1 = (-b + Math.sqrt(determinant)) / (2 * a);
