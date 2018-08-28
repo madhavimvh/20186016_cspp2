@@ -1,6 +1,8 @@
 import java.util.Scanner;
-
-public class Solution {
+/**
+*To take the input from the user
+*/
+public final class Solution {
 	/*
 	Do not modify this main function.
 	*/
@@ -28,3 +30,4 @@ public class Solution {
 	Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
 }
+
