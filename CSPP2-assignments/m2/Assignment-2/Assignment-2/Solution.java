@@ -6,7 +6,7 @@ public final class Solution {
     /**
     *@variable FOUR.
     */
-    private static int FOUR = 4;
+    private static final int FOUR = 4;
     /**
     *Do not modify this main function.
     *@param args as variable
