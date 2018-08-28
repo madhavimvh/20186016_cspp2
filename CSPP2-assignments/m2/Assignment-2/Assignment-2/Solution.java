@@ -16,7 +16,7 @@ public class Solution {
 		int determinant = (b*b) - (4*a*c);
 		if (determinant > 0){
 			double root1 = (-b + Math.sqrt(determinant))/(2*a);
-			double root2 = (-b + Math.sqrt(determinant))/(2*a);
+			double root2 = (-b - Math.sqrt(determinant))/(2*a);
 			System.out.println(root1 + " " + root2);
 		}
 		else if (determinant == 0){
