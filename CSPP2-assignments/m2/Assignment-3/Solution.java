@@ -15,11 +15,13 @@ public class Solution {
 	Need to write the power function and print the output.
 	*/
 	public static int power(int base, int exponent) {
-		if (exponent == 0 )
-		return(1);
-		else;
-		base = base * power(base, exponent - 1);
-		return (base);
+		if (exponent == 0 ){
+			return(1);
+		} else {
+			base = base * power(base, exponent - 1);
+			return (base);
+		}
+		
 		
 	}
 }
