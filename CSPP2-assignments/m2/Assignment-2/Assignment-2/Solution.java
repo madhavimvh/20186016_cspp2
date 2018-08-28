@@ -17,11 +17,15 @@ public final class Solution {
     }
     /**
     *To print the roots of a quadratic equation.
-    *
+    *@param a variable
+    *@param b variable
+    *@param c variable
     */
-    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
+    public static void rootsOfQuadraticEquation(final int a,
+                                                final int b,
+                                                final int c) {
         int determinant = (b * b) - (4 * a * c);
-        if (determinant > 0){
+        if (determinant > 0) {
             double root1 = (-b + Math.sqrt(determinant)) / (2 * a);
             double root2 = (-b - Math.sqrt(determinant)) / (2 * a);
             System.out.println(root1 + " " + root2);
