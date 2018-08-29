@@ -26,11 +26,9 @@ public final class Solution {
         int temp = 1;
         int i;
         for(i=1;i<=n1 && i <=n2;i++){
-            if(n1 % i == 0 && n2 == 0){
+            if(n1 % i == 0 && n2 % i == 0){
                 temp = i;
-
             }
-            
         }
         return temp;
     }
