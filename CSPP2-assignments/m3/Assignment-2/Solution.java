@@ -3,8 +3,8 @@
  */
 import java.util.Scanner;
 /*
-*Do not modify this main function.
-*/
+ * Do not modify this main function.
+ */
 public final class Solution {
     /**
      * Empty constructor.
