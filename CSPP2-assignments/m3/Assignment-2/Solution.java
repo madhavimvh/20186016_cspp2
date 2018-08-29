@@ -7,11 +7,17 @@ import java.util.Scanner;
 */
 public final class Solution {
     /**
-    *Empty constructor.
-    */
+     * Empty constructor.
+     */
     private Solution() {
     }
+    /**
+     * { var_description }.
+     */
     private static final int TEN = 10;
+    /**
+     * { var_description }.
+     */
     private static final int SEVEN = 7;
     /**
      * { function_description }.
