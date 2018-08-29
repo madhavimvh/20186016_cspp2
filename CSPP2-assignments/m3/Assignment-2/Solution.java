@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
 *Do not modify this main function.
 */
-public class Solution {
+public final class Solution {
     /**
     *Empty constructor.
     */
@@ -18,7 +18,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(returnSevenCount(n));
@@ -30,10 +30,10 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }.
      */
-    public static int returnSevenCount(int n) {
-        int i = 1; 
+    public static int returnSevenCount(final int n) {
+        int i = 1;
         int count = 0;
-        for(i = 1; i <= n; i++) {
+        for (i = 1; i <= n; i++) {
             count += returnCountOfNumber(i);
         }
         return count;
@@ -47,7 +47,7 @@ public class Solution {
      */
     public static int returnCountOfNumber(int n) {
         int count = 0;
-        while(n > 0) {
+        while (n > 0) {
             if (n % TEN == SEVEN) {
                 count += 1;
             }
