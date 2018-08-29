@@ -39,7 +39,3 @@ public final class Solution {
         return temp;
     }
 }
-
-
-
-
