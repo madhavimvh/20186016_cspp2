@@ -51,13 +51,14 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int returnCountOfNumber(int n) {
+    public static int returnCountOfNumber(final int n) {
+        int temp = n;
         int count = 0;
-        while (n > 0) {
-            if (n % TEN == SEVEN) {
+        while (temp > 0) {
+            if (temp % TEN == SEVEN) {
                 count += 1;
             }
-            n = n / TEN;
+            temp /= TEN;
         }
         return count;
     }
