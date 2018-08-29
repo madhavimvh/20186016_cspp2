@@ -11,6 +11,8 @@ public class Solution {
     */
     private Solution() {
     }
+    private static final int TEN = 10;
+    private static final int SEVEN = 7;
     /**
      * { function_description }.
      *
@@ -46,10 +48,10 @@ public class Solution {
     public static int returnCountOfNumber(int n) {
         int count = 0;
         while(n > 0) {
-            if (n % 10 == 7) {
+            if (n % TEN == SEVEN) {
                 count += 1;
             }
-            n = n/10;
+            n = n / TEN;
         }
         return count;
     }
