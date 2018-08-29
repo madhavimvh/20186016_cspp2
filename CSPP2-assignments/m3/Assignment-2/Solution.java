@@ -3,16 +3,28 @@
  */
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
+ Do not modify this main function.
+*/
 public class Solution {
-/* Fill the main function to print the number of 7's between 1 to n*/
+
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         System.out.println(returnSevenCount(n));
     }
 
+    /**
+     * Returns seven count.
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static int returnSevenCount(int n) {
     	int i = 1; 
         int count = 0;
@@ -22,6 +34,13 @@ public class Solution {
 	    return count;
     }
 
+    /**
+     * Returns a count of number.
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static int returnCountOfNumber(int n) {
     	int count = 0;
     	while(n > 0) {
