@@ -37,7 +37,8 @@ public final class Solution {
         int[][] arr = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                arr[i][j] = scan.nextInt();
+                // arr[i][j] = scan.nextInt();
+                System.out.println(scan.nextInt());
             }
         }
         for (int i = 0; i < n; i++) {
@@ -48,7 +49,7 @@ public final class Solution {
         return arr;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      arr1  The arr 1
      * @param      arr2  The arr 2
@@ -57,8 +58,8 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int[][] addition(final int[][] arr1, 
-                                    final int[][] arr2, 
+    public static int[][] addition(final int[][] arr1,
+                                    final int[][] arr2,
                                     final int n, final int m) {
          int c[][] = new int[n][m];
          for (int i = 0; i < n; i++) {
