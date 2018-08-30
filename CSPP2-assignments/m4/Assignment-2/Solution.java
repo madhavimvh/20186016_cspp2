@@ -43,13 +43,13 @@ public final class Solution {
      * @param      n2    The n 2
      * @param      m2    The m 2
      */
-    public static void addition (final int[][] arr1,
+    public static void addition(final int[][] arr1,
                                  final int[][] arr2,
                                  final int n1,
                                  final int m1,
                                  final int n2,
                                  final int m2) {
-        if (n1 == n1 && m1 ==m2) {
+        if (n1 == n1 && m1 == m2) {
             int[][] c = new int[n1][m1];
                 for (int i = 0; i < n1; i++) {
                     for (int j = 0; j < m1; j++) {
