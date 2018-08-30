@@ -2,7 +2,7 @@
  * { item_description }.
  */
 import java.util.Scanner;
-import java.util.Arrays;
+//import java.util.Arrays;
 /**
  * Class for solution.
  */
@@ -25,7 +25,7 @@ public final class Solution {
 		for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.println(Arrays.toString(arr));
+        //System.out.println(Arrays.toString(arr));
         System.out.println(maxnum(arr));
 		
 
