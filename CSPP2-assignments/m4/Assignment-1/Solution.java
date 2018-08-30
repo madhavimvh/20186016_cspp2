@@ -17,11 +17,10 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner sc=new Scanner(System.in);
         //System.out.println("enter the size of array");
-        int n= sc.nextInt();
+        int n = sc.nextInt();
         int[] arr = new int[n];
         //System.out.println("enter the array elements");
         for (int i = 0; i < n; i++) {
@@ -39,7 +38,7 @@ public final class Solution {
      */
     public static int maxnum(final int[] arr) {
         int max = arr[0];
-        for (int element : arr){
+        for (int element : arr) {
             if (element > max) {
                 max = element;
             }
