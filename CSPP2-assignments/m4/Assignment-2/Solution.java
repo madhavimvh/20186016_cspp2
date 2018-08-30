@@ -15,14 +15,15 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n1 = sc.nextInt();
-        int m1 = sc.nextInt();
-        int[][] arr1 = getMatrix(n1, m1);
-        System.out.println();
-        int n2 = sc.nextInt();
-        int m2 = sc.nextInt();
-        int[][] arr2 = getMatrix(n2, m2);
-        System.out.println(addition(arr1, arr2, n1, m1));
+        // int n1 = sc.nextInt();
+        // int m1 = sc.nextInt();
+                System.out.println(sc.nextInt());
+        // int[][] arr1 = getMatrix(n1, m1);
+        // System.out.println();
+        // int n2 = sc.nextInt();
+        // int m2 = sc.nextInt();
+        // int[][] arr2 = getMatrix(n2, m2);
+        // System.out.println(addition(arr1, arr2, n1, m1));
     }
     /**
      * Gets the matrix.
@@ -34,6 +35,7 @@ public final class Solution {
      */
     public static int[][] getMatrix(final int n, final int m) {
         Scanner scan = new Scanner(System.in);
+
         int[][] arr = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
