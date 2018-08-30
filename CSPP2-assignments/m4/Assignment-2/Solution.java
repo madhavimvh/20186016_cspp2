@@ -63,7 +63,7 @@ public final class Solution {
      * @param      n1    The n 1
      * @param      m1    The m 1
      */
-    public static void printMatrix(int[][] d, int n1, int m1) {
+    public static void printMatrix(final int[][] d, final int n1, final int m1) {
         String temp = "";
         for (int i = 0; i < n1; i++) {
             for (int j = 0; j < m1; j++) {
