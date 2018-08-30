@@ -15,43 +15,23 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        // int n1 = sc.nextInt();
-        // int m1 = sc.nextInt();
-                System.out.println(sc.nextInt());
-                System.out.println(sc.nextInt());
-                System.out.println(sc.nextInt());
-        // int[][] arr1 = getMatrix(n1, m1);
-        // System.out.println();
-        // int n2 = sc.nextInt();
-        // int m2 = sc.nextInt();
-        // int[][] arr2 = getMatrix(n2, m2);
-        // System.out.println(addition(arr1, arr2, n1, m1));
-    }
-    /**
-     * Gets the matrix.
-     *
-     * @param      n     { parameter_description }.
-     * @param      m     { parameter_description }.
-     *
-     * @return     The matrix.
-     */
-    public static int[][] getMatrix(final int n, final int m) {
-        Scanner scan = new Scanner(System.in);
-
-        int[][] arr = new int[n][m];
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int[][] arr1 = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                // arr[i][j] = scan.nextInt();
-                System.out.println(scan.nextInt());
+                arr1[i][j] = sc.nextInt();
             }
         }
+        int[][] arr2 = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                System.out.println(arr[i][j]);
+                arr2[i][j] = sc.nextInt();
             }
         }
-        return arr;
+        System.out.println(addition(arr1, arr2, n, m));
     }
+    
     /**
      * { function_description }.
      *
