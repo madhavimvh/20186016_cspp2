@@ -67,11 +67,14 @@ public final class Solution {
      * @param      m1    The m 1
      */
     public static void printMatrix(int[][] d, int n1, int m1) {
+        String temp = "";
         for (int i = 0; i < n1; i++) {
             for (int j = 0; j < m1; j++) {
-                System.out.println(d[i][j] + " ");
+                temp += d[i][j] + " ";
             }
-            System.out.println(" ");
+            temp = temp.trim();
+            temp += "\n";
         }
+        System.out.println(temp);
     }
 }
