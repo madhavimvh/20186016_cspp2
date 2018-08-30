@@ -38,10 +38,10 @@ public final class Solution {
      *
      * @param      arr1  The arr 1
      * @param      arr2  The arr 2
-     * @param      n     { parameter_description }.
-     * @param      m     { parameter_description }.
-     *
-     * @return     { description_of_the_return_value }
+     * @param      n1    { parameter_description }.
+     * @param      m1    { parameter_description }.
+     * @param      n2    The n 2
+     * @param      m2    The m 2
      */
     public static void addition (final int[][] arr1, final int[][] arr2, final int n1, final int m1, final int n2, final int m2) {
         if (n1 == n1 && m1 ==m2) {
