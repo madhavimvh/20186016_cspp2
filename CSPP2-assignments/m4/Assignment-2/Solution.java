@@ -22,13 +22,13 @@ public final class Solution {
         int n2 = sc.nextInt();
         int m2 = sc.nextInt();
         int[][] arr2 = getMatrix(n2, m2);
-        System.out.println(Addition(arr1, arr2, n1, m1));
+        System.out.println(addition(arr1, arr2, n1, m1));
     }
     /**
      * Gets the matrix.
      *
-     * @param      n     { parameter_description }
-     * @param      m     { parameter_description }
+     * @param      n     { parameter_description }.
+     * @param      m     { parameter_description }.
      *
      * @return     The matrix.
      */
@@ -57,7 +57,9 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int[][] Addition(final int[][] arr1, final int[][] arr2, final int n, final int m) {
+    public static int[][] addition(final int[][] arr1, 
+                                    final int[][] arr2, 
+                                    final int n, final int m) {
          int c[][] = new int[n][m];
          for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
