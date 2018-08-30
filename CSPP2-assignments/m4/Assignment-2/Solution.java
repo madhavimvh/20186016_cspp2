@@ -34,6 +34,7 @@ public final class Solution {
             for (int j = 0; j < m; j++) {
                 System.out.println(d[i][j]);
             }
+            System.out.println();
         }
     }
     
