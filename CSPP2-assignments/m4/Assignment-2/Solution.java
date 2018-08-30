@@ -18,6 +18,8 @@ public final class Solution {
         // int n1 = sc.nextInt();
         // int m1 = sc.nextInt();
                 System.out.println(sc.nextInt());
+                System.out.println(sc.nextInt());
+                System.out.println(sc.nextInt());
         // int[][] arr1 = getMatrix(n1, m1);
         // System.out.println();
         // int n2 = sc.nextInt();
