@@ -32,9 +32,7 @@ public final class Solution {
             }
         }
         addition(arr1, arr2, n1, m1, n2, m2);
-
     }
-    
     /**
      * { function_description }.
      *
@@ -58,7 +56,6 @@ public final class Solution {
             System.out.println("not possible");
         }
     }
-
     /**
      * { function_description }.
      *
