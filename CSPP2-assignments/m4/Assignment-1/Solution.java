@@ -1,11 +1,17 @@
 /**
  * { item_description }.
  */
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for solution.
  */
 public final class Solution {
+	/**
+     * Empty constructor.
+     */
+    private Solution() {
+    }
 	/**
 	*Fill this main function to print maximum of given array
 	*/
@@ -19,6 +25,7 @@ public final class Solution {
 		for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        System.out.println(Arrays.toString(arr));
         System.out.println(maxnum(arr));
 		
 
