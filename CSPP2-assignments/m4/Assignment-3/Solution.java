@@ -1,4 +1,4 @@
-// Given an String, Write a java method that returns 
+// Given an String, Write a java method that returns
 // the decimal value for the given binary string.
 import java.util.Scanner;
 // import java.util.Arrays;
@@ -6,6 +6,11 @@ import java.util.Scanner;
 * {item description}.
 */
 public class Solution {
+    /**
+     * { item_description }.
+     */
+    private Solution() {
+    }
     /**
     Do not modify this main function.
     
