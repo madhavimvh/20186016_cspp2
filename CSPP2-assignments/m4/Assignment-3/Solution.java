@@ -2,28 +2,50 @@
 // Given an String, Write a java method that returns the decimal value for the given binary string.
 
 
-import java.util.Scanner;
-import java.lang.Math;
-public class Solution
-{/*
+import java.util.*;
+import java.util.Arrays;
+public class Solution {
+	/**
 	Do not modify this main function.
 	*/
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int n= sc.nextInt();
-		for(int i=0;i<=n;i++){
+		for(int i=0;i<n;i++) {
 			String s=sc.next();
-			int res=binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println(res);
+			//System.out.println(s);
+			// int res=binaryToDecimal(s);//Write binaryToDecimal function
+			// int ress = intToDecimal(Integer.parseInt(s));
+			int ress = intToDecimal(s);
+			System.out.println(ress);
+			// System.out.println(res);
 		}
 	}
-	public static int binaryToDecimal(String s) {
-		int decimal = 0;
-		for (int i = 0; i < s.length(); i++) {
-			decimal += Math.pow(2, i); 
+	// public static int binaryToDecimal(String s) {
+	// 	double j = 0;
+	// 	for (int i = 0; i < s.length(); i++){
+	// 		if(s.charAt(i) == '1'){
+	// 			//System.out.println(s.charAt(i));
+	// 			j = j + Math.pow(2, s.length()-1-i);
+	// 			//System.out.println(j);
+	// 			//System.out.println(s.length()-1-i);
+	// 		}
+	// 	}
+	// 	return (int) j;
+	// }
+	public static int intToDecimal(String s) {
+		int temp = 0;
+		// int length = String.valueOf(s).length();
+		for (int i = 0; i < s.length(); i++){
+			// System.out.println(s.length());
+			temp += Integer.parseInt(String.valueOf(s.charAt(i)))*Math.pow(2, s.length()-1-i);
+			// System.out.println(temp);
 		}
-		return decimal;
+		return temp;
 	}
-
 }
+
+
+
+
+
