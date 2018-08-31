@@ -38,7 +38,8 @@ public class Solution {
 		// int length = String.valueOf(s).length();
 		for (int i = 0; i < s.length(); i++){
 			// System.out.println(s.length());
-			temp += Integer.parseInt(String.valueOf(s.charAt(i)))*Math.pow(2, s.length()-1-i);
+			int n = Integer.parseInt(String.valueOf(s.charAt(i)));
+			temp += n*Math.pow(2, s.length()-1-i);
 			// System.out.println(temp);
 		}
 		return temp;
