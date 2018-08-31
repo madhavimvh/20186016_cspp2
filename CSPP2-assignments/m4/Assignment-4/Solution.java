@@ -31,8 +31,8 @@ public final class Solution {
      * @return     { description_of_the_return_value }
      */
     public static String reverseString(final String s) {
-        String reverse = ""  ;
-        for(int i = 1; i <= s.length(); i++) {
+        String reverse = "";
+        for (int i = 1; i <= s.length(); i++) {
             reverse += s.charAt(s.length() - i);
             // System.out.println(s.length() - i);
             // System.out.println(reverse);
