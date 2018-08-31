@@ -20,8 +20,8 @@ public class Solution
 		String reverse = ""  ;
 		for (int i = 1; i <= s.length(); i++){
 			reverse += s.charAt(s.length() - i);
-			System.out.println(s.length() - i);
-			System.out.println(reverse);
+			// System.out.println(s.length() - i);
+			// System.out.println(reverse);
 		}
 	return reverse;
 	}
