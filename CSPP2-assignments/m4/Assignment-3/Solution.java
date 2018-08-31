@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
 * {item description}.
 */
-public class Solution {
+public final class Solution {
     /**
      * { item_description }.
      */
@@ -15,7 +15,7 @@ public class Solution {
     Do not modify this main function.
     @param      args  The arguments
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
@@ -39,12 +39,12 @@ public class Solution {
     *
     * @return     { description_of_the_return_value }
     */
-    public static int intToDecimal(String s) {
+    public static int intToDecimal(final String s) {
         int temp = 0;
         // int length = String.valueOf(s).length();
         for (int i = 0; i < s.length(); i++) {
             // System.out.println(s.length());
-            int n = Integer.parseInt (String.valueOf (s.charAt(i)));
+            int n = Integer.parseInt(String.valueOf(s.charAt(i)));
             temp += n * Math.pow(2, s.length() - 1 - i);
             // System.out.println(temp);
         }
