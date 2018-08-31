@@ -9,10 +9,10 @@ public class Solution {
     @param      args  The arguments
     */
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int n= sc.nextInt();
-        for(int i=0;i<n;i++) {
-            String s=sc.next();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i = 0; i < n; i++) {
+            String s = sc.next();
             //System.out.println(s);
             // int res=binaryToDecimal(s);//Write binaryToDecimal function
             // int ress = intToDecimal(Integer.parseInt(s));
