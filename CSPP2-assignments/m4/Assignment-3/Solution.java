@@ -1,7 +1,10 @@
 // Given an String, Write a java method that returns 
 // the decimal value for the given binary string.
-import java.util.*;
-import java.util.Arrays;
+import java.util.Scanner;
+// import java.util.Arrays;
+/**
+* {item description}.
+*/
 public class Solution {
     /**
     Do not modify this main function.
