@@ -13,20 +13,20 @@ final class Solution {
         //not used
     }
     /**
-     * Function to replace each element
-     *  of the given char array that matches the given
-     *  character with the given replacement.
+     * Function to replace each element of the given char array that matches the
+     * given character with the given replacement.
      *
      * @param      charArray  The character array
      * @param      oldChar    The old character
      * @param      newChar    The new character
+     * @param      n          { parameter_description }
      *
      * @return     new character array with replaced characters
      */
     static char[] replaceAll(final char[] charArray,
-        final char oldChar, final char newChar, int n) {
-	   for (int i = 0; i < n; i++) {
-           if(charArray[i] == oldChar) {
+        final char oldChar, final char newChar, final int n) {
+       for (int i = 0; i < n; i++) {
+            if (charArray[i] == oldChar) {
             charArray[i] = newChar;
            }
        }
