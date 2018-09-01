@@ -35,7 +35,7 @@ final class Solution {
                 nn[i][j] = (n / 100) * 100;
                 System.out.println("nn" + nn[i][j]); 
                 }else {
-                    nn[i][j] = (n / 100) * 100;
+                    nn[i][j] = (a[i][j] / 100) * 100;
                     System.out.println("nn2" + nn[i][j]); 
                 }
             } else {
