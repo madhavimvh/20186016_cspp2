@@ -33,14 +33,14 @@ final class Solution {
                 if (rem > 50) {
                 n = ((a[i][j] + 99) / 100) * 100;
                 nn[i][j] = (n / 100) * 100;
-                // return nn[i][j];
+                // System.out.println(nn[i][j]);
                 }else {
                     nn[i][j] = (a[i][j] / 100) * 100;
-                    // return nn[i][j];
+                    // System.out.println(nn[i][j]);
                 }
             } else {
                 nn[i][j] = 0;
-                // return nn[i][j];
+                // System.out.println(nn[i][j]);
             }
             }
             
