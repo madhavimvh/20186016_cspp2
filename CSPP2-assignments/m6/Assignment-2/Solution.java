@@ -12,8 +12,17 @@ final class Solution {
     private Solution() {
         //not used
     }
+    /**
+     * { var_description }.
+     */
     private static final int HUN = 100;
+    /**
+     * { var_description }.
+     */
     private static final int NIN = 90;
+    /**
+     * { var_description }.
+     */
     private static final int FIF = 50;
     /**
      * Function to round the
