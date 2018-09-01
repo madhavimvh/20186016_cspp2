@@ -12,6 +12,9 @@ final class Solution {
     private Solution() {
         //not used
     }
+    private static final int HUN = 100;
+    private static final int NIN = 90;
+    private static final int FIF = 50;
     /**
      * Function to round the
      * elements of a matrix to the nearest 100.
@@ -27,16 +30,16 @@ final class Solution {
                                 final int columns) {
         int n = 0;
         int[][] nn = new int[rows][columns];
-        for (int i = 0; i < rows ;i++) {
-            for (int j = 0; j < columns ;j++) {
-                int rem = a[i][j] %100;
-                if (a[i][j] > 50 ) {
-                if (rem > 50) {
-                n = ((a[i][j] + 99) / 100) * 100;
-                nn[i][j] = (n / 100) * 100;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                int rem = a[i][j] % HUN;
+                if (a[i][j] > FIF) {
+                if (rem > FIF) {
+                n = ((a[i][j] + NIN) / HUN) * HUN;
+                nn[i][j] = (n / HUN) * HUN;
                 // System.out.println(nn[i][j]);
-                }else {
-                    nn[i][j] = (a[i][j] / 100) * 100;
+                } else {
+                    nn[i][j] = (a[i][j] / HUN) * HUN;
                     // System.out.println(nn[i][j]);
                 }
             } else {
