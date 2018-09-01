@@ -28,10 +28,9 @@ final class Solution {
 
         for (int i = 0; i < rows ;i++) {
             for (int j = 0; j < columns ;j++) {
-                int b  = a[i][j]/100;
-                System.out.println("b" + b);
+                int rem = a[i][j] %100;
                 if (a[i][j] > 50 ) {
-                if ((a[i][j]) > (50*b)) {
+                if (rem > 50) {
                 n = ((a[i][j] + 99) / 100) * 100;
                 nn[i][j] = (n / 100) * 100;
                 System.out.println(nn[i][j]); 
