@@ -29,6 +29,7 @@ final class Solution {
         for (int i = 0; i < rows ;i++) {
             for (int j = 0; j < columns ;j++) {
                 int b  = a[i][j]/100;
+                System.out.println("b" + b);
                 if (a[i][j] > 50 ) {
                 if ((a[i][j]) > (50*b)) {
                 n = ((a[i][j] + 99) / 100) * 100;
