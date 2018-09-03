@@ -35,15 +35,12 @@ public final class Solution {
         String input = s.next();
         InputValidator i = new InputValidator(input, input.length());       
         System.out.println(i.validateData());
-
     }
-
 }
 //other way to write the same program.
 // class InputValidator{
 //  private String s;
 //  private int inputLength;
-
 //  public InputValidator(String s) {
 //      this.s = s;
 //      this.inputLength = s.length();
@@ -51,7 +48,6 @@ public final class Solution {
 //  public boolean validateData() {
 //      return inputLength >= 6;
 //  }
-
 // }
 // public class Solution
 // {
@@ -59,10 +55,7 @@ public final class Solution {
 //     {
 //      Scanner s=new Scanner(System.in);
 //      String input=s.next();
-//      InputValidator i=new InputValidator(input);     
+//      InputValidator i=new InputValidator(input);
 //      System.out.println(i.validateData());
-
 //     }
-
 // }
-
