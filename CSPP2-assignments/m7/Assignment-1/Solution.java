@@ -21,7 +21,7 @@ class InputValidator {
      * @param      a            { parameter_description }.
      * @param      inputLength  The input length
      */
-    public InputValidator(final String a, final int inputLength) {
+    InputValidator(final String a, final int inputLength) {
         this.aa = a;
         this.inputlength = inputLength;
     }
