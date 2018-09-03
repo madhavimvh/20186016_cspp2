@@ -1,16 +1,16 @@
 import java.util.*;
-class InputValidator
-{
+class InputValidator{
 	private String s;
 	private int inputLength;
 
-	public InputValidator(String s, int inputLength) {
+	public InputValidator(String s) {
 		this.s = s;
-		this.inputLength = inputLength;
+		this.inputLength = s.length();
 	}
 	public boolean validateData() {
 		return inputLength >= 6;
 	}
+
 }
 public class Solution
 {
@@ -18,7 +18,7 @@ public class Solution
     {
     	Scanner s=new Scanner(System.in);
     	String input=s.next();
-    	InputValidator i=new InputValidator(input, input.length());    	
+    	InputValidator i=new InputValidator(input);    	
     	System.out.println(i.validateData());
 
     }
