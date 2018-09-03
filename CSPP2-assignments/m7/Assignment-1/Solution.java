@@ -21,7 +21,7 @@ class InputValidator {
      * @param      a            { parameter_description }.
      * @param      inputLength  The input length
      */
-    public InputValidator(final String a, final int inputLength) {
+    public InputValidator(String a, int inputLength) {
         this.aa = a;
         this.inputlength = inputLength;
     }
@@ -46,7 +46,7 @@ public final class Solution {
     /**
      * @param      args  { parameter_description }.
      */
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input, input.length());
