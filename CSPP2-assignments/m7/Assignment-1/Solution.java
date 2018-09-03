@@ -34,6 +34,7 @@ class InputValidator {
         return inputlength >= SIX;
     }
 }
+
 /**
  * Class for solution.
  */
