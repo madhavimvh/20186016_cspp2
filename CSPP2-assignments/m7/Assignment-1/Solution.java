@@ -1,23 +1,26 @@
 import java.util.Scanner;
+/**
+ * Class for input validator.
+ */
 class InputValidator {
     /**
      * { var_description }.
      */
     private static final int SIX = 6;
-    private String s;
-    private int inputLength;
+    private String a;
+    private int inputlength;
     /**
      * Constructs the object.
      *
-     * @param      s            { parameter_description }
+     * @param      s            { parameter_description }.
      * @param      inputLength  The input length
      */
-    public InputValidator(final String s, final int inputLength) {
-        this.s = s;
-        this.inputLength = inputLength;
+    public InputValidator(final String a, final int inputlength) {
+        this.a = a;
+        this.inputlength = inputlength;
     }
     public boolean validateData() {
-        return inputLength >= SIX;
+        return inputlength >= SIX;
     }
 }
 /**
