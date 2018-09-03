@@ -39,6 +39,11 @@ class InputValidator {
  */
 public final class Solution {
     /**
+     * { item_description }.
+     */
+    private Solution() {
+    }
+    /**
      * @param      args  { parameter_description }.
      */
     public static void main(final String args[]) {
