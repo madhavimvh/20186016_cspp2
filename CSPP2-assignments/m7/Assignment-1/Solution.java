@@ -7,18 +7,29 @@ class InputValidator {
      * { var_description }.
      */
     private static final int SIX = 6;
+    /**
+     * { var_description }.
+     */
     private String aa;
+    /**
+     * { var_description }.
+     */
     private int inputlength;
     /**
      * Constructs the object.
      *
-     * @param      s            { parameter_description }.
+     * @param      a            { parameter_description }.
      * @param      inputLength  The input length
      */
     public InputValidator(final String a, final int inputLength) {
         this.aa = a;
         this.inputlength = inputLength;
     }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean validateData() {
         return inputlength >= SIX;
     }
@@ -33,7 +44,7 @@ public final class Solution {
     public static void main(final String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
-        InputValidator i = new InputValidator(input, input.length());       
+        InputValidator i = new InputValidator(input, input.length());
         System.out.println(i.validateData());
     }
 }
