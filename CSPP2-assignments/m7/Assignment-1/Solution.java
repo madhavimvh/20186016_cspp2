@@ -53,6 +53,7 @@ public final class Solution {
         System.out.println(i.validateData());
     }
 }
+
 //other way to write the same program.
 // class InputValidator{
 //  private String s;
