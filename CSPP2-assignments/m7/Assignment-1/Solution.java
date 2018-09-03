@@ -7,7 +7,7 @@ class InputValidator {
      * { var_description }.
      */
     private static final int SIX = 6;
-    private String a;
+    private String aa;
     private int inputlength;
     /**
      * Constructs the object.
@@ -15,9 +15,9 @@ class InputValidator {
      * @param      s            { parameter_description }.
      * @param      inputLength  The input length
      */
-    public InputValidator(final String a, final int inputlength) {
-        this.a = a;
-        this.inputlength = inputlength;
+    public InputValidator(final String a, final int inputLength) {
+        this.aa = a;
+        this.inputlength = inputLength;
     }
     public boolean validateData() {
         return inputlength >= SIX;
