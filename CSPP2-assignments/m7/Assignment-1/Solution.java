@@ -1,5 +1,5 @@
 import java.util.*;
-class InputValidator{
+class InputValidator {
 	private static final int SIX = 6;
 	private String s;
 	private int inputLength;
@@ -26,11 +26,10 @@ public final class Solution {
 	/**
 	 * @param      args  { parameter_description }.
 	 */
-	public static void main(final String args[])
-    {
-    	Scanner s=new Scanner(System.in);
-    	String input=s.next();
-    	InputValidator i=new InputValidator(input, input.length());    	
+	public static void main(final String args[]) {
+    	Scanner s = new Scanner(System.in);
+    	String input = s.next();
+    	InputValidator i = new InputValidator(input, input.length());    	
     	System.out.println(i.validateData());
 
     }
