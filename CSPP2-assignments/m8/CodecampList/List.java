@@ -4,6 +4,11 @@ import java.util.Scanner;
  * List of .
  */
 public class List {
+    /**
+     * { item_description }.
+     */
+    private static final int TEN = 10;
+    
     //Implement all the methods mentioned to build a ListADT
         /**
         * int string array.
