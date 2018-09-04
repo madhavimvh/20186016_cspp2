@@ -8,7 +8,6 @@ public class List {
      * { item_description }.
      */
     private static final int TEN = 10;
-    
     //Implement all the methods mentioned to build a ListADT
         /**
         * int string array.
@@ -59,7 +58,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     // declare a private int size
     // again, don't initialize it here
