@@ -254,6 +254,8 @@ public class List {
                 if(l.get(Integer.parseInt(tokens[1])) > 0){
                 System.out.println(l.get(Integer.parseInt(tokens[1])));     
                 break;
+                } else {
+                    return ;
                 }
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
