@@ -150,9 +150,9 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
-        if(index >= 0 && index < size) {
+        if (index >= 0 && index < size) {
             return a[index];
         }
         return -1;
@@ -178,21 +178,21 @@ public class List {
         for (int i = 0; i < size - 1; i++) {
             s += a[i] + ",";
         }
-        s += a[size-1] + "]";
+        s += a[size - 1] + "]";
         return s;
-    } 
+    }
     /**
-     * Contains return true if the list has the item passed as an argument to
-     * the method So, iterate through the list and return true if the item
-     * exists and otherwise false
+     * Contains return true if the list has the item passed as an argument to.
+     * the method So, iterate through the list and return true if the item.
+     * exists and otherwise false.
      *
      * @param      item  The item.
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
-        return (indexOf(item) >= 0);  
+        return (indexOf(item) >= 0);
     }
     /**
      * Returns the index of the first occurrence of the specified element in
@@ -202,10 +202,10 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if(a[i] == item){
+            if (a[i] == item) {
                 return i;
             }
         }
@@ -213,12 +213,11 @@ public class List {
     }
     // public void addAll(int[] item) {
     //         }
-    
     // public void add(int index, int item) {
     //     if(index >= 0 && index < size && size < list.length) {
     //         for (int i = index; i < size; i++) {
     //             temp = a[i];
-    //             a[i + 1] = temp; 
+    //             a[i + 1] = temp;
     //         }
     //     }
     // }
@@ -228,12 +227,12 @@ public class List {
     //         if (item == list[i]) {
     //             count++;
     // }
-	/**
+    /**
      * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -278,5 +277,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
