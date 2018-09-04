@@ -92,9 +92,9 @@ public class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        if(size < a.length){
+        if (size < a.length) {
         a[size] = item;
-        size++;    
+        size++;
         }
     }
     /**
@@ -124,10 +124,10 @@ public class List {
      *
      * @param      index  The index.
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
+        if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 a[i] = a[i + 1];
             }
