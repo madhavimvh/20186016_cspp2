@@ -133,8 +133,9 @@ public class List {
         if(index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 a[i] = a[i + 1];
-                
             }
+            a[size - 1] = 0;
+            size--;
         }
     }
 
