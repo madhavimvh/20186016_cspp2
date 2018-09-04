@@ -69,7 +69,7 @@ public class List {
      * some default values.
      */
     public List() {
-        this.a = new int[10];
+        this.a = new int[TEN];
         this.size = 0;
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -91,11 +91,12 @@ public class List {
      *
      * @param      item  The item.
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        if(size < a.length)
+        if(size < a.length){
         a[size] = item;
-        size++;
+        size++;    
+        }
     }
     /**
      * The size method returns the value of the size. The purpose of the method
