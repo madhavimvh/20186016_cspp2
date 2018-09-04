@@ -93,7 +93,7 @@ public class List {
         if(size < a.length) {
             a[size] = item;
             size ++;
-            System.out.println("str" + toString(a));
+            // System.out.println("str" + toString(a));
         }
     }
 
