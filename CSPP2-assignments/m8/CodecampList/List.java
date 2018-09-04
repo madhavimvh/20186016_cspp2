@@ -2,7 +2,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
+        private int[] a;
+        private int size;
 
     /*
      * The goal for the list is to store items.
@@ -25,9 +27,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    private int[] a;
-    private int size;
-
+    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -90,11 +90,9 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        if(size < a.length) {
-            a[size] = item;
-            size ++;
-            // System.out.println("str" + toString(a));
-        }
+        if(size < a.length)
+        a[size] = item;
+        size++;
     }
 
     /*
@@ -121,7 +119,7 @@ public class List {
      * moved to the left by one position.
      * Here is an example:
      * array = [1,2,3,0,0,0,0,0,0,0]
-     * remove(2) would remove the item 2
+     * remove(1) would remove the item 2 which is at index position 1.
      * But how do you remove the item from an array?
      * Well, the way to remove it is to move all
      * the items, that are to the right of the removed item, to the left
@@ -132,13 +130,11 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
+        if(index >= 0 && index < size) {
+            for (int i = 0; i < size - 1; i++) {
                 a[i] = a[i + 1];
+                
             }
-        size--;
-        } else {
-            System.out.println("System is out of range");
         }
     }
 
@@ -155,7 +151,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if(index >= 0 && index < size ) {
+        if(index >= 0 && index < size) {
             return a[index];
         }
         return -1;
@@ -181,15 +177,15 @@ public class List {
      * not all the elements of the array.
      *
      */
-    public String toString(int[] a) {
+    public String toString() {
         // Replace the code below
         String s = "[";
-        for(int i = 0; i < size - 1; i++) {
-               s += a[i] + "]"; 
-            }
-            s = a[size]  + "]";
-            return s;
+        for (int i = 0; i < size - 1; i++) {
+            s += a[i];
         }
+        s += a[size-1] + "]";
+        return s;
+    } 
     
     /*
      * Contains return true if the list has
@@ -200,8 +196,8 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         return (indexOf(item) >= 0);
+        
     }
-    
 
     /*
      * Returns the index of the first occurrence 
@@ -213,7 +209,7 @@ public class List {
         for (int i = 0; i < size; i++) {
             if(a[i] == item){
                 return i;
-            } 
+            }
         }
         return -1;
     }
@@ -263,6 +259,3 @@ public class List {
         }
 	}
 }
-
-
-
