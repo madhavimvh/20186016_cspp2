@@ -211,6 +211,23 @@ public class List {
         }
         return -1;
     }
+    // public void addAll(int[] item) {
+    //         }
+    
+    // public void add(int index, int item) {
+    //     if(index >= 0 && index < size && size < list.length) {
+    //         for (int i = index; i < size; i++) {
+    //             temp = a[i];
+    //             a[i + 1] = temp; 
+    //         }
+    //     }
+    // }
+    // public int count(int item) {
+    //     int count = 0;
+    //     for (int i = 0; i < size; i++) {
+    //         if (item == list[i]) {
+    //             count++;
+    // }
 	/**
      * { function_description }.
      *
