@@ -41,7 +41,7 @@ public class Fibonacci {
         int x = 0, y = 1, z;
         list.add(x);
         list.add(y);
-        for (int i = 0; i < n -2; i++) {
+        for (int i = 0; i < n - 2; i++) {
         z = x + y;
         x = y;
         y = z;
@@ -49,6 +49,11 @@ public class Fibonacci {
         }
         return list;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
