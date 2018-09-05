@@ -19,7 +19,7 @@ public class Fibonacci {
     /**
      * { item_description }.
      */
-    public Fibonacci() {
+    private Fibonacci() {
     }
     /*
      * fib is a static method takes a argument n
