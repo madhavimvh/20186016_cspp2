@@ -94,7 +94,11 @@ public class List {
      * 
      */
 
+    //
     // todo - add an overloaded constructor here
+    /**
+    *@param      n     { parameter_description }.
+    */
     public List(int n) {
         list = new int[n];
         size = 0; 
