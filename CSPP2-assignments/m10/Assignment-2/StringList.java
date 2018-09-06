@@ -172,7 +172,7 @@ public class StringList implements StringListInterface{
      */
 
     public void remove(int index) {
-        if (index >= 0 && index < size) {
+        if (index >= 0) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
