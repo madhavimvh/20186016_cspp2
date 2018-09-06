@@ -111,6 +111,9 @@ public class List {
      * The method returns void (nothing)
      */
     public void add(final int item) {
+        if (size == list.length) {
+            resize();
+        }
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;   
     }
@@ -186,7 +189,7 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
+        if(index >= 0) {
             for(int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -276,15 +279,10 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(final int[] items) {
-        if ((size + items.length) >= list.length){
-            resize();
-        }
         for (int i = 0; i < items.length; i++) {
-            // System.out.println("lll" + items.length);
-            // System.out.println("ii" + i);
-            list[size++] = items[i];
-        }
+            add(items[i]);
     }
+}
      /* 
         Inserts the specified element at the specified index 
 	by moving all the elements to the right.
