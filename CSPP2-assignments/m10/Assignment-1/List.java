@@ -242,6 +242,9 @@ public class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
+        if(get(0) == 0) {
+            System.out.println("\nInvalid Position Exception");
+        }
         return str;
     }
     
@@ -333,7 +336,6 @@ public class List {
                 else{
                     if(t.length>1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
-                    System.out.println("gjgjg");
                     }
                 }
                 break;
