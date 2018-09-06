@@ -283,8 +283,7 @@ public class List {
         The method returns void (nothing)
      */
     public void add(int index,int item) {
-        if(index >= 0 && index < size) {
-            
+        if(index >= 0 ) {
         int[] b = Arrays.copyOfRange(list, 0, list.length);
         // System.out.println(Arrays.toString(b));
         for(int i = index; i < size; i++) {
