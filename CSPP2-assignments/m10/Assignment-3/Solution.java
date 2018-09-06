@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 // A Class is implemented for Student details
+/**
+ * class Student.
+ */
 final class Student {
     /**
      * name is a String data type.
