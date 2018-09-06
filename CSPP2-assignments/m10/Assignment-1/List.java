@@ -158,6 +158,9 @@ public class List {
     public int size() {
         return size;
     }
+    private void resize() {
+        list = Arrays.copyOf(list, 2 * size);
+    }
 
     /*
      * The remove method does what the name suggests.
@@ -273,13 +276,16 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(final int[] items) {
+        if ((size + items.length) >= list.length){
+            resize();
+        } else {
         for (int i = 0; i < items.length; i++) {
             // System.out.println(items.length);
             // System.out.println(i);
             list[size++] = items[i];
+        }   
         }
     }
-
      /* 
         Inserts the specified element at the specified index 
 	by moving all the elements to the right.
