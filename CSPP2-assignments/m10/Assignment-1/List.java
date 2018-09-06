@@ -314,7 +314,7 @@ public final class List {
         }
     }
     /**
-     * Returns the count of occurances of a given item in the list
+     * Returns the count of occurances of a given item in the list.
      *
      * @param      item  The item
      *
