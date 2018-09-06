@@ -112,9 +112,6 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
-        if (size == list.length) {
-            resize();
-        }
         list[size++] = item;   
     }
 
@@ -279,8 +276,14 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(final int[] items) {
+        if ((size + items.length) >= list.length){
+            resize();
+        } else {
         for (int i = 0; i < items.length; i++) {
-            add(items[i]);
+            // System.out.println("lll" + items.length);
+            // System.out.println("ii" + i);
+            list[size++] = items[i];
+        }   
         }
     }
      /* 
