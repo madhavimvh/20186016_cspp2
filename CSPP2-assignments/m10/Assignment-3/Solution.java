@@ -1,5 +1,5 @@
 /**
- * @author : madhavimvh
+ * @author : madhavimvh.
  */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
