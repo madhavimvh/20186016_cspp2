@@ -245,7 +245,7 @@ public class List {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
-        if(get(0) == 0) {
+        if (get(0) == 0) {
             str += "\nInvalid Position Exception";
         }
         return str;
@@ -355,6 +355,7 @@ public class List {
                 for(int i=0;i<temp.length;i++)
                     temp[i]=Integer.parseInt(t1[i]);
                 l.addAll(temp);
+                System.out.println("kshdk");
                 }
                 break;
                 case "size":
