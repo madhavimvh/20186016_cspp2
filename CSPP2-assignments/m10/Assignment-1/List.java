@@ -258,7 +258,7 @@ public final class List {
     /**
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
-     * exists and otherwise false
+     * exists and otherwise false.
      *
      * @param      item  The item.
      *
@@ -271,7 +271,7 @@ public final class List {
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
      *
-     * @param      item  The item
+     * @param      item  The item.
      *
      * @return     { description_of_the_return_value }
      */
@@ -318,7 +318,7 @@ public final class List {
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int count(final int item) {
         int count = 0;
@@ -329,6 +329,11 @@ public final class List {
         }
         return count;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -343,14 +348,13 @@ public final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if ((tokens.length)==2) {
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
+                } else {
                     if (t.length > 1) {
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
                 }
@@ -361,9 +365,10 @@ public final class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for (int i = 0; i < temp.length; i++)
+                int[] temp = new int[t1.length];
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
@@ -390,6 +395,8 @@ public final class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
