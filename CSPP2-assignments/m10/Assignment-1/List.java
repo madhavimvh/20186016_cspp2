@@ -110,7 +110,7 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;   
     }
@@ -183,7 +183,7 @@ public class List {
      * The method returns void (nothing)
      */
 
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index >= 0 && index < size) {
@@ -278,12 +278,11 @@ public class List {
     public void addAll(final int[] items) {
         if ((size + items.length) >= list.length){
             resize();
-        } else {
+        }
         for (int i = 0; i < items.length; i++) {
             // System.out.println("lll" + items.length);
             // System.out.println("ii" + i);
             list[size++] = items[i];
-        }   
         }
     }
      /* 
