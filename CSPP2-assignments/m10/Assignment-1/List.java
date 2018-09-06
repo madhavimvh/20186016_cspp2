@@ -333,6 +333,7 @@ public class List {
                 else{
                     if(t.length>1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    System.out.println("gjgjg");
                     }
                 }
                 break;
