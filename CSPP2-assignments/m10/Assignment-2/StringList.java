@@ -1,5 +1,8 @@
-//An interface for ListADT of strings
+// An interface for ListADT of strings
 import java.util.Arrays;
+/**
+ * Interface for string list interface.
+ */
 interface StringListInterface
 {
 	 public void add(String item);
