@@ -12,9 +12,9 @@ final class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      namee  The name
      */
-    Student(final String namee){//A constructor used to initialize
+    Student(final String namee) {//A constructor used to initialize
         //the instance variables
         this.name = namee;
     }
@@ -23,7 +23,7 @@ final class Student {
      *
      * @return     The name.
      */
-    public String getName(){//Getter method which returns the value
+    public String getName() {//Getter method which returns the value
         //of instance variable
         return this.name;
     }
@@ -35,7 +35,7 @@ final class Student {
      * @return     returns boolean.
      */
     @Override
-    public boolean equals(Object other) { //This method is to check 
+    public boolean equals(final Object other) { //This method is to check
         //if two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -43,6 +43,11 @@ final class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
