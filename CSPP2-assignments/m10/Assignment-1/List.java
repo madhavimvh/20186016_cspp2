@@ -1,8 +1,12 @@
+/**
+ * @author : madhavimvh.
+ */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
  * { item_description }.
+ * @author: madhavimvh
  */
 public final class List {
     /**
