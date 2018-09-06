@@ -38,6 +38,9 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    * list.
+    */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -56,15 +59,18 @@ public final class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     // declare a private int size
     // again, don't initialize it here
-    // variable initialization should be done in the constructor
+    // variable initialization should be done in the constructo
+    /**
+    * size
+    */
     private int size;
     /*
-     * The purpose of the constructor is to initialize the
-     * class variables with some default values.
+     * The purpose of the constructor is to initialize the class variables with
+     * some default values.
      */
     public List() {
         // what are the two variables to be initialized here?
@@ -110,7 +116,7 @@ public final class List {
             resize();
         }
         //Inserts the specified element at the end of the zelist.
-        list[size++] = item;   
+        list[size++] = item;
     }
     /*
      *
@@ -125,7 +131,7 @@ public final class List {
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
      * using java.lang.System.arraycopy(...);
-     * 
+     *
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
