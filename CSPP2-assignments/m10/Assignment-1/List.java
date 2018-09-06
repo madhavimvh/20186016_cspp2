@@ -13,8 +13,7 @@ public final class List {
      * 10 IS A MAGIC NUMBER.
      */
     private static final int TEN = 10;
-	//Implement all the methods mentioned to build a ListADT
-
+    //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -36,12 +35,10 @@ public final class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -61,35 +58,27 @@ public final class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
-
     public List() {
-
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
         list = new int[TEN];
-
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
     }
-
     /**
      * Overloaded constructor with list capacity as argument The default
      * constructor sets the list capacity to 10 So, adding an item when the list
@@ -106,7 +95,6 @@ public final class List {
         size = 0;
         list = new int[capacity];
     }
-    
     /**
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -124,7 +112,6 @@ public final class List {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;   
     }
-
     /*
      *
      * Resize the list
@@ -155,9 +142,7 @@ public final class List {
      * You know enough of Object Oriented Programming to answer these questions :-)
      *
      */
-
     // todo create resize method
-
     /**
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
@@ -175,7 +160,6 @@ public final class List {
     private void resize() {
         list = Arrays.copyOf(list, TWO * size);
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -196,7 +180,6 @@ public final class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
     /**
      * { function_description }.
      *
@@ -214,7 +197,6 @@ public final class List {
             System.out.println("Invalid Position Exception");
         }
     }
-
     /**
      * Get method has to return the items that is at the index position passed
      * as an argument to the method. If the item doesn't exist then return a -1
@@ -235,7 +217,6 @@ public final class List {
             return list[index];
         }
     }
-
     /**
      * What happens when you print an object using println? Java provides a
      * method named toString that is internally invoked when an object variable
@@ -266,7 +247,6 @@ public final class List {
         }
         return str;
     }
-    
     /**
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -279,7 +259,6 @@ public final class List {
     public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
-
     /**
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
@@ -308,7 +287,6 @@ public final class List {
      /**
       Inserts the specified element at the specified index by moving all the
       elements to the right. The method returns void (nothing)
-     
       @param      index  The index
       @param      item   The item
      */
@@ -327,7 +305,6 @@ public final class List {
             System.out.println("Negative Index Exception");
         }
     }
-    
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item) {
         int count = 0;
@@ -338,12 +315,9 @@ public final class List {
         }
         return count;
     }
-
-
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -404,5 +378,5 @@ public final class List {
                 break;
             }
         }
-	}
+    }
 }
