@@ -14,16 +14,16 @@ final class Student {
      *
      * @param      name  The name
      */
-    Student(final String name) {//A constructor used to initialize
+    Student(final String namee){//A constructor used to initialize
         //the instance variables
-        this.name = name;
+        this.name = namee;
     }
     /**
      * Gets the name.
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value
+    public String getName(){//Getter method which returns the value
         //of instance variable
         return this.name;
     }
