@@ -70,7 +70,7 @@ public final class Solution {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
-        switch(objectType) {
+        switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
                 while (stdin.hasNext()) {
@@ -78,7 +78,7 @@ public final class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding 
+                    // based on the list operation invoke the corresponding
                     //method
                     switch (tokens[0]) {
                         case "add":
@@ -115,6 +115,8 @@ public final class Solution {
                         break;
                         case "contains":
                         System.out.println(listString.contains(tokens[1]));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -170,6 +172,8 @@ public final class Solution {
                         System.out.println(listInteger.contains(
                           Integer.parseInt((tokens[1]))));
                         break;
+                        default:
+                        break;
                     }
                 }
             break;
@@ -223,6 +227,8 @@ public final class Solution {
                         case "contains":
                         System.out.println(listFloat.contains(
                           Float.parseFloat(tokens[1])));
+                        break;
+                        default:
                         break;
                     }
                 }
@@ -278,6 +284,8 @@ public final class Solution {
                         System.out.println(listCharacter.contains(
                           tokens[1].charAt(0)));
                         break;
+                        default:
+                        break;
                     }
                 }
             break;
@@ -332,6 +340,8 @@ public final class Solution {
                         case "contains":
                         System.out.println(listDouble.contains(
                           Double.parseDouble(tokens[1])));
+                        break;
+                        default:
                         break;
                     }
                 }
