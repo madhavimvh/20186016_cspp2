@@ -56,6 +56,11 @@ final class Student {
  * class Solution.
  */
 public final class Solution {
+  /**
+   * empty constructor.
+   */
+  private Solution() {
+  }
     /**
      * main method.
      *
