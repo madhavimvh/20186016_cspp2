@@ -17,7 +17,7 @@ final class Student {
      *
      * @param      namee  The name
      */
-    Student(final String namee) {//A constructor used to initialize
+    Student(final String namee){//A constructor used to initialize
         //the instance variables
         this.name = namee;
     }
@@ -26,7 +26,7 @@ final class Student {
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value
+    public String getName(){//Getter method which returns the value
         //of instance variable
         return this.name;
     }
@@ -72,6 +72,11 @@ public final class Solution {
    */
   private Solution() {
   }
+  /**
+   * Constructs the object.
+   *
+   * @param      stdin  The stdin
+   */
   public static void executeListString(final Scanner stdin) {
     List<String> listString = new List();
                 while (stdin.hasNext()) {
