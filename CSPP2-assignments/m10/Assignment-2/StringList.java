@@ -123,7 +123,7 @@ public class StringList implements StringListInterface{
      */
     public void add(String item) {
         //Inserts the specified element at the end of the list.
-        if (size >= list.length) {
+        if (size == list.length) {
             resize();
         }
         list[size++] = item;
@@ -135,7 +135,9 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(String[] items) {
-		
+		for (int i = 0; i < items.length; i++) {
+            add(items[i]);
+    }
 	}
     /*
      * The size method returns the value of the size.
