@@ -187,10 +187,10 @@ public class List {
             for(int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
+            size--;
         } else {
             System.out.println("Invalid Position Exception");
         }
-        size--;
     }
 
     /*
