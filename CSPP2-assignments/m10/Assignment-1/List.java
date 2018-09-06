@@ -280,8 +280,8 @@ public class List {
             resize();
         } else {
         for (int i = 0; i < items.length; i++) {
-            System.out.println("lll" + items.length);
-            System.out.println("ii" + i);
+            // System.out.println("lll" + items.length);
+            // System.out.println("ii" + i);
             list[size++] = items[i];
         }   
         }
@@ -355,7 +355,6 @@ public class List {
                 for(int i=0;i<temp.length;i++)
                     temp[i]=Integer.parseInt(t1[i]);
                 l.addAll(temp);
-                System.out.println("kshdk");
                 }
                 break;
                 case "size":
