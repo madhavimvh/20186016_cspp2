@@ -280,8 +280,8 @@ public class List {
             resize();
         } else {
         for (int i = 0; i < items.length; i++) {
-            // System.out.println(items.length);
-            // System.out.println(i);
+            System.out.println("lll" + items.length);
+            System.out.println("ii" + i);
             list[size++] = items[i];
         }   
         }
