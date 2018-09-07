@@ -1,8 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
 /**
- * List of .
+ * @author : madhavimvh.
  */
 public class List {
     /**
