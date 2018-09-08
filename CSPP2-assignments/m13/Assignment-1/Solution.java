@@ -51,7 +51,8 @@ class Set {
 	        }
 	        for (int i = 0; i < size; i++) {
 	         	if (set[i] != item[0]) {
-	         		set[size++] = item[0];
+	         		set[i] = item[0];
+	         		size++;
 	         	}
 	         } 
 	}
