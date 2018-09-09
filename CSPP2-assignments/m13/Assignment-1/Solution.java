@@ -56,6 +56,7 @@ class Set {
 			System.out.println(item);
 			if (item != set[i]) {
 				set[size++] = item;
+				break;
 			}
 			System.out.println(Arrays.toString(set));
 		}
