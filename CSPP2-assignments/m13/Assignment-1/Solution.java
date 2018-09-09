@@ -38,7 +38,7 @@ class Set {
 		String str = "{";
 		int i = 0;
 		for (i = 0; i < size - 1; i++) {
-			str = str + set[i] + ",";
+			str = str + set[i] + ", ";
 			
 		}
 		str = str + set[i] + "}";
@@ -56,8 +56,8 @@ class Set {
 			// System.out.println(item);
 			if (item != set[i]) {
 				set[size++] = item;
-				break;
 			}
+			break;
 			// System.out.println(Arrays.toString(set));
 		}
 	}
