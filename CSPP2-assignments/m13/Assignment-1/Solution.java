@@ -45,6 +45,7 @@ class Set {
 		return str;
 	}
 	public void resize() {
+		System.out.println(size);
 		set = Arrays.copyOf(set, 2 * size);
 	}
 	public void add(final int item) {
