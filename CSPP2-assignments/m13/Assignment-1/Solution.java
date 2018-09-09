@@ -35,13 +35,13 @@ class Set {
 		if (size == 0) {
 			return "{}";
 		}
-		String str = "[";
+		String str = "{";
 		int i = 0;
 		for (i = 0; i < size - 1; i++) {
 			str = str + set[i] + ",";
 			
 		}
-		str = str + set[i] + "]";
+		str = str + set[i] + "}";
 		return str;
 	}
 	public void resize() {
@@ -53,12 +53,12 @@ class Set {
 			resize();
 		}
 		for (int i = 0; i <= size; i++) {
-			System.out.println(item);
+			// System.out.println(item);
 			if (item != set[i]) {
 				set[size++] = item;
 				break;
 			}
-			System.out.println(Arrays.toString(set));
+			// System.out.println(Arrays.toString(set));
 		}
 	}
 	public void add(final int[] item) {
