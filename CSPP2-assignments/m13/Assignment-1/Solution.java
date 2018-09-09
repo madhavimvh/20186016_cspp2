@@ -48,6 +48,7 @@ class Set {
 		set = Arrays.copyOf(set, 2 * size);
 	}
 	public void add(final int item) {
+		System.out.println(item);
 		if (size == set.length) {
 			resize();
 		}
