@@ -55,6 +55,8 @@ class Set {
 		for (int i = 0; i <= size; i++) {
 			System.out.println("df" + size);
 			if (set[i] != item) {
+				System.out.println("item" + item);
+				System.out.println("set[i]" + set[i]);
 				set[size] = item;
 			}
 			System.out.println("sdf" + Arrays.toString(set));
