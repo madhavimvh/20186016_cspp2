@@ -54,9 +54,12 @@ class Set {
 		}
 		for (int i = 0; i <= size; i++) {
 			// System.out.println(item);
-			if (item != set[i]) {
+			if (set[i] == item) {
+				break;
+			} else {
 				set[size++] = item;
 			}
+			// break;
 			// System.out.println(Arrays.toString(set));
 		}
 	}
