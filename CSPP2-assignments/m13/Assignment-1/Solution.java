@@ -52,23 +52,24 @@ class Set {
 		if (size == set.length) {
 			resize();
 		}
-		for (int i = 0; i <= size; i++) {
-			System.out.println("df" + size);
-			if (set[i] != item) {
-				System.out.println("item" + item);
-				System.out.println("set[i]" + set[i]);
-				set[size] = item;
-			}
-			System.out.println("sdf" + Arrays.toString(set));
+		if (containss(item) == true) {
+			set[size++] = item;
 		}
-		size++;
 	}
 	public void add(final int[] item) {
 		for (int i = 0; i < item.length; i++) {
 			add(item[i]);
 		}
 	}
-
+	public boolean containss(final int item) {
+		for (int i = 0; i < size; i++) {
+			if (item != set[i]) {
+			} else {
+				return false;
+			}
+		}
+		return true;
+	}
 }
 /**
  * Solution class for code-eval.
