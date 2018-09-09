@@ -55,8 +55,8 @@ class Set {
 		for (int i = 0; i <= size; i++) {
 			System.out.println(item);
 			if (item != set[i]) {
-				set[size++] = item;
 			}
+			set[size++] = item;
 			System.out.println(Arrays.toString(set));
 		}
 	}
