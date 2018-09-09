@@ -44,19 +44,19 @@ class Set {
 		str = str + set[i] + "]";
 		return str;
 	}
-	// public void resize() {
-	// 	System.out.println(size);
-	// 	set = Arrays.copyOf(set, 2 * size);
-	// }
+	public void resize() {
+		System.out.println(size);
+		set = Arrays.copyOf(set, 2 * size);
+	}
 	public void add(final int item) {
-		// if (size == set.length) {
-		// 	resize();
-		// }
+		if (size == set.length) {
+			resize();
+		}
 		for (int i = 0; i <= size; i++) {
 			System.out.println(item);
 			if (item != set[i]) {
+				set[size++] = item;
 			}
-			set[size++] = item;
 			System.out.println(Arrays.toString(set));
 		}
 	}
