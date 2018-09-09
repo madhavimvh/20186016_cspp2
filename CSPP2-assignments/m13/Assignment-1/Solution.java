@@ -48,14 +48,15 @@ class Set {
 		set = Arrays.copyOf(set, 2 * size);
 	}
 	public void add(final int item) {
-		System.out.println(item);
 		if (size == set.length) {
 			resize();
 		}
 		for (int i = 0; i < size; i++) {
+			System.out.println(item);
 			if (item != set[i]) {
 				set[size++] = item;
 			}
+			System.out.println(set);
 		}
 	}
 	public void add(final int[] item) {
