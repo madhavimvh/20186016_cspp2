@@ -53,13 +53,13 @@ class Set {
 			resize();
 		}
 		for (int i = 0; i <= size; i++) {
-			// System.out.println(item);
+			System.out.println("df" + size);
 			if (set[i] != item) {
 				set[i] = item;
 			}
-			size++;
-			// System.out.println(Arrays.toString(set));
+			System.out.println("sdf" + Arrays.toString(set));
 		}
+		size++;
 	}
 	public void add(final int[] item) {
 		for (int i = 0; i < item.length; i++) {
