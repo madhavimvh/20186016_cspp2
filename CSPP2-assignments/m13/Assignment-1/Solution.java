@@ -52,7 +52,7 @@ class Set {
 		// if (size == set.length) {
 		// 	resize();
 		// }
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i <= size; i++) {
 			System.out.println(item);
 			if (item != set[i]) {
 				set[size++] = item;
