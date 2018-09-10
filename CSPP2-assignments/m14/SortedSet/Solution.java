@@ -195,6 +195,7 @@ public final class Solution {
                 break;
                 case "addAll":
                 intArray = intArray(tokens[1]);
+                System.out.println("hello");
                 s.addAll(intArray);
                 break;
                 case "intersection":
