@@ -112,7 +112,7 @@ class SortedSet {
 			return set;
 		} else {
 			for (int i = 0; i < size; i++) {
-				if (sortedset[i] >= fromElement && sortedset[i] < fromElement) {
+				if (sortedset[i] >= fromElement && sortedset[i] < toElement) {
 					set.add(sortedset[i]);
 				}
 			}
