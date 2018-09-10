@@ -141,10 +141,7 @@ class SortedSet {
 		return set;
 	}
 	public int last() {
-		if (size == 0) {
-			System.out.println("Set Empty Exception");
-			return -1;
-		} return sortedset[size - 1];
+		return sortedset[size - 1];
 	}
 
 }
@@ -254,9 +251,7 @@ public final class Solution {
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 break;
                 case "last":
-                if (s.last() > 0) {
-                System.out.println(s.last());	
-                }
+                System.out.println(s.last());
                 default:
                 break;
             }
