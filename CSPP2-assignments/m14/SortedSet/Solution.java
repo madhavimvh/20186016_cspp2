@@ -130,12 +130,11 @@ class SortedSet {
 	return set;
 	}
 	public SortedSet headSet(int toElement) {
-		System.out.println("into headSet");
 		SortedSet set = new SortedSet();
 		if (indexOf(toElement) <= 0) {
 			return null;
 		} else {
-			System.out.println("into else");
+			System.out.println("indes" + indexOf(toElement));
 			for (int i = 0; i < indexOf(toElement); i++) {
 				set.add(sortedset[i]);
 			}
