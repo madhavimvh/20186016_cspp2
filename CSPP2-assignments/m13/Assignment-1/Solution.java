@@ -85,7 +85,7 @@ class Set {
 	public int[][] cartesianProduct(final Set that) {
 		int[][] array = new int[this.size() * that.size()][2];
 		if (this.size() == 0 || that.size() == 0) {
-			return array;
+			return null;
 		}
 		int x = 0;
 		for (int i = 0; i < this.size(); i++) {
