@@ -131,10 +131,10 @@ class SortedSet {
 	}
 	public SortedSet headSet(int toElement) {
 		SortedSet set = new SortedSet();
-		if (toElement > size || toElement <= 0) {
+		if (indexOf(toElement) > size || indexOf(toElement) <= 0) {
 			return null;
 		} else {
-			for (int i = 0; i < toElement; i++) {
+			for (int i = 0; i < indexOf(toElement); i++) {
 				set.add(sortedset[i]);
 			}
 		}
