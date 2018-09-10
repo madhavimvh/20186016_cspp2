@@ -113,7 +113,7 @@ class SortedSet {
 		}
 			item--;
 			// System.out.println("item2" + item);
-			return (indexOf(item) + 1);
+			return (indexOf(item));
 		}
 
 	public SortedSet subSet(int fromElement, int toElement) {
