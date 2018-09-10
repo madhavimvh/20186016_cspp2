@@ -196,7 +196,7 @@ public class List<E> {
 			for (int j = 0; j < size; j++) {
 				if (items[i] == list[j]) {
 					remove(j);
-					j--;
+					// j--;
 				}
 			}
 		}
