@@ -132,7 +132,7 @@ class SortedSet {
 	public SortedSet headSet(int toElement) {
 		SortedSet set = new SortedSet();
 		for (int i = 0; i < size(); i++) {
-			if(sortedset[i] <= toElement) {
+			if(sortedset[i] < toElement) {
 				set.add(sortedset[i]);
 			}
 		}
