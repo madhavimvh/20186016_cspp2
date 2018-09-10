@@ -57,7 +57,7 @@ class SortedSetADT {
 			add(item[i]);
 		}
 		Arrays.sort(sortedset);
-		System.out.println(Arrays.toString(sortedset));
+		System.out.println("fs" + Arrays.toString(sortedset));
 	}
 	public boolean contains(final int item) {
 		for (int i = 0; i < size; i++) {
