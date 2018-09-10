@@ -21,13 +21,21 @@ class SortedSet {
      * constructor with arguments.
      */
     private int[] sortedset;
+    /**
+     * size is the no of elements.
+     */
     private int size;
-    public SortedSet(final int capacity) {
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
+    protected SortedSet(final int capacity) {
         sortedset = new int[capacity];
         size = 0;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -47,7 +55,6 @@ class SortedSet {
         int i = 0;
         for (i = 0; i < size - 1; i++) {
             str = str + sortedset[i] + ", ";
-            
         }
         str = str + sortedset[i] + "}";
         return str;
