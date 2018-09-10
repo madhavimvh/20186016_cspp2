@@ -46,9 +46,9 @@ class SortedSet {
 		}
 		if (contains(item) == false) {
 			sortedset[size++] = item;
-			sortedset = Arrays.copyOf(sortedset, size);
 			// System.out.println(Arrays.toString(sortedset));
 		}
+		sortedset = Arrays.copyOf(sortedset, size);
 		Arrays.sort(sortedset);
 		// System.out.println("fs" + Arrays.toString(sortedset));
 	}
@@ -136,18 +136,6 @@ class SortedSet {
 				set.add(sortedset[i]);
 			}
 		}
-		// if (indexOf(toElement) > size) {
-		// 	for (int i = 0; i < size; i++) {
-		// 		set.add(sortedset[i]);
-		// 	}
-		// } else if (indexOf(toElement) <= 0) {
-		// 	return set;
-		// } else {
-		// 	// System.out.println("indes" + indexOf(toElement));
-		// 	for (int i = 0; i < indexOf(toElement); i++) {
-		// 		set.add(sortedset[i]);
-		// 	}
-		// }
 		return set;
 	}
 	public int last() {
