@@ -113,7 +113,7 @@ class SortedSet {
 		}
 			item--;
 			// System.out.println("item2" + item);
-			return (indexOf(item));
+			return (indexOf(item) + 1);
 		}
 
 	public SortedSet subSet(int fromElement, int toElement) {
@@ -131,19 +131,23 @@ class SortedSet {
 	}
 	public SortedSet headSet(int toElement) {
 		SortedSet set = new SortedSet();
-		if (indexOf(toElement) > size) {
-			for (int i = 0; i < size; i++) {
-				set.add(sortedset[i]);
-			}
-		} else if (indexOf(toElement) <= 0) {
-			System.out.println("{}");
-			return null;
-		} else {
-			// System.out.println("indes" + indexOf(toElement));
-			for (int i = 0; i < indexOf(toElement); i++) {
+		for (int i = 0; i < size(); i++) {
+			if(sortedset[i] <= toElement) {
 				set.add(sortedset[i]);
 			}
 		}
+		// if (indexOf(toElement) > size) {
+		// 	for (int i = 0; i < size; i++) {
+		// 		set.add(sortedset[i]);
+		// 	}
+		// } else if (indexOf(toElement) <= 0) {
+		// 	return set;
+		// } else {
+		// 	// System.out.println("indes" + indexOf(toElement));
+		// 	for (int i = 0; i < indexOf(toElement); i++) {
+		// 		set.add(sortedset[i]);
+		// 	}
+		// }
 		return set;
 	}
 	public int last() {
