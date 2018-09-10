@@ -68,7 +68,7 @@ class Set {
 		Set newset = new Set();
 		for (int i = 0; i < this.size(); i++) {
 			if (that.contains(this.set[i]));
-			newset.add(that.set[i]);
+			newset.add(this.set[i]);
 				
 			}
 			return newset;
