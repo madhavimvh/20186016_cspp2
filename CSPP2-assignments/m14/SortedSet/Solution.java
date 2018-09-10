@@ -37,7 +37,7 @@ class SortedSetADT {
 		return str;
 	}
 	public void resize() {
-		System.out.println(size);
+		// System.out.println(size);
 		sortedset = Arrays.copyOf(sortedset, 2 * size);
 	}
 	public void add(final int item) {
@@ -46,16 +46,17 @@ class SortedSetADT {
 		}
 		if (contains(item) == false) {
 			sortedset[size++] = item;
-			System.out.println(Arrays.toString(sortedset));
+			sortedset = Arrays.copyOf(sortedset, size);
+			// System.out.println(Arrays.toString(sortedset));
 		}
 		Arrays.sort(sortedset);
-		System.out.println("fs" + Arrays.toString(sortedset));
+		// System.out.println("fs" + Arrays.toString(sortedset));
 	}
 
 	public void addAll(final int[] item) {
-		System.out.println("addAll");
+		// System.out.println("addAll");
 		for (int i = 0; i < item.length; i++) {
-			System.out.println(item[i]);
+			// System.out.println(item[i]);
 			add(item[i]);
 		}
 	}
@@ -102,14 +103,23 @@ class SortedSetADT {
 		}
 		return array;
 	}
+	public int indexOf(int item) {
+		//Write logic for indexOf method
+		for (int i = 0; i < size; i++) {
+			if (sortedset[i] == item) {
+				return i;
+			}
+		}
+		return -1;
+	}
 	public SortedSetADT subSet(int fromElement, int toElement) {
 		System.out.println("subset");
 		SortedSetADT set = new SortedSetADT();
-		if (fromElement > toElement) {
+		if (indexOf(fromElement) > indexOf(toElement)) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
 		} else {
-			for (int i = fromElement; i < toElement; i++) {
+			for (int i = indexOf(fromElement); i < indexOf(toElement); i++) {
 			set.add(sortedset[i]);
 		}
 	}
@@ -195,7 +205,6 @@ public final class Solution {
                 break;
                 case "addAll":
                 intArray = intArray(tokens[1]);
-                System.out.println("hello");
                 s.addAll(intArray);
                 break;
                 case "intersection":
