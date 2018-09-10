@@ -105,19 +105,19 @@ class SortedSet {
 	}
 	public int indexOf(int item) {
 		//Write logic for indexOf method
-		System.out.println("item1" + item);
+		// System.out.println("item1" + item);
 		for (int i = 0; i < size; i++) {
 			if (sortedset[i] == item) {
 				return i;
 			} 
 		}
 			item--;
-			System.out.println("item2" + item);
+			// System.out.println("item2" + item);
 			return (indexOf(item) + 1);
 		}
 
 	public SortedSet subSet(int fromElement, int toElement) {
-		System.out.println("subset");
+		// System.out.println("subset");
 		SortedSet set = new SortedSet();
 		if (indexOf(fromElement) > indexOf(toElement)) {
 			System.out.println("Invalid Arguments to Subset Exception");
