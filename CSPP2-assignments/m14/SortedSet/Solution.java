@@ -254,7 +254,7 @@ public final class Solution {
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 break;
                 case "last":
-                if (s.last() >= 0) {
+                if (s.last() > 0) {
                 System.out.println(s.last());	
                 }
                 default:
