@@ -137,7 +137,7 @@ class SortedSet {
 			}
 		}
 		else if (indexOf(toElement) <= 0) {
-			return null;
+			return set;
 		} else {
 			System.out.println("indes" + indexOf(toElement));
 			for (int i = 0; i < indexOf(toElement); i++) {
