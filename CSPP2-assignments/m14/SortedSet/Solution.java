@@ -132,7 +132,6 @@ class SortedSet {
 		if (size > 0) {
 		return sortedset[size - 1];	
 		} else {
-			System.out.println("");
 			return -1;
 		}
 	}
