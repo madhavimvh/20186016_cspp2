@@ -57,7 +57,7 @@ class SortedSetADT {
 			add(item[i]);
 		}
 		Arrays.sort(sortedset);
-		System.out.println("fs" + Arrays.toString(sortedset));
+		// System.out.println("fs" + Arrays.toString(sortedset));
 	}
 	public boolean contains(final int item) {
 		for (int i = 0; i < size; i++) {
@@ -103,6 +103,7 @@ class SortedSetADT {
 		return array;
 	}
 	public SortedSetADT subSet(int fromElement, int toElement) {
+		System.out.println("subset");
 		SortedSetADT set = new SortedSetADT();
 		if (fromElement > toElement) {
 			System.out.println("Invalid Arguments to Subset Exception");
