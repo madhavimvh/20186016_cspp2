@@ -44,7 +44,7 @@ class SortedSet {
 		if (size == sortedset.length) {
 			resize();
 		}
-		if (contains(item) == false) {
+		if (!contains(item)) {
 			sortedset[size++] = item;
 			// System.out.println(Arrays.toString(sortedset));
 		}
@@ -65,8 +65,8 @@ class SortedSet {
 			if (item == sortedset[i]) {
 				return true;
 			}
-			}
-			return false;
+		}
+		return false;
 		}
 	public SortedSet intersection(final SortedSet that) {
 		if (that.size() == 0 || this.size() == 0) {
@@ -103,18 +103,6 @@ class SortedSet {
 		}
 		return array;
 	}
-	public int indexOf(int item) {
-		//Write logic for indexOf method
-		// System.out.println("item1" + item);
-		for (int i = 0; i < size; i++) {
-			if (sortedset[i] == item) {
-				return i;
-			} 
-		}
-			item--;
-			// System.out.println("item2" + item);
-			return (indexOf(item) + 1);
-		}
 	public SortedSet subSet(int fromElement, int toElement) {
 		SortedSet set = new SortedSet();
 		if (fromElement > toElement) {
@@ -124,11 +112,11 @@ class SortedSet {
 			return set;
 		} else {
 			for (int i = 0; i < size; i++) {
-			if (sortedset[i] >= fromElement && sortedset[i] < fromElement) {
-				set.add(sortedset[i]);
+				if (sortedset[i] >= fromElement && sortedset[i] < fromElement) {
+					set.add(sortedset[i]);
+				}
 			}
 		}
-	}
 	return set;
 	}
 	public SortedSet headSet(int toElement) {
@@ -144,6 +132,7 @@ class SortedSet {
 		if (size > 0) {
 		return sortedset[size - 1];	
 		} else {
+			System.out.println("");
 			return -1;
 		}
 	}
