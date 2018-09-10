@@ -194,8 +194,8 @@ public final class Solution {
                 }
                 break;
                 case "addAll":
-                int[] intArray1 = intArray(tokens[1]);
-                s.addAll(intArray1);
+                intArray = intArray(tokens[1]);
+                s.addAll(intArray);
                 break;
                 case "intersection":
                 s = new SortedSetADT();
