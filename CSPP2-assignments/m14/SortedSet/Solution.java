@@ -123,8 +123,10 @@ class SortedSet {
 		} else if (size == 0) {
 			return set;
 		} else {
-			for (int i = indexOf(fromElement); i < indexOf(toElement); i++) {
-			set.add(sortedset[i]);
+			for (int i = 0; i < size; i++) {
+			if (sortedset[i] >= fromElement && sortedset[i] < fromElement) {
+				set.add(sortedset[i]);
+			}
 		}
 	}
 	return set;
