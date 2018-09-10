@@ -105,29 +105,17 @@ class SortedSet {
 	}
 	public int indexOf(int item) {
 		//Write logic for indexOf method
+		System.out.println("item1" + item);
 		for (int i = 0; i < size; i++) {
 			if (sortedset[i] == item) {
 				return i;
-			}
+			} 
 		}
-		if (item < 0) {
-			System.out.println("item-ve" +item);
-		item--;
-		for (int element : sortedset) {
-			if (item == element) {
-				return indexOf(element);
-			}
-		}		
-			} else {
-				item++;
-				for (int element : sortedset) {
-					if (item == element) {
-						return indexOf(element);
-					}
-				}
-		}	
-		return -1;
-		}		
+			item--;
+			System.out.println("item2" + item);
+			return (indexOf(item) + 1);
+		}
+
 	public SortedSet subSet(int fromElement, int toElement) {
 		System.out.println("subset");
 		SortedSet set = new SortedSet();
@@ -193,7 +181,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         // instantiate this set
-        SortedSetADT s = new SortedSetADT();
+        SortedSet s = new SortedSet();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -224,8 +212,8 @@ public final class Solution {
                 s.addAll(intArray);
                 break;
                 case "intersection":
-                s = new SortedSetADT();
-                SortedSetADT t = new SortedSetADT();
+                s = new SortedSet();
+                SortedSet t = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
@@ -233,15 +221,15 @@ public final class Solution {
                 System.out.println(s.intersection(t));
                 break;
                 case "retainAll":
-                s = new SortedSetADT();
+                s = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
                 case "cartesianProduct":
-                s = new SortedSetADT();
-                t = new SortedSetADT();
+                s = new SortedSet();
+                t = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
@@ -253,7 +241,7 @@ public final class Solution {
                     break;
                 }
                 String[] arrstring3 = tokens[1].split(",");
-                SortedSetADT object = s.subSet(Integer.parseInt(arrstring3[0]),
+                SortedSet object = s.subSet(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
