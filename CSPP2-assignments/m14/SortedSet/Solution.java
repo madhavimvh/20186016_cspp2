@@ -60,14 +60,14 @@ class SortedSet {
         return str;
     }
     /**
-     * { function_description }
+     * { function_description }.
      */
     public void resize() {
         // System.out.println(size);
         sortedset = Arrays.copyOf(sortedset, 2 * size);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      */
@@ -96,7 +96,7 @@ class SortedSet {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
@@ -127,7 +127,7 @@ class SortedSet {
                     if (that.sortedset[j] == this.sortedset[i]) {
                         newsortedset.add(this.sortedset[i]);
                     }
-                }   
+                }
             }
             return newsortedset;
         }
@@ -141,7 +141,7 @@ class SortedSet {
     public SortedSet retainAll(final int[] items) {
             SortedSet newsortedset = new SortedSet();
             newsortedset.addAll(items);
-            return this.intersection(newsortedset);         
+            return this.intersection(newsortedset);
         }
     /**
      * cartesian product.
@@ -172,7 +172,7 @@ class SortedSet {
      *
      * @return     { description_of_the_return_value }
      */
-    public SortedSet subSet(int fromElement, int toElement) {
+    public SortedSet subSet(final int fromElement, final int toElement) {
         SortedSet set = new SortedSet();
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -195,10 +195,10 @@ class SortedSet {
      *
      * @return     { description_of_the_return_value }
      */
-    public SortedSet headSet(int toElement) {
+    public SortedSet headSet(final int toElement) {
         SortedSet set = new SortedSet();
         for (int i = 0; i < size(); i++) {
-            if(sortedset[i] < toElement) {
+            if (sortedset[i] < toElement) {
                 set.add(sortedset[i]);
             }
         }
@@ -211,7 +211,7 @@ class SortedSet {
      */
     public int last() {
         if (size > 0) {
-        return sortedset[size - 1]; 
+        return sortedset[size - 1];
         } else {
             return -1;
         }
