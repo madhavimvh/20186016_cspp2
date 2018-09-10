@@ -115,7 +115,6 @@ class SortedSet {
 			// System.out.println("item2" + item);
 			return (indexOf(item) + 1);
 		}
-
 	public SortedSet subSet(int fromElement, int toElement) {
 		SortedSet set = new SortedSet();
 		if (fromElement > toElement) {
@@ -258,6 +257,7 @@ public final class Solution {
                 	System.out.println(s.last());
                 } else {
                 	System.out.println("Set Empty Exception");
+                	System.out.println("-1");
                 }
                 default:
                 break;
