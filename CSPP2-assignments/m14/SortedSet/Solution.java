@@ -250,7 +250,7 @@ public final class Solution {
                 }
                 break;
                 case "headSet":
-                System.out.println(s.headSet(Integer.parseInt(tokens[2])));
+                System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 break;
                 case "last":
                 System.out.println(s.last());
