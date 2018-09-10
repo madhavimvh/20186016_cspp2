@@ -68,11 +68,11 @@ class SortedSet {
 			}
 			return false;
 		}
-	public SortedSet intersection(final SortedSet that) {
+	public SortedSetADT intersection(final SortedSetADT that) {
 		if (that.size() == 0 || this.size() == 0) {
-			return new SortedSet();
+			return new SortedSetADT();
 		}
-		SortedSet newsortedset = new SortedSet();
+		SortedSetADT newsortedset = new SortedSetADT();
 		for (int i = 0; i < this.size(); i++) {
 			for (int j = 0; j < that.size(); j++) {
 					if (that.sortedset[j] == this.sortedset[i]) {
@@ -84,12 +84,12 @@ class SortedSet {
 		}
 	
 
-	public SortedSet retainAll(final int[] items) {
-			SortedSet newsortedset = new SortedSet();
+	public SortedSetADT retainAll(final int[] items) {
+			SortedSetADT newsortedset = new SortedSetADT();
 			newsortedset.addAll(items);
 			return this.intersection(newsortedset);			
 		}
-	public int[][] cartesianProduct(final SortedSet that) {
+	public int[][] cartesianProduct(final SortedSetADT that) {
 		int[][] array = new int[this.size() * that.size()][2];
 		if (this.size() == 0 || that.size() == 0) {
 			return null;
@@ -109,27 +109,17 @@ class SortedSet {
 			if (sortedset[i] == item) {
 				return i;
 			}
-		}
-		if (item < 0) {
-		item--;
-		for (int element : sortedset) {
-			if (item == element) {
-				return indexOf(element);
-			}
-		}		
-			} else {
-				item++;
-				for (int element : sortedset) {
-					if (item == element) {
-						return indexOf(element);
-					}
+		} else if (item < 0) {
+			for (int i = item; i < size; i--) {
+				if (i == ) {
+					
 				}
-		}	
-		return -1;
-		}		
-	public SortedSet subSet(int fromElement, int toElement) {
+			}
+		} 			
+	}
+	public SortedSetADT subSet(int fromElement, int toElement) {
 		System.out.println("subset");
-		SortedSet set = new SortedSet();
+		SortedSetADT set = new SortedSetADT();
 		if (indexOf(fromElement) > indexOf(toElement)) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
@@ -140,8 +130,8 @@ class SortedSet {
 	}
 	return set;
 	}
-	public SortedSet headSet(int toElement) {
-		SortedSet set = new SortedSet();
+	public SortedSetADT headSet(int toElement) {
+		SortedSetADT set = new SortedSetADT();
 		if (toElement > size || toElement <= 0) {
 			return null;
 		} else {
