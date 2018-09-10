@@ -1,141 +1,136 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
  * Class for set.
  * @author : 
  */
 class SortedSet {
-	/**
-	 * Empty constructor.
-	 */
-	public SortedSet() {
-		sortedset = new int[10];
-		size = 0;
-	}
-	private int[] sortedset;
-	private int size;
-	public SortedSet(final int capacity) {
-		sortedset = new int[capacity];
-		size = 0;
-	}
-	public int size() {
-		return size;
-	}
-	public String toString() {
-		if (size == 0) {
-			return "{}";
-		}
-		String str = "{";
-		int i = 0;
-		for (i = 0; i < size - 1; i++) {
-			str = str + sortedset[i] + ", ";
-			
-		}
-		str = str + sortedset[i] + "}";
-		return str;
-	}
-	public void resize() {
-		// System.out.println(size);
-		sortedset = Arrays.copyOf(sortedset, 2 * size);
-	}
-	public void add(final int item) {
-		if (size == sortedset.length) {
-			resize();
-		}
-		if (!contains(item)) {
-			sortedset[size++] = item;
-			// System.out.println(Arrays.toString(sortedset));
-		}
-		sortedset = Arrays.copyOf(sortedset, size);
-		Arrays.sort(sortedset);
-		// System.out.println("fs" + Arrays.toString(sortedset));
-	}
-
-	public void addAll(final int[] item) {
-		// System.out.println("addAll");
-		for (int i = 0; i < item.length; i++) {
-			// System.out.println(item[i]);
-			add(item[i]);
-		}
-	}
-	public boolean contains(final int item) {
-		for (int i = 0; i < size; i++) {
-			if (item == sortedset[i]) {
-				return true;
-			}
-		}
-		return false;
-		}
-	public SortedSet intersection(final SortedSet that) {
-		if (that.size() == 0 || this.size() == 0) {
-			return new SortedSet();
-		}
-		SortedSet newsortedset = new SortedSet();
-		for (int i = 0; i < this.size(); i++) {
-			for (int j = 0; j < that.size(); j++) {
-					if (that.sortedset[j] == this.sortedset[i]) {
-						newsortedset.add(this.sortedset[i]);
-					}
-				}	
-			}
-			return newsortedset;
-		}
-	
-
-	public SortedSet retainAll(final int[] items) {
-			SortedSet newsortedset = new SortedSet();
-			newsortedset.addAll(items);
-			return this.intersection(newsortedset);			
-		}
-	public int[][] cartesianProduct(final SortedSet that) {
-		int[][] array = new int[this.size() * that.size()][2];
-		if (this.size() == 0 || that.size() == 0) {
-			return null;
-		}
-		int x = 0;
-		for (int i = 0; i < this.size(); i++) {
-			for (int j = 0; j < that.size(); j++) {
-				array[x][0] = this.sortedset[i];
-				array[x++][1] = that.sortedset[j];
-			}
-		}
-		return array;
-	}
-	public SortedSet subSet(int fromElement, int toElement) {
-		SortedSet set = new SortedSet();
-		if (fromElement > toElement) {
-			System.out.println("Invalid Arguments to Subset Exception");
-			return null;
-		} else if (size == 0) {
-			return set;
-		} else {
-			for (int i = 0; i < size; i++) {
-				if (sortedset[i] >= fromElement && sortedset[i] < toElement) {
-					set.add(sortedset[i]);
-				}
-			}
-		}
-	return set;
-	}
-	public SortedSet headSet(int toElement) {
-		SortedSet set = new SortedSet();
-		for (int i = 0; i < size(); i++) {
-			if(sortedset[i] < toElement) {
-				set.add(sortedset[i]);
-			}
-		}
-		return set;
-	}
-	public int last() {
-		if (size > 0) {
-		return sortedset[size - 1];	
-		} else {
-			return -1;
-		}
-	}
-
+    /**
+     * Empty constructor.
+     */
+    public SortedSet() {
+        sortedset = new int[10];
+        size = 0;
+    }
+    private int[] sortedset;
+    private int size;
+    public SortedSet(final int capacity) {
+        sortedset = new int[capacity];
+        size = 0;
+    }
+    public int size() {
+        return size;
+    }
+    public String toString() {
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            str = str + sortedset[i] + ", ";
+            
+        }
+        str = str + sortedset[i] + "}";
+        return str;
+    }
+    public void resize() {
+        // System.out.println(size);
+        sortedset = Arrays.copyOf(sortedset, 2 * size);
+    }
+    public void add(final int item) {
+        if (size == sortedset.length) {
+            resize();
+        }
+        if (!contains(item)) {
+            sortedset[size++] = item;
+            // System.out.println(Arrays.toString(sortedset));
+        }
+        sortedset = Arrays.copyOf(sortedset, size);
+        Arrays.sort(sortedset);
+        // System.out.println("fs" + Arrays.toString(sortedset));
+    }
+    public void addAll(final int[] item) {
+        // System.out.println("addAll");
+        for (int i = 0; i < item.length; i++) {
+            // System.out.println(item[i]);
+            add(item[i]);
+        }
+    }
+    public boolean contains(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (item == sortedset[i]) {
+                return true;
+            }
+        }
+        return false;
+        }
+    public SortedSet intersection(final SortedSet that) {
+        if (that.size() == 0 || this.size() == 0) {
+            return new SortedSet();
+        }
+        SortedSet newsortedset = new SortedSet();
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < that.size(); j++) {
+                    if (that.sortedset[j] == this.sortedset[i]) {
+                        newsortedset.add(this.sortedset[i]);
+                    }
+                }   
+            }
+            return newsortedset;
+        }
+    public SortedSet retainAll(final int[] items) {
+            SortedSet newsortedset = new SortedSet();
+            newsortedset.addAll(items);
+            return this.intersection(newsortedset);         
+        }
+    public int[][] cartesianProduct(final SortedSet that) {
+        int[][] array = new int[this.size() * that.size()][2];
+        if (this.size() == 0 || that.size() == 0) {
+            return null;
+        }
+        int x = 0;
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < that.size(); j++) {
+                array[x][0] = this.sortedset[i];
+                array[x++][1] = that.sortedset[j];
+            }
+        }
+        return array;
+    }
+    public SortedSet subSet(int fromElement, int toElement) {
+        SortedSet set = new SortedSet();
+        if (fromElement > toElement) {
+            System.out.println("Invalid Arguments to Subset Exception");
+            return null;
+        } else if (size == 0) {
+            return set;
+        } else {
+            for (int i = 0; i < size; i++) {
+                if (sortedset[i] >= fromElement && sortedset[i] < toElement) {
+                    set.add(sortedset[i]);
+                }
+            }
+        }
+    return set;
+    }
+    public SortedSet headSet(int toElement) {
+        SortedSet set = new SortedSet();
+        for (int i = 0; i < size(); i++) {
+            if(sortedset[i] < toElement) {
+                set.add(sortedset[i]);
+            }
+        }
+        return set;
+    }
+    public int last() {
+        if (size > 0) {
+        return sortedset[size - 1]; 
+        } else {
+            return -1;
+        }
+    }
 }
 /**
  * Solution class for code-eval.
@@ -145,7 +140,6 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-
     }
     /**
      * helper function to convert string input to int array.
@@ -244,10 +238,10 @@ public final class Solution {
                 break;
                 case "last":
                 if (s.last() > 0) {
-                	System.out.println(s.last());
+                    System.out.println(s.last());
                 } else {
-                	System.out.println("Set Empty Exception");
-                	System.out.println("-1");
+                    System.out.println("Set Empty Exception");
+                    System.out.println("-1");
                 }
                 default:
                 break;
