@@ -118,6 +118,9 @@ class SortedSet {
 
 	public SortedSet subSet(int fromElement, int toElement) {
 		SortedSet set = new SortedSet();
+		if (size == 0) {
+			return set;
+		}
 		if (indexOf(fromElement) > indexOf(toElement)) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
