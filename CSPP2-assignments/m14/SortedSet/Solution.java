@@ -117,8 +117,10 @@ class SortedSet {
 		}
 
 	public SortedSet subSet(int fromElement, int toElement) {
-		// System.out.println("subset");
 		SortedSet set = new SortedSet();
+		if (set.size() == 0) {
+			return set;
+		}
 		if (indexOf(fromElement) > indexOf(toElement)) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
@@ -138,8 +140,10 @@ class SortedSet {
 		}
 		return set;
 	}
-	public int last() {
-		return sortedset[size - 1];
+	public void last() {
+		if (size == 0) {
+			System.out.println("Set Empty Exception");
+		} System.out.println(sortedset[size - 1]);
 	}
 
 }
@@ -249,7 +253,7 @@ public final class Solution {
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
                 break;
                 case "last":
-                System.out.println(s.last());
+                s.last();
                 default:
                 break;
             }
