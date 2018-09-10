@@ -111,6 +111,7 @@ class SortedSet {
 			}
 		}
 		if (item < 0) {
+			System.out.println("item-ve" +item);
 		item--;
 		for (int element : sortedset) {
 			if (item == element) {
