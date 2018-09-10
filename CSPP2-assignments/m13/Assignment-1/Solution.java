@@ -82,6 +82,17 @@ class Set {
 			newset.add(items);
 			return this.intersection(newset);			
 		}
+	public int[][] cartesianProduct(final Set that) {
+		int[][] array = new int[this.size() * that.size()][2];
+		int x = 0;
+		for (int i = 0; i < this.size(); i++) {
+			for (int j = 0; j < that.size(); j++) {
+				array[x][0] = this.set[i];
+				array[x++][1] = that.set[j];
+			}
+		}
+		return array;
+	}
 	}
 /**
  * Solution class for code-eval.
@@ -163,15 +174,15 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-                // case "cartesianProduct":
-                // s = new Set();
-                // t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                // break;
+                case "cartesianProduct":
+                s = new Set();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                break;
                 default:
                 break;
             }
