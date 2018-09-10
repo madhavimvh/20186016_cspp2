@@ -3,25 +3,42 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Class for set.
- * @author : 
+ * @author     :
  */
 class SortedSet {
     /**
+     * 10 is a magic number.
+     */
+    private static final int TEN = 10;
+    /**
      * Empty constructor.
      */
-    public SortedSet() {
-        sortedset = new int[10];
+    protected SortedSet() {
+        sortedset = new int[TEN];
         size = 0;
     }
+    /**
+     * constructor with arguments.
+     */
     private int[] sortedset;
     private int size;
     public SortedSet(final int capacity) {
         sortedset = new int[capacity];
         size = 0;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         return size;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0) {
             return "{}";
@@ -35,10 +52,18 @@ class SortedSet {
         str = str + sortedset[i] + "}";
         return str;
     }
+    /**
+     * { function_description }
+     */
     public void resize() {
         // System.out.println(size);
         sortedset = Arrays.copyOf(sortedset, 2 * size);
     }
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         if (size == sortedset.length) {
             resize();
@@ -51,6 +76,11 @@ class SortedSet {
         Arrays.sort(sortedset);
         // System.out.println("fs" + Arrays.toString(sortedset));
     }
+    /**
+     * Adds all.
+     *
+     * @param      item  The item
+     */
     public void addAll(final int[] item) {
         // System.out.println("addAll");
         for (int i = 0; i < item.length; i++) {
@@ -58,6 +88,13 @@ class SortedSet {
             add(item[i]);
         }
     }
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == sortedset[i]) {
@@ -66,6 +103,13 @@ class SortedSet {
         }
         return false;
         }
+    /**
+     * intersection of set.
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     */
     public SortedSet intersection(final SortedSet that) {
         if (that.size() == 0 || this.size() == 0) {
             return new SortedSet();
@@ -80,11 +124,25 @@ class SortedSet {
             }
             return newsortedset;
         }
+    /**
+     * retailAll function.
+     *
+     * @param      items  The items
+     *
+     * @return     { description_of_the_return_value }
+     */
     public SortedSet retainAll(final int[] items) {
             SortedSet newsortedset = new SortedSet();
             newsortedset.addAll(items);
             return this.intersection(newsortedset);         
         }
+    /**
+     * cartesian product.
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int[][] cartesianProduct(final SortedSet that) {
         int[][] array = new int[this.size() * that.size()][2];
         if (this.size() == 0 || that.size() == 0) {
@@ -99,6 +157,14 @@ class SortedSet {
         }
         return array;
     }
+    /**
+     * subset.
+     *
+     * @param      fromElement  The from element
+     * @param      toElement    To element
+     *
+     * @return     { description_of_the_return_value }
+     */
     public SortedSet subSet(int fromElement, int toElement) {
         SortedSet set = new SortedSet();
         if (fromElement > toElement) {
@@ -115,6 +181,13 @@ class SortedSet {
         }
     return set;
     }
+    /**
+     * headset.
+     *
+     * @param      toElement  To element
+     *
+     * @return     { description_of_the_return_value }
+     */
     public SortedSet headSet(int toElement) {
         SortedSet set = new SortedSet();
         for (int i = 0; i < size(); i++) {
@@ -124,6 +197,11 @@ class SortedSet {
         }
         return set;
     }
+    /**
+     * returns the last element.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int last() {
         if (size > 0) {
         return sortedset[size - 1]; 
