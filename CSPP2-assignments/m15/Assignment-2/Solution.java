@@ -207,15 +207,16 @@ class SortedSet {
      */
     public SortedSet headSet(final int toElement) throws Exception {
         SortedSet set = new SortedSet();
-        if (size == 0) {
-            throw new Exception("Set Empty Exception");
-        }
         for (int i = 0; i < size(); i++) {
             if (sortedset[i] < toElement) {
                 set.add(sortedset[i]);
             }
         }
-        return set;
+        if (set.size() == 0) {
+            throw new Exception("Set Empty Exception");
+        } else {
+            return set;
+        }
     }
     /**
      * returns the last element.
