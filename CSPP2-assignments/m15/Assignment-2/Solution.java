@@ -83,14 +83,21 @@ class SortedSet {
         Arrays.sort(sortedset);
         // System.out.println("fs" + Arrays.toString(sortedset));
     }
+    /**
+     * returns a set after removing the element.
+     *
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
+     */
     public void remove(final int index) throws Exception {
         if (index >= size || index < 0) {
-        	throw new Exception("Invalid Position Exception");
+            throw new Exception("Invalid Position Exception");
         } else {
-        	for (int i = index; i < size; i++) {
+            for (int i = index; i < size; i++) {
             sortedset[i] = sortedset[i + 1];
         }
-        	
+            
         }
         size--;
     }
@@ -282,11 +289,11 @@ public final class Solution {
                 break;
                 case "remove":
                 try {
-				s.remove(Integer.parseInt(tokens[1]));	
+                s.remove(Integer.parseInt(tokens[1]));  
                 } catch(Exception ex) {
-                	System.out.println(ex.getMessage());
+                    System.out.println(ex.getMessage());
                 }
-				case "contains":
+                case "contains":
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
                 case "print":
