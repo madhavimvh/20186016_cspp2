@@ -223,11 +223,11 @@ class SortedSet {
      *
      * @return     { description_of_the_return_value }
      */
-    public int last() {
-        if (size > 0) {
+    public int last() throws Exception {
+        if (size == 0) {
+            throw new Exception("Set Empty Exception");
+        } else {    
         return sortedset[size - 1];
-        } else {
-            return -1;
         }
     }
 }
@@ -350,11 +350,10 @@ public final class Solution {
                 }
                 break;
                 case "last":
-                if (s.last() > 0) {
+                try {
                     System.out.println(s.last());
-                } else {
-                    System.out.println("Set Empty Exception");
-                    System.out.println("-1");
+                } catch(Exception ex) {
+                    System.out.println(ex.getMessage());
                 }
                 default:
                 break;
