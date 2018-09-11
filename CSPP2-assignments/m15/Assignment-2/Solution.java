@@ -205,8 +205,11 @@ class SortedSet {
      *
      * @return     { description_of_the_return_value }
      */
-    public SortedSet headSet(final int toElement) {
+    public SortedSet headSet(final int toElement) throws Exception {
         SortedSet set = new SortedSet();
+        if (size == 0) {
+            throw new Exception("Set Empty Exception");
+        }
         for (int i = 0; i < size(); i++) {
             if (sortedset[i] < toElement) {
                 set.add(sortedset[i]);
@@ -339,7 +342,11 @@ public final class Solution {
                 }
                 break;
                 case "headSet":
+                try {    
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
+                } catch(Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
                 break;
                 case "last":
                 if (s.last() > 0) {
