@@ -96,8 +96,7 @@ class SortedSet {
         } else {
             for (int i = index; i < size; i++) {
             sortedset[i] = sortedset[i + 1];
-        }
-            
+        } 
         }
         size--;
     }
@@ -185,12 +184,15 @@ class SortedSet {
     /**
      * subset.
      *
-     * @param      fromElement  The from element
+     * @param      fromElement  The from element.
      * @param      toElement    To element
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception    { exception_description }
      */
-    public SortedSet subSet(final int fromElement, final int toElement) throws Exception{
+    public SortedSet subSet(final int fromElement,
+                            final int toElement) throws Exception {
         SortedSet set = new SortedSet();
         if (fromElement > toElement) {
             throw new Exception("Invalid Arguments to Subset Exception");
@@ -208,9 +210,11 @@ class SortedSet {
     /**
      * headset.
      *
-     * @param      toElement  To element
+     * @param      toElement  To element.
      *
      * @return     { description_of_the_return_value }
+     *
+     * @throws     Exception  { exception_description }
      */
     public SortedSet headSet(final int toElement) throws Exception {
         SortedSet set = new SortedSet();
@@ -228,7 +232,9 @@ class SortedSet {
     /**
      * returns the last element.
      *
-     * @return     { description_of_the_return_value }
+     * @return     returns the last element in the set.
+     *
+     * @throws     Exception  { exception_description }
      */
     public int last() throws Exception {
         if (size == 0) {
