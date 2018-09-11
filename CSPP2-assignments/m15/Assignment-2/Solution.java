@@ -96,7 +96,7 @@ class SortedSet {
         } else {
             for (int i = index; i < size; i++) {
             sortedset[i] = sortedset[i + 1];
-        } 
+        }
         }
         size--;
     }
@@ -239,7 +239,7 @@ class SortedSet {
     public int last() throws Exception {
         if (size == 0) {
             throw new Exception("Set Empty Exception");
-        } else {    
+        } else {
         return sortedset[size - 1];
         }
     }
@@ -295,8 +295,8 @@ public final class Solution {
                 break;
                 case "remove":
                 try {
-                s.remove(Integer.parseInt(tokens[1]));  
-                } catch(Exception ex) {
+                s.remove(Integer.parseInt(tokens[1]));
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 case "contains":
@@ -351,21 +351,21 @@ public final class Solution {
                 if (object != null) {
                     System.out.println(object);
                 }
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 break;
                 case "headSet":
-                try {    
+                try {
                 System.out.println(s.headSet(Integer.parseInt(tokens[1])));
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 break;
                 case "last":
                 try {
                     System.out.println(s.last());
-                } catch(Exception ex) {
+                } catch (Exception ex) {
                     System.out.println(ex.getMessage());
                 }
                 default:
