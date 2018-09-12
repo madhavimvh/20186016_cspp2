@@ -20,9 +20,6 @@ class Show {
     public String[] getseats() {
         return this.seats;
     }
-    public String toString(String s) {
-        return s;
-    }
 
 }
 class Patron {
