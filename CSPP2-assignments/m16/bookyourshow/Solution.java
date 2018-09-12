@@ -20,6 +20,9 @@ class Show {
     public String[] getseats() {
         return this.seats;
     }
+    public String toString() {
+        return movieName + ", " + datetime + ", " + Arrays.toString(seats).replace(" ", "");
+    }
 
 }
 class Patron {
@@ -109,6 +112,23 @@ class BookYourShow {
                 System.out.println("No show");
             }
     }
+    public void printTicket(String movieName, String datetime, String mobileNumber) {
+        Show show = getAShow(movieName, datetime);
+        if (show != null) {
+            for (int i = 0; i < patronSize; i++) {
+                if (patrons[i].getmobileNumber().equals(mobileNumber)) {
+                    System.out.println(mobileNumber + " " + movieName + " " + datetime);
+                }
+            }
+        }
+        
+    }
+    public void showAll() {
+        for (int i = 0; i < showSize; i++) {
+            System.out.println(shows[i]);
+        }
+    }
+            
 }
     // public void getAShow()
 
@@ -163,14 +183,13 @@ public final class Solution {
                         System.out.println("No show");
                     }
                 break;
+                case "print":
+                    bys.printTicket(check[1], tokens[1], tokens[2]);
+                break;
 
-                // case "print":
-                //     bys.printTicket(check[1], tokens[1], tokens[2]);
-                // break;
-
-                // case "showAll":
-                //     bys.showAll();
-                // break;
+                case "showAll":
+                    bys.showAll();
+                break;
                 default:
                 break;
             }
