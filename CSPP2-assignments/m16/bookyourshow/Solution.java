@@ -156,8 +156,8 @@ class BookYourShow {
      * Constructs the object.
      */
     public BookYourShow() {
-        this.shows = new Show[2];
-        this.patrons = new Patron[2];
+        this.shows = new Show[10];
+        this.patrons = new Patron[20];
         this.showSize = showSize;
         this.patronSize = patronSize;
     }
