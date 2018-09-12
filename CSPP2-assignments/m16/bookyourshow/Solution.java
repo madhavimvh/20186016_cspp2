@@ -93,7 +93,7 @@ class BookYourShow {
                 for (int j = 0; j < custseats.length; j++) {
                     if (seats[i].equals(custseats[j]) ) {
                         count += 1;
-                        new  String().replace(seats[i], "N/A");
+                        seats[i].replace(seats[i], "N/A");
 
                     }
                 }
