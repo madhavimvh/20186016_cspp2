@@ -21,7 +21,7 @@ class Show {
         return this.seats;
     }
     public String printexceptTickets() {
-        return movieName + " " + datetime; 
+        return movieName + "," + datetime; 
     }
     public String toString() {
         return movieName + ", " + datetime + ", " + Arrays.toString(seats).replace(" ", "");
@@ -98,22 +98,18 @@ class BookYourShow {
                     }
                 }
             }
-            if (count == custseats.length) {
-                return true;
-            } else {
-                return false;
-            }
-}
+            return (count == custseats.length) ;
+    }
     public void bookAShow(String movieName, String datetime, Patron p) {
         addAPatron(p);
         Show showispresent = getAShow(movieName, datetime);
         if (showispresent != null) {
-            if (checkSeats(showispresent, p.getbookedSeats())) {
-                // System.out.println(p.getmobileNumber() + " " + movieName + " " + datetime);
-            }        
-            } else {
-                System.out.println("No show");
+            if (!checkSeats(showispresent, p.getbookedSeats())) {
+                System.out.println("Invalid");
             }
+        } else {
+            System.out.println("No show");
+        }
     }
     public void printTicket(String movieName, String datetime, String mobileNumber) {
         Show show = getAShow(movieName, datetime);
