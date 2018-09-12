@@ -91,7 +91,7 @@ class BookYourShow {
         String[] seats = show.getseats();
         for (int i  = 0; i < seats.length; i++) {
                 for (int j = 0; j < custseats.length; j++) {
-                    if (seats[i].equals(custseats[j]) && !(seats[i].equals("N/A"))) {
+                    if (seats[i].equals(custseats[j]) ) {
                         count += 1;
                         seats[i] = "N/A";
 
