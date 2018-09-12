@@ -24,7 +24,7 @@ class Show {
         return movieName + "," + datetime; 
     }
     public String toString() {
-        return movieName + ", " + datetime + ", " + Arrays.toString(seats).replace(" ", "");
+        return movieName + "," + datetime + "," + Arrays.toString(seats).replace(", ", ",");
     }
 
 }
