@@ -1,16 +1,19 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class Show {
+/**
+ * { item_description }.
+ */
+final class Show {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String movieName;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String datetime;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String[] seats;
     /**
