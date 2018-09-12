@@ -140,7 +140,13 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
+    /**
+     * { var_description }.
+     */
     private static final int TEN = 10;
+    /**
+     * { var_description }.
+     */
     private static final int TWEN = 20;
     /**
      * { var_description }.
@@ -221,7 +227,7 @@ class BookYourShow {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean checkSeats(final Show show,final String[] custseats) {
+    public boolean checkSeats(final Show show, final String[] custseats) {
         int x;
         int count = 0;
         String[] seats = show.getseats();
@@ -243,7 +249,7 @@ class BookYourShow {
      * @param      datetime   The datetime
      * @param      p          { parameter_description }
      */
-    public void bookAShow(final String movieName,final String datetime,final Patron p) {
+    public void bookAShow(final String movieName, final String datetime, final Patron p) {
         addAPatron(p);
         Show showispresent = getAShow(movieName, datetime);
         if (showispresent != null) {
@@ -259,7 +265,7 @@ class BookYourShow {
      * @param      datetime      The datetime
      * @param      mobileNumber  The mobile number
      */
-    public void printTicket(final String movieName,final String datetime,final String mobileNumber) {
+    public void printTicket(final String movieName, final String datetime, final String mobileNumber) {
         Show show = getAShow(movieName, datetime);
         if (show != null) {
             for (int i = 0; i < patronSize; i++) {
