@@ -20,6 +20,9 @@ class Show {
     public String[] getseats() {
         return this.seats;
     }
+    public String printexceptTickets() {
+        return movieName + " " + datetime; 
+    }
     public String toString() {
         return movieName + ", " + datetime + ", " + Arrays.toString(seats).replace(" ", "");
     }
