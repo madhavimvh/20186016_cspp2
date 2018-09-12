@@ -167,7 +167,7 @@ class BookYourShow {
     /**
      * Constructs the object.
      */
-    public BookYourShow() {
+    protected BookYourShow() {
         this.shows = new Show[TEN];
         this.patrons = new Patron[TWEN];
         this.showSize = showSize;
@@ -212,7 +212,7 @@ class BookYourShow {
      */
     public Show getAShow(final String movieName, final String datetime) {
         for (int i = 0; i < showSize; i++) {
-            if (shows[i].getmovieName().equals(movieName) 
+            if (shows[i].getmovieName().equals(movieName)
                 && shows[i].getdatetime().equals(datetime)) {
                 return shows[i];
             }
@@ -240,16 +240,17 @@ class BookYourShow {
                 }
             }
         }
-        return (count == custseats.length) ;
+        return (count == custseats.length);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      movieName  The movie name
      * @param      datetime   The datetime
      * @param      p          { parameter_description }
      */
-    public void bookAShow(final String movieName, final String datetime, final Patron p) {
+    public void bookAShow(final String movieName, final String datetime,
+        final Patron p) {
         addAPatron(p);
         Show showispresent = getAShow(movieName, datetime);
         if (showispresent != null) {
@@ -265,7 +266,8 @@ class BookYourShow {
      * @param      datetime      The datetime
      * @param      mobileNumber  The mobile number
      */
-    public void printTicket(final String movieName, final String datetime, final String mobileNumber) {
+    public void printTicket(final String movieName, final String datetime
+        ,final String mobileNumber) {
         Show show = getAShow(movieName, datetime);
         if (show != null) {
             for (int i = 0; i < patronSize; i++) {
