@@ -25,7 +25,7 @@ class Show {
      * @param      datetime   The datetime
      * @param      seats      The seats
      */
-    public Show(final String movieName, final String datetime, final String[] seats) {
+    public Show(String movieName, String datetime, String[] seats) {
         this.movieName = movieName;
         this.datetime = datetime;
         this.seats = seats;
@@ -100,7 +100,7 @@ class Patron {
      * @param      mobileNumber  The mobile number
      * @param      bookedSeats   The booked seats
      */
-    public Patron(final String patronName, final String mobileNumber, final String[] bookedSeats) {
+    public Patron(String patronName, String mobileNumber, String[] bookedSeats) {
         this.patronName = patronName;
         this.mobileNumber = mobileNumber;
         this.bookedSeats = bookedSeats;
@@ -184,7 +184,7 @@ class BookYourShow {
      *
      * @param      p     { parameter_description }
      */
-    public void addAPatron(final Patron p) {
+    public void addAPatron(Patron p) {
         if (patronSize == patrons.length) {
             resize();
         }
@@ -198,7 +198,7 @@ class BookYourShow {
      *
      * @return     A show.
      */
-    public Show getAShow(final String movieName, final String datetime) {
+    public Show getAShow(String movieName, String datetime) {
         for (int i = 0; i < showSize; i++) {
             if (shows[i].getmovieName().equals(movieName) && shows[i].getdatetime().equals(datetime)) {
                 return shows[i];
@@ -214,7 +214,7 @@ class BookYourShow {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean checkSeats(final Show show, final String[] custseats) {
+    public boolean checkSeats(Show show, String[] custseats) {
         int x;
         int count = 0;
         String[] seats = show.getseats();
@@ -236,7 +236,7 @@ class BookYourShow {
      * @param      datetime   The datetime
      * @param      p          { parameter_description }
      */
-    public void bookAShow(final String movieName, final String datetime, final Patron p) {
+    public void bookAShow(String movieName, String datetime, Patron p) {
         addAPatron(p);
         Show showispresent = getAShow(movieName, datetime);
         if (showispresent != null) {
@@ -252,7 +252,7 @@ class BookYourShow {
      * @param      datetime      The datetime
      * @param      mobileNumber  The mobile number
      */
-    public void printTicket(final String movieName, final String datetime, final String mobileNumber) {
+    public void printTicket(String movieName, String datetime, String mobileNumber) {
         Show show = getAShow(movieName, datetime);
         if (show != null) {
             for (int i = 0; i < patronSize; i++) {
