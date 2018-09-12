@@ -233,7 +233,7 @@ class BookYourShow {
         String[] seats = show.getseats();
         for (int i  = 0; i < seats.length; i++) {
             for (int j = 0; j < custseats.length; j++) {
-                if (seats[i].equals(custseats[j]) ) {
+                if (seats[i].equals(custseats[j])) {
                     count += 1;
                     seats[i] = seats[i].replace(seats[i], "N/A");
 
@@ -260,19 +260,20 @@ class BookYourShow {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      movieName     The movie name
      * @param      datetime      The datetime
      * @param      mobileNumber  The mobile number
      */
     public void printTicket(final String movieName, final String datetime
-        ,final String mobileNumber) {
+        , final String mobileNumber) {
         Show show = getAShow(movieName, datetime);
         if (show != null) {
             for (int i = 0; i < patronSize; i++) {
                 if (patrons[i].getmobileNumber().equals(mobileNumber)) {
-                    System.out.println(mobileNumber + " " + movieName + " " + datetime);
+                    System.out.println(mobileNumber + " " + movieName 
+                        + " " + datetime);
                     return;
                 }
             }
