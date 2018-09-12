@@ -86,7 +86,7 @@ class BookYourShow {
         for (int i  = 0; i < seats.length; i++) {
                 for (int j = 0; j < custseats.length; j++) {
                     if (seats[i].equals(custseats[j])) {
-                        count += 0;
+                        count += 1;
                         seats[i].replace(seats[i], "n/a");
 
                     }
@@ -101,11 +101,12 @@ class BookYourShow {
     public void bookAShow(String movieName, String datetime, Patron p) {
         addAPatron(p);
         Show showispresent = getAShow(movieName, datetime);
+        System.out.println(showispresent == null);
         if (showispresent != null) {
             if (checkSeats(showispresent, p.getbookedSeats())) {
                 System.out.println(p.getmobileNumber() + " " + movieName + " " + datetime);
 
-            }         
+            }        
             } else {
                 System.out.println("No show");
             }
@@ -140,7 +141,7 @@ public final class Solution {
                 case "add":
                     int k = 2;
                     String[] seats = new String[tokens.length - 2];
-                    System.out.println(tokens.length);
+                    // System.out.println(tokens.length);
                     for (int j = 0; j < seats.length; j++) {
                         seats[j] = tokens[k++];
                     }
