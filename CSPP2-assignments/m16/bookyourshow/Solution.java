@@ -266,13 +266,13 @@ class BookYourShow {
      * @param      datetime      The datetime
      * @param      mobileNumber  The mobile number
      */
-    public void printTicket(final String movieName, final String datetime
-        , final String mobileNumber) {
+    public void printTicket(final String movieName, final String datetime,
+        final String mobileNumber) {
         Show show = getAShow(movieName, datetime);
         if (show != null) {
             for (int i = 0; i < patronSize; i++) {
                 if (patrons[i].getmobileNumber().equals(mobileNumber)) {
-                    System.out.println(mobileNumber + " " + movieName 
+                    System.out.println(mobileNumber + " " + movieName
                         + " " + datetime);
                     return;
                 }
