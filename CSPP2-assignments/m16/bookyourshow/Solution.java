@@ -104,9 +104,7 @@ class BookYourShow {
         addAPatron(p);
         Show showispresent = getAShow(movieName, datetime);
         if (showispresent != null) {
-            if (!checkSeats(showispresent, p.getbookedSeats())) {
-                System.out.println("Invalid");
-            }
+            checkSeats(showispresent, p.getbookedSeats());
         } else {
             System.out.println("No show");
         }
