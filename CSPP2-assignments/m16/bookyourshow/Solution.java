@@ -45,9 +45,7 @@ class Patron {
     public String[] getbookedSeats() {
         return bookedSeats;
     }
-    public String toString(String s) {
-        return s;
-    }
+    
 }
 class BookYourShow {
     private Show[] shows;
@@ -109,6 +107,7 @@ class BookYourShow {
         if (showispresent != null) {
             if (checkSeats(showispresent, p.getbookedSeats())) {
                 System.out.println(p.getmobileNumber() + " " + movieName + " " + datetime);
+
             }         
             } else {
                 System.out.println("No show");
