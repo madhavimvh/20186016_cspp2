@@ -173,7 +173,7 @@ class BookYourShow {
      *
      * @param      newshow  The newshow
      */
-    public void addAShow(final Show newshow) {
+    public void addAShow(Show newshow) {
         if (showSize == shows.length) {
             resize();
         }
