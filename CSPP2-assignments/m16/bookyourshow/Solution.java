@@ -24,11 +24,12 @@ final class Show {
     /**
      * Constructs the object.
      *
-     * @param      movieName  The movie name
-     * @param      datetime   The datetime
-     * @param      seats      The seats
+     * @param      movieNamee  The movie name
+     * @param      datetimee   The datetime
+     * @param      seatss      The seats
      */
-    protected Show(final String movieNamee,final String datetimee,final String[] seatss) {
+    protected Show(final String movieNamee,
+        final String datetimee, final String[] seatss) {
         this.movieName = movieNamee;
         this.datetime = datetimee;
         this.seats = seatss;
@@ -63,7 +64,7 @@ final class Show {
      * @return     { description_of_the_return_value }
      */
     public String printexceptTickets() {
-        return movieName + "," + datetime; 
+        return movieName + "," + datetime;
     }
     /**
      * Returns a string representation of the object.
@@ -71,7 +72,8 @@ final class Show {
      * @return     String representation of the object.
      */
     public String toString() {
-        return movieName + "," + datetime + "," + Arrays.toString(seats).replace(", ", ",");
+        return movieName + "," + datetime + "," +
+        Arrays.toString(seats).replace(", ", ",");
     }
 
 }
@@ -103,7 +105,8 @@ class Patron {
      * @param      mobileNumber  The mobile number
      * @param      bookedSeats   The booked seats
      */
-    public Patron(final String patronName,final String mobileNumber,final String[] bookedSeats) {
+    public Patron(final String patronName, final String mobileNumber,
+        final String[] bookedSeats) {
         this.patronName = patronName;
         this.mobileNumber = mobileNumber;
         this.bookedSeats = bookedSeats;
