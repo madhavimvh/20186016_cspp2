@@ -110,6 +110,8 @@ class BookYourShow {
             if (checkSeats(showispresent, p.getbookedSeats())) {
                 System.out.println(p.getmobileNumber() + " " + movieName + " " + datetime);
             }         
+            } else {
+                System.out.println("No show");
             }
     }
 }
