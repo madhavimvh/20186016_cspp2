@@ -103,7 +103,9 @@ class BookYourShow {
     public void bookAShow(String movieName, String datetime, Patron p) {
         addAPatron(p);
         Show showispresent = getAShow(movieName, datetime);
-        if (showispresent != null && checkSeats(showispresent, p.getbookedSeats())) {
+        if (showispresent != null) {
+            checkSeats(showispresent, p.getbookedSeats());
+        } else {
             System.out.println("No show");
         }
     }
@@ -116,10 +118,8 @@ class BookYourShow {
                     return;
                 }
             }
-            System.out.println("Invalid");
-        } else {
-            System.out.println("Invalid");
         }
+        System.out.println("Invalid");
         
     }
     public void showAll() {
