@@ -72,8 +72,8 @@ final class Show {
      * @return     String representation of the object.
      */
     public String toString() {
-        return movieName + "," + datetime + "," +
-        Arrays.toString(seats).replace(", ", ",");
+        return movieName + "," + datetime + ","
+        + Arrays.toString(seats).replace(", ", ",");
     }
 
 }
@@ -82,45 +82,45 @@ final class Show {
  */
 class Patron {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String patronName;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String mobileNumber;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String[] bookedSeats;
     /**
      * Constructs the object.
      */
-    public Patron() {
+    protected Patron() {
     }
     /**
      * Constructs the object.
      *
-     * @param      patronName    The patron name
-     * @param      mobileNumber  The mobile number
-     * @param      bookedSeats   The booked seats
+     * @param      patronNamee    The patron name
+     * @param      mobileNumberr  The mobile number
+     * @param      bookedSeatss   The booked seats
      */
-    public Patron(final String patronName, final String mobileNumber,
-        final String[] bookedSeats) {
-        this.patronName = patronName;
-        this.mobileNumber = mobileNumber;
-        this.bookedSeats = bookedSeats;
+    protected Patron(final String patronNamee, final String mobileNumberr,
+        final String[] bookedSeatss) {
+        this.patronName = patronNamee;
+        this.mobileNumber = mobileNumberr;
+        this.bookedSeats = bookedSeatss;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public String getpatronName() {
         return patronName;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -128,47 +128,47 @@ class Patron {
         return mobileNumber;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
     public String[] getbookedSeats() {
         return bookedSeats;
     }
-    
 }
 /**
  * Class for book your show.
  */
 class BookYourShow {
+    private static final int TEN = 10;
+    private static final int TWEN = 20;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private Show[] shows;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private Patron[] patrons;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int showSize;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private int patronSize;
-
     /**
      * Constructs the object.
      */
     public BookYourShow() {
-        this.shows = new Show[10];
-        this.patrons = new Patron[20];
+        this.shows = new Show[TEN];
+        this.patrons = new Patron[TWEN];
         this.showSize = showSize;
         this.patronSize = patronSize;
     }
     /**
-     * { function_description }
+     * { function_description }.
      */
     public void resize() {
         shows = Arrays.copyOf(shows, shows.length);
@@ -204,16 +204,17 @@ class BookYourShow {
      *
      * @return     A show.
      */
-    public Show getAShow(final String movieName,final String datetime) {
+    public Show getAShow(final String movieName, final String datetime) {
         for (int i = 0; i < showSize; i++) {
-            if (shows[i].getmovieName().equals(movieName) && shows[i].getdatetime().equals(datetime)) {
+            if (shows[i].getmovieName().equals(movieName) 
+                && shows[i].getdatetime().equals(datetime)) {
                 return shows[i];
             }
         }
         return null;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      show       The show
      * @param      custseats  The custseats
