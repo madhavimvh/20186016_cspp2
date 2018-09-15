@@ -1,6 +1,39 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class Quiz {
-	private String p;
+	private String[] question1;
+	private String[] question2;
+	private String[] question3;
+	private String[] question4;
+	public Quiz() {
+		this.question1 = question1;
+		this.question2 = question2;
+		this.question3 = question3;
+		this.question4 = question4;
+	}
+	public Quiz(String[] question1, String[] question2, String[] question3, String[] question4) {
+		this.question1 = question1;
+		this.question2 = question2;
+		this.question3 = question3;
+		this.question4 = question4;
+	}
+	public String[] getquestion1() {
+		return question1;
+	}
+	public String[] getquestion2() {
+		return question2;
+	}
+
+	public String[] getquestion3() {
+		return question3;
+	}
+
+	public String[] getquestion4() {
+		return question4;
+	}
+	public String toString() {
+		return question1[0];
+	}
 }
 /**
  * Solution class for code-eval.
@@ -35,9 +68,6 @@ public final class Solution {
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                System.out.println(s);
-                System.out.println(q);
-                System.out.println(Integer.parseInt(tokens[1]));
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -63,11 +93,19 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s,final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class.
-        
+        String[] question1 = new String[20];
+        question1 = s.nextLine().split(":");
+        String[] question2 = s.nextLine().split(":");
+        String[] question3 = s.nextLine().split(":");
+        String[] question4 = s.nextLine().split(":");
+        new Quiz(question1, question2, question3, question4);
+		System.out.println("4 are added to the quiz");
+		System.out.println(quiz.getquestion1());
+
     }
 
     /**
@@ -81,6 +119,10 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        String[] a = quiz.getquestion1();
+        System.out.println(a[0] + "(1)");
+        System.out.println(a[1] + " " + a[2] + " " + a[3] + " " + a[4]);
+        
     }
 
     /**
