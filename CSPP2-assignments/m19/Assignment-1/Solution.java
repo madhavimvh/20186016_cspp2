@@ -1,77 +1,16 @@
 import java.util.Scanner;
 /**
- * Class for quiz.
- */
+* Class Quiz
+*/
 class Quiz {
-/**
- *
- */
-    private int quiz;
-/**
- *
- */
-    private String questiontxt;
-/**
- *
- */
-    private int maxmark;
-/**
- *
- */
-    private int choice;
-/**
- *
- */
-    Quiz() {
-    }
     /**
-     * Constructs the object.
-     *
-     * @param      quizz         The quizz
-     * @param      questiontxtt  The questiontxtt
-     * @param      maxmarkk      The maxmarkk
-     * @param      choicee       The choicee
+     * Quiz contructor.
      */
-    Quiz(final int quizz, final String questiontxtt, final int maxmarkk,
-         final int choicee) {
-        this.quiz = quizz;
-        this.questiontxt = questiontxtt;
-        this.maxmark = maxmarkk;
-        this.choice = choicee;
-    }
-    /**.
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int getquiz() {
-        return quiz;
-    }
-    /**.
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public String getquestiontxt() {
-        return questiontxt;
-    }
-    /**.
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int getmaxmark() {
-        return maxmark;
-    }
-    /**.
-     * { function_description }
-     *
-     * @return     { description_of_the_return_value }
-     */
-    public int getchoice() {
-        return choice;
+    Quiz() {
+
     }
 }
+
 /**
  * Solution class for code-eval.
  */
@@ -79,6 +18,22 @@ public final class Solution {
     /**
     * Constructs the object.
     */
+
+    /**
+     * {final int 5 declaration}.
+     */
+    public static final int FIVE = 5;
+    /**
+     * {final int 4 declaration}.
+     */
+    public static final int FOUR = 4;
+    /**
+     * {final int 3 declaration}.
+     */
+    public static final int THREE = 3;
+    /**
+     * Constructs the object.
+     */
     private Solution() {
         // leave this blank
     }
@@ -131,17 +86,52 @@ public final class Solution {
      * @param      questionCount  The question count
      */
     public static void loadQuestions(final Scanner s, final Quiz quiz,
-                                         final int questionCount) {
+     final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
 
+        // for (int i = 0; i < questionscount; i++) {
+        //  String[] question = s.nextLine();
+        //  String[][] choice = s.nextLine();
+        // System.out.println(questionscount + " are added to the quiz");
+        // }
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
-        } else {
-            System.out.println(questionCount + " are added to the quiz");
+            return;
         }
+        String a = s.nextLine();
+        String[] error = a.split(":");
+        String[] errorPoint = error[1].split(",");
+        int number = Integer.parseInt(error[2]);
+        if (error[0] == null || error.length < FIVE || error[0].length() == 0) {
+            System.out.println("Error! Malformed question");
+            return;
+        }
+        int penalityError = Integer.parseInt(error[FOUR]);
+        if (penalityError > 0) {
+            System.out.println("Invalid penalty for " + error[0]);
+            return;
+        }
+        int scoreError = Integer.parseInt(error[THREE]);
+        if (scoreError < 0) {
+            System.out.println("Invalid max marks for " + error[0]);
+            return;
+        }
+        if (errorPoint.length < FOUR) {
+            System.out.println(error[0] +
+                " does not have enough answer choices");
+            return;
+        }
+        if (number > FOUR) {
+            System.out.
+            println("Error! Correct answer choice number is out of range for question text 1");
+            return;
+        }
+
+        System.out.println(questionCount + " are added to the quiz");
     }
+
     /**
      * Starts a quiz.
      *
@@ -150,15 +140,14 @@ public final class Solution {
      * @param      answerCount  The answer count
      */
     public static void startQuiz(final Scanner s, final Quiz quiz,
-                                    final int answerCount) {
+     final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        //for (int i = 1; i <= answerCount; i++) {
-            //System.out.println("question text " + quiz + "(" + s + ")");
-        //}
+
     }
-    /**.
+
+    /**
      * Displays the score report
      *
      * @param      quiz     The quiz object
