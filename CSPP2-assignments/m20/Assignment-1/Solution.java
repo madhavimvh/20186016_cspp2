@@ -59,6 +59,9 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
+    	if (correctAnswer == Integer.parseInt(choice)) {
+    		return true;
+    	}
         return false;
     }
     /**
@@ -66,8 +69,8 @@ class Question {
      *
      * @return     The correct answer.
      */
-    public String getCorrectAnswer() {
-        return null;
+    public int getCorrectAnswer() {
+        return correctAnswer;
     }
     /**
      * Gets the question text.
@@ -75,7 +78,7 @@ class Question {
      * @return     The question text.
      */
     public String getQuestionText() {
-        return null;
+        return questiontext;
     }
     /**
      * Gets the choice.
@@ -83,7 +86,7 @@ class Question {
      * @return     The choice.
      */
     public String[] getChoice() {
-        return null;
+        return choices;
     }
     /**
      * Gets the maximum marks.
@@ -91,7 +94,7 @@ class Question {
      * @return     The maximum marks.
      */
     public int getMaxMarks() {
-        return 1;
+        return maxMarks;
     }
     /**
      * Gets the penalty.
@@ -99,7 +102,7 @@ class Question {
      * @return     The penalty.
      */
     public int getPenalty() {
-        return 1;
+        return penalty;
     }
     /**
      * Sets the response.
@@ -107,7 +110,7 @@ class Question {
      * @param      answer  The answer
      */
     public void setResponse(final String answer) {
-
+    	response = answer;
     }
     /**
      * Gets the response.
@@ -115,7 +118,7 @@ class Question {
      * @return     The response.
      */
     public String getResponse() {
-        return null;
+        return response;
     }
     /**
      * Returns a string representation of the object.
@@ -155,6 +158,7 @@ class Quiz {
      * @param      q     The question
      */
     public void addQuestion(final Question q) {
+    	questions[size++] = q;
 
     }
     /**
@@ -165,7 +169,7 @@ class Quiz {
      * @return     The question.
      */
     public Question getQuestion(final int index) {
-        return null;
+        return questions[index] ;
     }
     /**
      * Shows the report.
@@ -247,10 +251,8 @@ public final class Solution {
    				return;
     		}
     		while (q > 0) {
-    			// System.out.println(q);
 	    		String[] tokens = scan.nextLine().split(":");
 	    		String[] choice = tokens[1].split(",");
-	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
     		if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("") || tokens[3].equals("") || tokens.length < 5) {
     			System.out.println("Error! Malformed question");
     			return;
@@ -270,11 +272,13 @@ public final class Solution {
     		if (Integer.parseInt(tokens[4]) > 0) {
     			System.out.println("Invalid penalty for " + tokens[0]);
     			return;
-    		}
+    		} else {
+	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+	    	}
 
     	q--;
     	}
-
+	    System.out.println(q + " are added to the quiz");
 }
     /**
      * Starts a quiz.
