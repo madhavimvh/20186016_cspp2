@@ -303,9 +303,9 @@ public final class Solution {
                 // return;
             } else {
                 Question ques = new Question(tokens[0], choice
-                    ,Integer.parseInt(tokens[2]),
+                     , Integer.parseInt(tokens[2]),
                     Integer.parseInt(tokens[2 + 1])
-                    ,Integer.parseInt(tokens[2 + 2]));
+                     , Integer.parseInt(tokens[2 + 2]));
                 quiz.addQuestion(ques);
             }
         // q--;
