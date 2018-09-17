@@ -62,11 +62,7 @@ class Question {
     public boolean evaluateResponse(final String choice) {
     	// System.out.println(correctAnswer);
     	// System.out.println("ds" + choice);
-    	String[] inp = choice.split(" ");
-    	if (correctAnswer == Integer.parseInt(inp[1])) {
-    		return true;
-    	}
-        return false;
+    	return choice.equals(choices[correctAnswer - 1]);
     }
     /**
      * Gets the correct answer.
@@ -299,10 +295,8 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         for (int i = 0; i < quiz.size; i++) {
-               	quiz.questions[i].setResponse(scan.nextLine());
-        }
-        for (int i = 0; i < quiz.size; i++) {
         System.out.println(quiz.questions[i].getQuestionText() + "(" + (i+1) + ")");
+       	quiz.questions[i].setResponse(scan.nextLine());
         String[] answer = quiz.questions[i].getChoice();
         	for (int j = 0; j < answer.length - 1; j++) {
         	System.out.print(answer[j] + "\t");
