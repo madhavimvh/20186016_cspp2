@@ -283,12 +283,14 @@ public final class Solution {
                 // return;
             }
             if (choice.length < 2) {
-                throw new Exception(tokens[0] + " does not have enough answer choices");
+                throw new Exception(tokens[0]
+                    + " does not have enough answer choices");
                 // return;
             }
             if (Integer.parseInt(tokens[2]) < 1
                 || Integer.parseInt(tokens[2]) > choice.length) {
-                throw new Exception("Error! Correct answer choice number is out of range for "
+                throw new Exception(
+                    "Error! Correct answer choice number is out of range for "
                     + tokens[0]);
                 // return;
             }
@@ -301,9 +303,9 @@ public final class Solution {
                 // return;
             } else {
                 Question ques = new Question(tokens[0], choice
-                    , Integer.parseInt(tokens[2]),
+                    ,Integer.parseInt(tokens[2]),
                     Integer.parseInt(tokens[2 + 1])
-                    , Integer.parseInt(tokens[2 + 2]));
+                    ,Integer.parseInt(tokens[2 + 2]));
                 quiz.addQuestion(ques);
             }
         // q--;
@@ -314,6 +316,7 @@ public final class Solution {
      * Starts a quiz.
      *
      * @param      scan  The scana
+     * @param      quiz  The quiz
      * @param      q     The answer count
      */
     public static void startQuiz(final Scanner scan,
@@ -350,12 +353,14 @@ public final class Solution {
             String choice = quiz.getQuestion(i).getResponse();
             // System.out.println(quiz.questions[i].evaluateResponse(choice));
             if (quiz.getQuestion(i).evaluateResponse(choice)) {
-                System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks());
+                System.out.println(" Correct Answer! - Marks Awarded: "
+                    + quiz.getQuestion(i).getMaxMarks());
                 a += quiz.getQuestion(i).getMaxMarks();
             } else {
-                System.out.println(" Wrong Answer! - Penalty: " + quiz.getQuestion(i).getPenalty() );
+                System.out.println(" Wrong Answer! - Penalty: "
+                    + quiz.getQuestion(i).getPenalty());
                 a += quiz.getQuestion(i).getPenalty();
-            }   
+            }
             }
             System.out.println("Total Score: " + a);
         }
