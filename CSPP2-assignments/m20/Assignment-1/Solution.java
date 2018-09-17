@@ -162,10 +162,17 @@ class Quiz {
      * Adds a question.
      *
      * @param      q     The question
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         return size;
     }
+    /**
+     * Adds a question.
+     *
+     * @param      q     The quarter
+     */
     public void addQuestion(final Question q) {
         questions[size++] = q;
 
