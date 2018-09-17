@@ -247,11 +247,11 @@ public final class Solution {
    				return;
     		}
     		while (q > 0) {
-    			System.out.println(q);
+    			// System.out.println(q);
 	    		String[] tokens = scan.nextLine().split(":");
 	    		String[] choice = tokens[1].split(",");
 	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
-    		if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
+    		if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("") || tokens[3].equals("") || tokens[4].length() == 0) {
     			System.out.println("Error! Malformed question");
     			return;
     		}
