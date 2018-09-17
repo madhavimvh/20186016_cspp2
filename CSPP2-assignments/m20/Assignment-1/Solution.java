@@ -150,7 +150,7 @@ class Quiz {
     /**
      * { var_description }.
      */
-    public int size;
+    private int size;
     /**
      * Constructs the object.
      */
@@ -163,6 +163,9 @@ class Quiz {
      *
      * @param      q     The question
      */
+    public int size() {
+        return size;
+    }
     public void addQuestion(final Question q) {
         questions[size++] = q;
 
@@ -302,7 +305,7 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-        for (int i = 0; i < quiz.size; i++) {
+        for (int i = 0; i < quiz.size(); i++) {
         System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + (quiz.getQuestion(i).getMaxMarks()) + ")");
         quiz.getQuestion(i).setResponse(scan.nextLine());
         String[] answer = quiz.getQuestion(i).getChoice();
@@ -325,7 +328,7 @@ public final class Solution {
         // write your code here to display the score report using quiz object.
         if (quiz.getQuestion(0) != null) {
             int a = 0;
-            for (int i = 0; i < quiz.size; i++) {
+            for (int i = 0; i < quiz.size(); i++) {
             System.out.println(quiz.getQuestion(i).getQuestionText());
             String choice = quiz.getQuestion(i).getResponse();
             // System.out.println(quiz.questions[i].evaluateResponse(choice));
