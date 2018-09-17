@@ -285,16 +285,16 @@ public final class Solution {
                 throw new Exception("Error! Correct answer choice number is out of range for " + tokens[0]);
                 // return;
             }
-            if (Integer.parseInt(tokens[3]) <= 0) {
+            if (Integer.parseInt(tokens[2 + 1]) <= 0) {
                 throw new  Exception("Invalid max marks for " + tokens[0]);
                 // return;
             }
-            if (Integer.parseInt(tokens[4]) > 0) {
+            if (Integer.parseInt(tokens[2 + 2]) > 0) {
                 throw new Exception("Invalid penalty for " + tokens[0]);
                 // return;
             } else {
                 Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]),
-                    Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+                    Integer.parseInt(tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
                 quiz.addQuestion(ques);
             }
         // q--;
