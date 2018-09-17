@@ -242,7 +242,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-    		while (q > 0) {
+    		while (q >= 0) {
 	    		String[] tokens = scan.nextLine().split(":");
 	    		String[] choice = tokens[1].split(",");
 	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
