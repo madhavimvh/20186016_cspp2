@@ -418,3 +418,218 @@ Error! Malformed question
 |--------------|
 | Score Report |
 |--------------|
+
+----------------------------------------
+########## Testcase 7: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Correct answer choice number is out of range for question text 1
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Correct answer choice number is out of range for question text 1
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 8: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+trick question  does not have enough answer choices
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+trick question  does not have enough answer choices
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 9: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question about sony(1)
+choice 4	choice 2
+
+|--------------|
+| Score Report |
+|--------------|
+question about sony
+ Correct Answer! - Marks Awarded: 1
+Total Score: 1
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+1 are added to the quiz
+|------------|
+| Start Quiz |
+|------------|
+question about sony(1)
+choice 4	choice 2
+
+|--------------|
+| Score Report |
+|--------------|
+question about sony
+ Correct Answer! - Marks Awarded: 1
+Total Score: 1
+
+----------------------------------------
+########## Testcase 10: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid max marks for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid max marks for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 11: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid penalty for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Invalid penalty for question about sony
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+########## Testcase 12: Passed ##########
+Expected Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Malformed question
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+Your Output: 
+|----------------|
+| Load Questions |
+|----------------|
+Error! Malformed question
+|------------|
+| Start Quiz |
+|------------|
+|--------------|
+| Score Report |
+|--------------|
+
+----------------------------------------
+Result: 12/13 testcases passed.
+Starting audit...
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:2:8: Unused import - java.util.Arrays. [UnusedImports]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:48:5: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:52: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:144:23: Variable 'questions' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:148:16: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:173:32: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:193:16: Variable 'flag' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:194:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:231: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:247:26: Parameter q should be final. [FinalParameters]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:259: Line is longer than 80 characters (found 134). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:259:98: '3' is a magic number. [MagicNumber]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:259:131: '5' is a magic number. [MagicNumber]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:264: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:267: Line is longer than 80 characters (found 101). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:268: Line is longer than 80 characters (found 115). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:271:45: '3' is a magic number. [MagicNumber]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:272: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:275:45: '4' is a magic number. [MagicNumber]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:279: Line is longer than 80 characters (found 159). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:279:126: '3' is a magic number. [MagicNumber]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:279:155: '4' is a magic number. [MagicNumber]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:293:20: Expected @param tag for 'quiz'. [JavadocMethod]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:298: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:298:74: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:298:75: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:306: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:321: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:323: Line is longer than 80 characters (found 115). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:326: Line is longer than 80 characters (found 107). [LineLength]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:326:105: ')' is preceded with whitespace. [ParenPad]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m20\Assignment-1\Solution.java:329: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 33 errors.
+
+
+[master 0ca74ae] "check_style_score -> 12 of 13 passed. style score: 0/1 "
+ 1 file changed, 420 insertions(+)
+ create mode 100644 CSPP2-assignments/m20/Assignment-1/out.txt
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+

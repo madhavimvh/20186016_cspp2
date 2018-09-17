@@ -295,7 +295,7 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         for (int i = 0; i < quiz.size; i++) {
-        System.out.println(quiz.questions[i].getQuestionText() + "(" + (i+1) + ")");
+        System.out.println(quiz.questions[i].getQuestionText() + "(" + (quiz.questions[i].getMaxMarks()) + ")");
        	quiz.questions[i].setResponse(scan.nextLine());
         String[] answer = quiz.questions[i].getChoice();
         	for (int j = 0; j < answer.length - 1; j++) {
