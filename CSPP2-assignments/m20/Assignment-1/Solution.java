@@ -238,19 +238,19 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, final int q) {
+        final Quiz quiz, int q) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-    		while (q >= 0) {
-    			System.out.println(q);
-	    		String[] tokens = scan.nextLine().split(":");
-	    		String[] choice = tokens[1].split(",");
-	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
     		if (q == 0) {
     			System.out.println("Quiz does not have questions");
    				return;
     		}
+    		while (q > 0) {
+    			System.out.println(q);
+	    		String[] tokens = scan.nextLine().split(":");
+	    		String[] choice = tokens[1].split(",");
+	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
     		if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("") || tokens[3].equals("") || tokens[4].equals("")) {
     			System.out.println("Error! Malformed question");
     			return;
@@ -272,6 +272,7 @@ public final class Solution {
     			return;
     		}
 
+    	q--;
     	}
 
 }
