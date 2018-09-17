@@ -41,16 +41,16 @@ Your Output:
 | Start Quiz |
 |------------|
 question text 1(1)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 2(2)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 3(3)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 4(4)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 |--------------|
 | Score Report |
@@ -109,16 +109,16 @@ Your Output:
 | Start Quiz |
 |------------|
 question text 1(1)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 2(2)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 3(3)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 4(4)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 |--------------|
 | Score Report |
@@ -173,16 +173,16 @@ Your Output:
 | Start Quiz |
 |------------|
 question text 1(1)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 2(2)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 3(3)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 question text 4(4)
-choice 1        choice 2        choice 3        choice 4        
+choice 1	choice 2	choice 3	choice 4
 
 |--------------|
 | Score Report |
@@ -268,7 +268,7 @@ Your Output:
 | Start Quiz |
 |------------|
 question a(1)
-choice a        choice b        choice c        choice d        Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+choice a	choice b	choice c	choice d	Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
 	at Solution.startQuiz(Solution.java:308)
 	at Solution.main(Solution.java:228)
 
@@ -301,7 +301,7 @@ Your Output:
 | Start Quiz |
 |------------|
 question text 1(1)
-choice 1        
+choice 1
 
 |--------------|
 | Score Report |
@@ -386,3 +386,6 @@ Error! Correct answer choice number is out of range for question text 1
 Exception in thread "main" java.lang.NullPointerException
 	at Solution.startQuiz(Solution.java:302)
 	at Solution.main(Solution.java:228)
+
+----------------------------------------
+########## Testcase 8: Failed ##########

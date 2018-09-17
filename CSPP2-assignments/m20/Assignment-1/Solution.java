@@ -304,10 +304,11 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
         System.out.println(quiz.questions[i].getQuestionText() + "(" + (i+1) + ")");
         String[] answer = quiz.questions[i].getChoice();
-        	for (int j = 0; j < q; j++) {
-        	System.out.print(answer[j] + "        ");
+        	for (int j = 0; j < q - 1; j++) {
+        	System.out.print(answer[j] + "\t");
         }
-        System.out.println("\n");
+        System.out.println(answer[q - 1]);
+        System.out.println("");
         	
         }
     }
