@@ -182,7 +182,7 @@ class Quiz {
      * @return     The question.
      */
     public Question getQuestion(final int index) {
-        return questions[index] ;
+        return questions[index];
     }
     /**
      * Shows the report.
@@ -242,7 +242,7 @@ public final class Solution {
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
-                displayScore(q);    
+                displayScore(q);
                 break;
                 default:
                 break;
@@ -256,6 +256,7 @@ public final class Solution {
      * @param      quiz       The quiz
      * @param      q          The question count
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) throws Exception {
@@ -271,7 +272,8 @@ public final class Solution {
             for (int i = 0; i < q; i++) {
                 String[] tokens = scan.nextLine().split(":");
                 String[] choice = tokens[1].split(",");
-            if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("") || tokens[3].equals("") || tokens.length < 5) {
+            if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("")
+                || tokens[3].equals("") || tokens.length < 5) {
                 throw new Exception("Error! Malformed question");
                 // return;
             }
@@ -291,7 +293,8 @@ public final class Solution {
                 throw new Exception("Invalid penalty for " + tokens[0]);
                 // return;
             } else {
-                Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+                Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]),
+                    Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
                 quiz.addQuestion(ques);
             }
         // q--;
@@ -310,7 +313,8 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         for (int i = 0; i < quiz.size(); i++) {
-        System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + (quiz.getQuestion(i).getMaxMarks()) + ")");
+        System.out.println(quiz.getQuestion(i).getQuestionText() + "("
+            + (quiz.getQuestion(i).getMaxMarks()) + ")");
         quiz.getQuestion(i).setResponse(scan.nextLine());
         String[] answer = quiz.getQuestion(i).getChoice();
             for (int j = 0; j < answer.length - 1; j++) {
