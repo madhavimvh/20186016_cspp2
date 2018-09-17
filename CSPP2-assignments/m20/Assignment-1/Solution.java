@@ -272,8 +272,9 @@ public final class Solution {
             for (int i = 0; i < q; i++) {
                 String[] tokens = scan.nextLine().split(":");
                 String[] choice = tokens[1].split(",");
-            if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("")
-                || tokens[3].equals("") || tokens.length < 5) {
+            if (tokens[0].equals("") || choice.length == 0
+                || tokens[2].equals("") || tokens[3].equals("")
+                || tokens.length < 5) {
                 throw new Exception("Error! Malformed question");
                 // return;
             }
@@ -281,8 +282,10 @@ public final class Solution {
                 throw new Exception(tokens[0] + " does not have enough answer choices");
                 // return;
             }
-            if (Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choice.length) {
-                throw new Exception("Error! Correct answer choice number is out of range for " + tokens[0]);
+            if (Integer.parseInt(tokens[2]) < 1
+                || Integer.parseInt(tokens[2]) > choice.length) {
+                throw new Exception("Error! Correct answer choice number is out of range for "
+                    + tokens[0]);
                 // return;
             }
             if (Integer.parseInt(tokens[2 + 1]) <= 0) {
@@ -293,7 +296,8 @@ public final class Solution {
                 throw new Exception("Invalid penalty for " + tokens[0]);
                 // return;
             } else {
-                Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]),
+                Question ques = new Question(tokens[0], choice
+                    , Integer.parseInt(tokens[2]),
                     Integer.parseInt(tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
                 quiz.addQuestion(ques);
             }
