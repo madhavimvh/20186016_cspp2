@@ -161,9 +161,7 @@ class Quiz {
     /**
      * Adds a question.
      *
-     * @param      q     The question
-     *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int size() {
         return size;
@@ -175,7 +173,6 @@ class Quiz {
      */
     public void addQuestion(final Question q) {
         questions[size++] = q;
-
     }
     /**
      * Gets the question.
@@ -196,7 +193,6 @@ class Quiz {
         String s = "";
         return s;
     }
-
 }
 /**
  * Solution class for code-eval.
@@ -262,7 +258,7 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, int q) throws Exception {
+        final Quiz quiz, final int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -271,7 +267,8 @@ public final class Solution {
                 System.out.println("Quiz does not have questions");
                 return;
             }
-            while (q > 0) {
+            // while (q > 0)
+            for (int i = 0; i < q; i++) {
                 String[] tokens = scan.nextLine().split(":");
                 String[] choice = tokens[1].split(",");
             if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("") || tokens[3].equals("") || tokens.length < 5) {
@@ -297,7 +294,7 @@ public final class Solution {
                 Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
                 quiz.addQuestion(ques);
             }
-        q--;
+        // q--;
         }
         System.out.println(temp + " are added to the quiz");
 }
