@@ -127,6 +127,11 @@ class Question {
      */
     public String toString() {
         String s = "";
+        // s = questiontext + "(" + maxMarks + ")" + "\n";
+        // for (int i = 0; i < choices.length - 1; i++) {
+        // 	s += choices[i] + "\t";
+        //  }
+        // s += choices[choices.length - 1];
         return s;
     }
 }
@@ -305,6 +310,10 @@ public final class Solution {
         System.out.println("");
         	
         }
+        // for (int i = 0; i < quiz.size; i++) {
+        // 	System.out.println(quiz.getQuestion(i));
+        // }
+
     }
     /**
      * Displays the score report.
