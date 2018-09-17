@@ -221,7 +221,11 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
+                try {
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
+            	} catch (Exception ex) {
+            		System.out.println(ex.getMessage());
+            	} 
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -249,7 +253,7 @@ public final class Solution {
      *
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, int q) {
+        final Quiz quiz, int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -262,24 +266,24 @@ public final class Solution {
 	    		String[] tokens = scan.nextLine().split(":");
 	    		String[] choice = tokens[1].split(",");
     		if (tokens[0].equals("") || choice.length == 0 || tokens[2].equals("") || tokens[3].equals("") || tokens.length < 5) {
-    			System.out.println("Error! Malformed question");
-    			return;
+    			throw new Exception("Error! Malformed question");
+    			// return;
     		}
     		if (choice.length < 2) {
-    			System.out.println(tokens[0] + " does not have enough answer choices");
-    			return;
+    			throw new Exception(tokens[0] + " does not have enough answer choices");
+    			// return;
     		}
     		if (Integer.parseInt(tokens[2]) < 1 || Integer.parseInt(tokens[2]) > choice.length) {
-    			System.out.println("Error! Correct answer choice number is out of range for " + tokens[0]);
-    			return;
+    			throw new Exception("Error! Correct answer choice number is out of range for " + tokens[0]);
+    			// return;
     		}
     		if (Integer.parseInt(tokens[3]) <= 0) {
-    			System.out.println("Invalid max marks for " + tokens[0]);
-    			return;
+    			throw new  Exception("Invalid max marks for " + tokens[0]);
+    			// return;
     		}
     		if (Integer.parseInt(tokens[4]) > 0) {
-    			System.out.println("Invalid penalty for " + tokens[0]);
-    			return;
+    			throw new Exception("Invalid penalty for " + tokens[0]);
+    			// return;
     		} else {
 	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
 	    		quiz.addQuestion(ques);
