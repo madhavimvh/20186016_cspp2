@@ -198,9 +198,13 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
-     /**
-     * Constructs the object.
+    /**
+     * { var_description }.
      */
+    private static final int FIVE = 5;
+     /**
+      * Constructs the object.
+      */
     private Solution() {
         // leave this blank
     }
@@ -273,8 +277,8 @@ public final class Solution {
                 String[] tokens = scan.nextLine().split(":");
                 String[] choice = tokens[1].split(",");
             if (tokens[0].equals("") || choice.length == 0
-                || tokens[2].equals("") || tokens[3].equals("")
-                || tokens.length < 5) {
+                || tokens[2].equals("") || tokens[2 + 1].equals("")
+                || tokens.length < FIVE) {
                 throw new Exception("Error! Malformed question");
                 // return;
             }
@@ -298,7 +302,8 @@ public final class Solution {
             } else {
                 Question ques = new Question(tokens[0], choice
                     , Integer.parseInt(tokens[2]),
-                    Integer.parseInt(tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
+                    Integer.parseInt(tokens[2 + 1])
+                    , Integer.parseInt(tokens[2 + 2]));
                 quiz.addQuestion(ques);
             }
         // q--;
