@@ -246,6 +246,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        	int temp = q;
     		if (q == 0) {
     			System.out.println("Quiz does not have questions");
    				return;
@@ -275,10 +276,9 @@ public final class Solution {
     		} else {
 	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
 	    	}
-
     	q--;
     	}
-	    System.out.println(q + " are added to the quiz");
+	    System.out.println(temp + " are added to the quiz");
 }
     /**
      * Starts a quiz.
