@@ -66,7 +66,7 @@ question text 4
 Total Score: 10
 
 ----------------------------------------
-########## Testcase 1: Failed ##########
+########## Testcase 1: Passed ##########
 Expected Output: 
 |----------------|
 | Load Questions |
@@ -124,17 +124,17 @@ choice 1	choice 2	choice 3	choice 4
 | Score Report |
 |--------------|
 question text 1
- Wrong Answer! - Penalty:-4
+ Wrong Answer! - Penalty: -4
 question text 2
- Wrong Answer! - Penalty:-3
+ Wrong Answer! - Penalty: -3
 question text 3
- Wrong Answer! - Penalty:-2
+ Wrong Answer! - Penalty: -2
 question text 4
- Wrong Answer! - Penalty:-1
+ Wrong Answer! - Penalty: -1
 Total Score: -10
 
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 |----------------|
 | Load Questions |
@@ -194,11 +194,11 @@ choice 1	choice 2	choice 3	choice 4
 question text 1
  Correct Answer! - Marks Awarded: 1
 question text 2
- Wrong Answer! - Penalty:-3
+ Wrong Answer! - Penalty: -3
 question text 3
- Wrong Answer! - Penalty:-2
+ Wrong Answer! - Penalty: -2
 question text 4
- Wrong Answer! - Penalty:-1
+ Wrong Answer! - Penalty: -1
 Total Score: -5
 
 ----------------------------------------
@@ -280,117 +280,3 @@ choice a	choice b	choice c	choice d	Exception in thread "main" java.lang.ArrayIn
 	at Solution.main(Solution.java:228)
 
 ----------------------------------------
-########## Testcase 4: Failed ##########
-Expected Output: 
-|----------------|
-| Load Questions |
-|----------------|
-1 are added to the quiz
-|------------|
-| Start Quiz |
-|------------|
-question text 1(1)
-choice 1	choice 2	choice 3	choice 4
-
-|--------------|
-| Score Report |
-|--------------|
-question text 1
- Wrong Answer! - Penalty: -4
-Total Score: -4
-
-Your Output: 
-|----------------|
-| Load Questions |
-|----------------|
-1 are added to the quiz
-|------------|
-| Start Quiz |
-|------------|
-question text 1(1)
-choice 1
-
-|--------------|
-| Score Report |
-|--------------|
-question text 1
- Wrong Answer! - Penalty:-4
-Total Score: -4
-
-----------------------------------------
-########## Testcase 5: Failed ##########
-Expected Output: 
-|----------------|
-| Load Questions |
-|----------------|
-Quiz does not have questions
-|------------|
-| Start Quiz |
-|------------|
-|--------------|
-| Score Report |
-|--------------|
-
-Your Output: 
-|----------------|
-| Load Questions |
-|----------------|
-Quiz does not have questions
-|------------|
-| Start Quiz |
-|------------|
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.startQuiz(Solution.java:302)
-	at Solution.main(Solution.java:228)
-
-----------------------------------------
-########## Testcase 6: Failed ##########
-Expected Output: 
-|----------------|
-| Load Questions |
-|----------------|
-Error! Malformed question
-|------------|
-| Start Quiz |
-|------------|
-|--------------|
-| Score Report |
-|--------------|
-
-Your Output: 
-|----------------|
-| Load Questions |
-|----------------|
-Error! Malformed question
-|------------|
-| Start Quiz |
-|------------|
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.startQuiz(Solution.java:302)
-	at Solution.main(Solution.java:228)
-
-----------------------------------------
-########## Testcase 7: Failed ##########
-Expected Output: 
-|----------------|
-| Load Questions |
-|----------------|
-Error! Correct answer choice number is out of range for question text 1
-|------------|
-| Start Quiz |
-|------------|
-|--------------|
-| Score Report |
-|--------------|
-
-Your Output: 
-|----------------|
-| Load Questions |
-|----------------|
-Error! Correct answer choice number is out of range for question text 1
-|------------|
-| Start Quiz |
-|------------|
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.startQuiz(Solution.java:302)
-	at Solution.main(Solution.java:228)

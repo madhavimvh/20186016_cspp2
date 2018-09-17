@@ -328,7 +328,7 @@ public final class Solution {
         	System.out.println(" Correct Answer! - Marks Awarded: " + quiz.questions[i].getMaxMarks());
         	a += quiz.questions[i].getMaxMarks();
         } else {
-        	System.out.println(" Wrong Answer! - Penalty:" + quiz.questions[i].getPenalty() );
+        	System.out.println(" Wrong Answer! - Penalty: " + quiz.questions[i].getPenalty() );
         	a += quiz.questions[i].getPenalty();
 
         }
