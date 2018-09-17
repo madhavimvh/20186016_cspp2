@@ -331,6 +331,6 @@ public final class Solution {
 
         	
         }
-        System.out.println("Total score: " + a);
+        System.out.println("Total Score: " + a);
     }
 }
