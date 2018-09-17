@@ -49,7 +49,7 @@ class Question {
         this.choices = choices1;
         this.correctAnswer = correctAnswer1;
         this.maxMarks = maxMarks1;
-        this.penalty = penalty1; 
+        this.penalty = penalty1;
 
     }
     /**
@@ -146,7 +146,7 @@ class Quiz {
     /**
      * { var_description }.
      */
-    public Question[] questions;
+    private Question[] questions;
     /**
      * { var_description }.
      */
@@ -303,9 +303,9 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         for (int i = 0; i < quiz.size; i++) {
-        System.out.println(quiz.questions[i].getQuestionText() + "(" + (quiz.questions[i].getMaxMarks()) + ")");
-        quiz.questions[i].setResponse(scan.nextLine());
-        String[] answer = quiz.questions[i].getChoice();
+        System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + (quiz.getQuestion(i).getMaxMarks()) + ")");
+        quiz.getQuestion(i).setResponse(scan.nextLine());
+        String[] answer = quiz.getQuestion(i).getChoice();
             for (int j = 0; j < answer.length - 1; j++) {
             System.out.print(answer[j] + "\t");
         }
@@ -326,15 +326,15 @@ public final class Solution {
         if (quiz.getQuestion(0) != null) {
             int a = 0;
             for (int i = 0; i < quiz.size; i++) {
-            System.out.println(quiz.questions[i].getQuestionText());
-            String choice = quiz.questions[i].getResponse();
+            System.out.println(quiz.getQuestion(i).getQuestionText());
+            String choice = quiz.getQuestion(i).getResponse();
             // System.out.println(quiz.questions[i].evaluateResponse(choice));
-            if (quiz.questions[i].evaluateResponse(choice)) {
-                System.out.println(" Correct Answer! - Marks Awarded: " + quiz.questions[i].getMaxMarks());
-                a += quiz.questions[i].getMaxMarks();
+            if (quiz.getQuestion(i).evaluateResponse(choice)) {
+                System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getQuestion(i).getMaxMarks());
+                a += quiz.getQuestion(i).getMaxMarks();
             } else {
-                System.out.println(" Wrong Answer! - Penalty: " + quiz.questions[i].getPenalty() );
-                a += quiz.questions[i].getPenalty();
+                System.out.println(" Wrong Answer! - Penalty: " + quiz.getQuestion(i).getPenalty() );
+                a += quiz.getQuestion(i).getPenalty();
             }   
             }
             System.out.println("Total Score: " + a);
