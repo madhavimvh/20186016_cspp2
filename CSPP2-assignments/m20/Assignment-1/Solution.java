@@ -302,10 +302,10 @@ public final class Solution {
                 throw new Exception("Invalid penalty for " + tokens[0]);
                 // return;
             } else {
-                Question ques = new Question(tokens[0], choice
-                , Integer.parseInt(tokens[2]),
-                    Integer.parseInt(tokens[2 + 1])
-                , Integer.parseInt(tokens[2 + 2]));
+                Question ques = new Question(tokens[0], choice,
+                    Integer.parseInt(tokens[2]),
+                    Integer.parseInt(tokens[2 + 1]),
+                    Integer.parseInt(tokens[2 + 2]));
                 quiz.addQuestion(ques);
             }
         // q--;
