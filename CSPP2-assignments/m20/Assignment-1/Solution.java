@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for question.
  */
@@ -59,7 +60,10 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-    	if (correctAnswer == Integer.parseInt(choice)) {
+    	// System.out.println(correctAnswer);
+    	// System.out.println("ds" + choice);
+    	String[] inp = choice.split(" ");
+    	if (correctAnswer == Integer.parseInt(inp[1])) {
     		return true;
     	}
         return false;
@@ -141,16 +145,17 @@ class Quiz {
     /**
      * { var_description }.
      */
-    private Question[] questions;
+    public Question[] questions;
     /**
      * { var_description }.
      */
-    private int size;
+    public int size;
     /**
      * Constructs the object.
      */
     Quiz() {
-
+    	size = 0;
+    	questions = new Question[onehundred];
     }
     /**
      * Adds a question.
@@ -275,6 +280,7 @@ public final class Solution {
     			return;
     		} else {
 	    		Question ques = new Question(tokens[0], choice, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+	    		quiz.addQuestion(ques);
 	    	}
     	q--;
     	}
@@ -292,6 +298,18 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        for (int i = 0; i < q; i++) {
+               	quiz.questions[i].setResponse(scan.nextLine());
+        }
+        for (int i = 0; i < q; i++) {
+        System.out.println(quiz.questions[i].getQuestionText() + "(" + (i+1) + ")");
+        String[] answer = quiz.questions[i].getChoice();
+        	for (int j = 0; j < q; j++) {
+        	System.out.print(answer[j] + "        ");
+        }
+        System.out.println("\n");
+        	
+        }
     }
     /**
      * Displays the score report.
@@ -300,5 +318,18 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
+        int a = 0;
+        for (int i = 0; i < quiz.size; i++) {
+        System.out.println(quiz.questions[i].getQuestionText());
+        String choice = quiz.questions[i].getResponse();
+        // System.out.println(quiz.questions[i].evaluateResponse(choice));
+        if (quiz.questions[i].evaluateResponse(choice)) {
+        	System.out.println(" Correct Answer! - Marks Awarded: " + quiz.questions[i].getMaxMarks());
+        	a += quiz.questions[i].getMaxMarks();
+        }
+
+        	
+        }
+        System.out.println("Total score: " + a);
     }
 }
