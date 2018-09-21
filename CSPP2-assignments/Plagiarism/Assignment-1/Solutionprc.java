@@ -158,7 +158,7 @@ public class Solutionprc {
 					}				
 			}
 			System.out.println(a);
-			System.out.println("Maximum similarity is between" + filee1 + "and" + filee2);
+			System.out.println("Maximum similarity is between " + filee1 + " and " + filee2);
 
 		} catch (Exception ex) {
 			System.out.println("file not found");
