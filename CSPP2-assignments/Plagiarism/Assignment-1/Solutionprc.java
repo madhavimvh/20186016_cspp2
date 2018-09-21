@@ -98,7 +98,8 @@ class Calculate {
 
 public class Solutionprc {
 	public static void main(String[] args) {
-		ArrayList<String> input = new ArrayList<String>();
+		try {
+			ArrayList<String> input = new ArrayList<String>();
 		ArrayList<String> inputnames = new ArrayList<String>();
 		Scanner sc = new  Scanner(System.in);
 		String folderName = sc.nextLine();
@@ -162,6 +163,10 @@ public class Solutionprc {
 		} catch (Exception ex) {
 			System.out.println("file not found");
 		}
+		} catch (Exception e) {
+			System.out.println("empty directory");
+		}
+		
 
 	}
 }
