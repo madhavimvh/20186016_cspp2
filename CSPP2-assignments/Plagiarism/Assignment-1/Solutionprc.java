@@ -80,7 +80,7 @@ class Plagiarism {
     /**
      * Constructs the object.
      *
-     * @param      words  The words
+     * @param      wordss  The words
      */
     Plagiarism(final String[] wordss) {
         map = new HashMap<String, Integer>();
@@ -113,9 +113,24 @@ class Plagiarism {
  */
 class Calculate {
     private static final double HUN = 100.0;
+    /**
+     * { var_description }.
+     */
     private HashMap<String, Integer> map1;
+    /**
+     * { var_description }.
+     */
     private HashMap<String, Integer> map2;
+    /**
+     * { var_description }.
+     */
     private HashMap<String, Integer> map;
+    /**
+     * Constructs the object.
+     *
+     * @param      map0   The map 0
+     * @param      map01  The map 01
+     */
     Calculate(final HashMap<String, Integer> map0,
         final HashMap<String, Integer> map01) {
         map1 = map0;
@@ -177,6 +192,9 @@ public final class Solutionprc {
      * { var_description }.
      */
     private static final int HUN = 100;
+    /**
+     * Constructs the object.
+     */
     private Solutionprc() {
     }
     /**
@@ -222,14 +240,14 @@ public final class Solutionprc {
                     HashMap<String, Integer> map1 = plag1.freq();
                     HashMap<String, Integer> map2 = plag2.freq();
                     Calculate c = new Calculate(map1, map2);
-                    result.add( (int) c.distance(c.dotProduct(),
+                    result.add ( (int) c.distance(c.dotProduct(),
                         c.euclidean(map1), c.euclidean(map2)));
                     // System.out.println("res" + result);
                     for (int x = 0; x < result.size(); x++) {
                     if (result.get(x) > max && result.get(x) != HUN) {
                         max = result.get(x);
                         filee1 = listoffiles[i].getName();
-                        filee2 = listoffiles[j].getName();   
+                        filee2 = listoffiles[j].getName();
                     }
                     }
                 }
