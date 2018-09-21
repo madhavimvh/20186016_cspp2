@@ -143,7 +143,7 @@ class Calculate {
     }
     public double distance(final double x, final double b, final double c) {
         double cos = 0;
-        cos = (x / (b*c)) *     HUN;
+        cos = (x / (b * c)) *     HUN;
         return Math.round(cos * HUN) / HUN;
     }
 }
@@ -151,7 +151,8 @@ class Calculate {
  * Class for solutionprc.
  */
 public final class Solutionprc {
-    private Solutionprc(){
+    private static final int HUN = 100;
+    private Solutionprc() {
     }
     public static void main(final String[] args) {
         try {
@@ -185,9 +186,9 @@ public final class Solutionprc {
                 // System.out.println(inputnames.get(i) + "\t");
                 for (int j = 0; j < inputnames.size(); j++) {
                     Plagiarism plag1 = new Plagiarism(new Filereader(folderName
-                        + "/" +inputnames.get(i)).getWord());
+                        + "/" + inputnames.get(i)).getWord());
                     Plagiarism plag2 = new Plagiarism(new Filereader(folderName
-                        + "/" +inputnames.get(j)).getWord());   
+                        + "/" + inputnames.get(j)).getWord());
                     HashMap<String, Integer> map1 = plag1.freq();
                     HashMap<String, Integer> map2 = plag2.freq();
                     Calculate c = new Calculate(map1, map2);
@@ -209,7 +210,7 @@ public final class Solutionprc {
                     for (int j = 0; j < listoffiles.length; j++) {
                         a += result.get(i1) + "\t\t";
                         i1++;
-                    }               
+                    }
             }
             System.out.println(a);
             System.out.println("Maximum similarity is between " + filee1 + " and " + filee2);
