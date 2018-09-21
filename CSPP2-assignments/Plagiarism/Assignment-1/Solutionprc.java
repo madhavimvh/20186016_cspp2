@@ -69,30 +69,30 @@ class Plagiarism {
     /**
      * Constructs the object.
      */
-    public Plagiarism(){
+    Plagiarism() {
     }
     /**
      * Constructs the object.
      *
      * @param      words  The words
      */
-    public Plagiarism(final String[] words) {
+    Plagiarism(final String[] wordss) {
         map = new HashMap<String, Integer>();
-        this.words = words;
+        this.words = wordss;
     }
     /**
      * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
-    public HashMap<String, Integer> freq(){
+    public HashMap<String, Integer> freq() {
         // System.out.println(Arrays.toString(words));
         // for (String s:words) {
         //  map.putIfAbsent(s, 0);
         //  map.put(s, map.get(s) + 1);
         // }
         for (int i = 0; i < words.length; i++) {
-            if (map.containsKey(words[i])){
+            if (map.containsKey(words[i])) {
                 map.put(words[i], map.get(words[i]) + 1);
             } else {
                 map.put(words[i], 1);
@@ -106,10 +106,12 @@ class Plagiarism {
  * Class for calculate.
  */
 class Calculate {
+    private static final double HUN = 100.0;
     private HashMap<String, Integer> map1;
     private HashMap<String, Integer> map2;
     private HashMap<String, Integer> map;
-    Calculate(final HashMap<String, Integer> map0,final HashMap<String, Integer> map01) {
+    Calculate(final HashMap<String, Integer> map0,
+        final HashMap<String, Integer> map01) {
         map1 = map0;
         map2 = map01;
         map = new HashMap<String, Integer>();
@@ -130,7 +132,7 @@ class Calculate {
         }
         return x;
     }
-    public double euclidean(final HashMap<String, Integer>map1) {
+    public double euclidean(final HashMap<String, Integer> mapp1) {
         double x = 0;
         double a = 0;
         for (String s : map1.keySet()) {
@@ -141,14 +143,16 @@ class Calculate {
     }
     public double distance(final double x, final double b, final double c) {
         double cos = 0;
-        cos = (x / (b*c)) * 100.0;
-        return Math.round(cos * 100.0) / 100.0;
+        cos = (x / (b*c)) *     HUN;
+        return Math.round(cos * HUN) / HUN;
     }
 }
 /**
  * Class for solutionprc.
  */
-public class Solutionprc {
+public final class Solutionprc {
+    private Solutionprc(){
+    }
     public static void main(final String[] args) {
         try {
             ArrayList<String> input = new ArrayList<String>();
@@ -180,8 +184,10 @@ public class Solutionprc {
             for (int i = 0; i < listoffiles.length; i++) {
                 // System.out.println(inputnames.get(i) + "\t");
                 for (int j = 0; j < inputnames.size(); j++) {
-                    Plagiarism plag1 = new Plagiarism(new Filereader(folderName + "/" +inputnames.get(i)).getWord());
-                    Plagiarism plag2 = new Plagiarism(new Filereader(folderName + "/" +inputnames.get(j)).getWord());   
+                    Plagiarism plag1 = new Plagiarism(new Filereader(folderName
+                        + "/" +inputnames.get(i)).getWord());
+                    Plagiarism plag2 = new Plagiarism(new Filereader(folderName
+                        + "/" +inputnames.get(j)).getWord());   
                     HashMap<String, Integer> map1 = plag1.freq();
                     HashMap<String, Integer> map2 = plag2.freq();
                     Calculate c = new Calculate(map1, map2);
