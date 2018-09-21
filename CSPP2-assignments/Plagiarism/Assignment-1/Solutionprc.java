@@ -243,7 +243,7 @@ public final class Solutionprc {
                     HashMap<String, Integer> map1 = plag1.freq();
                     HashMap<String, Integer> map2 = plag2.freq();
                     Calculate c = new Calculate(map1, map2);
-                    result.add ((int) c.distance(c.dotProduct(),
+                    result.add((int) c.distance(c.dotProduct(),
                         c.euclidean(map1), c.euclidean(map2)));
                     // System.out.println("res" + result);
                     for (int x = 0; x < result.size(); x++) {
@@ -275,3 +275,4 @@ public final class Solutionprc {
         }
     }
 }
+
