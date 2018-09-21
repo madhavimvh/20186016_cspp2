@@ -10,7 +10,13 @@ import java.util.ArrayList;
  * Class for filereader.
  */
 class Filereader {
+    /**
+     * { var_description }.
+     */
     private String[] word;
+    /**
+     * Constructs the object.
+     */
     Filereader() {
     }
     /**
@@ -132,6 +138,13 @@ class Calculate {
         }
         return x;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      mapp1  The mapp 1
+     *
+     * @return     { description_of_the_return_value }
+     */
     public double euclidean(final HashMap<String, Integer> mapp1) {
         double x = 0;
         double a = 0;
@@ -141,6 +154,15 @@ class Calculate {
         a = Math.sqrt(x);
         return a;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      x     { parameter_description }
+     * @param      b     { parameter_description }
+     * @param      c     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public double distance(final double x, final double b, final double c) {
         double cos = 0;
         cos = (x / (b * c)) *     HUN;
@@ -151,9 +173,17 @@ class Calculate {
  * Class for solutionprc.
  */
 public final class Solutionprc {
+    /**
+     * { var_description }.
+     */
     private static final int HUN = 100;
     private Solutionprc() {
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         try {
             ArrayList<String> input = new ArrayList<String>();
@@ -192,10 +222,11 @@ public final class Solutionprc {
                     HashMap<String, Integer> map1 = plag1.freq();
                     HashMap<String, Integer> map2 = plag2.freq();
                     Calculate c = new Calculate(map1, map2);
-                    result.add((int)c.distance(c.dotProduct(), c.euclidean(map1), c.euclidean(map2)));
+                    result.add( (int) c.distance(c.dotProduct(),
+                        c.euclidean(map1), c.euclidean(map2)));
                     // System.out.println("res" + result);
                     for (int x = 0; x < result.size(); x++) {
-                    if (result.get(x) > max && result.get(x) != 100) {
+                    if (result.get(x) > max && result.get(x) != HUN) {
                         max = result.get(x);
                         filee1 = listoffiles[i].getName();
                         filee2 = listoffiles[j].getName();   
@@ -213,7 +244,8 @@ public final class Solutionprc {
                     }
             }
             System.out.println(a);
-            System.out.println("Maximum similarity is between " + filee1 + " and " + filee2);
+            System.out.println("Maximum similarity is between "
+                + filee1 + " and " + filee2);
         } catch (Exception ex) {
             System.out.println("file not found");
         }
