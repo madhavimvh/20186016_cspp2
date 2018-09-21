@@ -10,7 +10,7 @@ class Filereader {
 		word = Fileinput(f);
 	}
 	public String[] Fileinput(String f) {
-		System.out.println("f" + f);
+		// System.out.println("f" + f);
 		String file = "";
 		String[] s = null;
 	try {
@@ -21,9 +21,9 @@ class Filereader {
 		s = file.split(" ");
 	} catch (Exception ex) {
 		System.out.println("-----file not found");
-		ex.printStackTrace();
+		// ex.printStackTrace();
 	}
-	System.out.println("jk" + Arrays.toString(s));
+	// System.out.println("jk" + Arrays.toString(s));
 	return s;
 	}
 
@@ -43,6 +43,7 @@ class Plagiarism {
 		this.words = words;
 	}
 	public HashMap<String, Integer> freq(){
+		// System.out.println(Arrays.toString(words));
 		// for (String s:words) {
 		// 	map.putIfAbsent(s, 0);
 		// 	map.put(s, map.get(s) + 1);
@@ -54,7 +55,7 @@ class Plagiarism {
 				map.put(words[i], 1);
 			}
 		}
-		System.out.println(map);
+		// System.out.println(map);
 		return map;
 		}
 }
@@ -100,9 +101,12 @@ public class Solutionprc {
 		ArrayList<String> input = new ArrayList<String>();
 		ArrayList<String> inputnames = new ArrayList<String>();
 		Scanner sc = new  Scanner(System.in);
-		File folder = new File(sc.nextLine());
+		String folderName = sc.nextLine();
+		File folder = new File(folderName);
 		File[] listoffiles = folder.listFiles();
 		String s = "";
+		String filee1 = null;
+		String filee2 = null;
 		try {
 			for (File file1 : listoffiles) {
 				inputnames.add(file1.getName());
@@ -118,24 +122,46 @@ public class Solutionprc {
 			}
 			System.out.print(inputnames.get(listoffiles.length - 1));
 
-
-			System.out.println();
+			ArrayList<Integer> result = new ArrayList<Integer>();
+			// System.out.println();
+			int max = 0;
 			for (int i = 0; i < listoffiles.length; i++) {
-				System.out.println(inputnames.get(i) + "\t");
-				
-				//Plagiarism plag1 = new Plagiarism(new Filereader(inputnames.get(i) + "").getWord());
+				// System.out.println(inputnames.get(i) + "\t");
 				for (int j = 0; j < inputnames.size(); j++) {
-					Plagiarism plag2 = new Plagiarism(new Filereader(inputnames.get(i) + "").getWord());	
+					Plagiarism plag1 = new Plagiarism(new Filereader(folderName + "/" +inputnames.get(i)).getWord());
+					Plagiarism plag2 = new Plagiarism(new Filereader(folderName + "/" +inputnames.get(j)).getWord());	
+					HashMap<String, Integer> map1 = plag1.freq();
+					HashMap<String, Integer> map2 = plag2.freq();
+					Calculate c = new Calculate(map1, map2);
+					result.add((int)c.distance(c.dotProduct(), c.euclidean(map1), c.euclidean(map2)));
+					// System.out.println("res" + result);
+					for (int x = 0; x < result.size(); x++) {
+					if (result.get(x) > max && result.get(x) != 100) {
+						max = result.get(x);
+						filee1 = listoffiles[i].getName();
+						filee2 = listoffiles[j].getName();
+
+						
+					}
+					}
+
 				}
 			}
+			String a = "";
+			int i1 = 0;
+			for (int i = 0; i < listoffiles.length; i++) {
+					a += "\n" + inputnames.get(i) + "\t";
+					for (int j = 0; j < listoffiles.length; j++) {
+						a += result.get(i1) + "\t\t";
+						i1++;
+					}				
+			}
+			System.out.println(a);
+			System.out.println("Maximum similarity is between" + filee1 + "and" + filee2);
 
 		} catch (Exception ex) {
 			System.out.println("file not found");
 		}
-		// HashMap<String, Integer> map1 = plag1.freq();
-		// HashMap<String, Integer> map2 = plag2.freq();
-		// Calculate c = new Calculate(map1, map2);
-		// System.out.println(c.distance(c.dotProduct(), c.euclidean(map1), c.euclidean(map2)));	
 
 	}
 }
