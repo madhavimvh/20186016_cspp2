@@ -1,7 +1,11 @@
-import java.util.*;
+import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
-import java.io.*;
+import java.util.Arrays;
+import java.io.File;
+// import java.util.*;
+// import java.io.*;
+import java.util.ArrayList;
 class Filereader {
 	String[] word;
 	Filereader() {
