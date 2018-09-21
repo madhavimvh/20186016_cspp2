@@ -18,8 +18,8 @@ class Filereader {
      *
      * @param      f     { parameter_description }
      */
-    Filereader(String f) {
-        word = Fileinput(f);
+    Filereader(final String f) {
+        word = fileinput(f);
     }
     /**
      * { function_description }.
@@ -28,13 +28,13 @@ class Filereader {
      *
      * @return     { description_of_the_return_value }
      */
-    public String[] Fileinput(final String f) {
+    public String[] fileinput(final String f) {
         // System.out.println("f" + f);
         String file = "";
         String[] s = null;
     try {
         Scanner scan = new Scanner(new File(f));
-        while(scan.hasNext()) {
+        while (scan.hasNext()) {
             file += scan.nextLine().toLowerCase().replaceAll("[^a-z0-9_ ]", "");
         }
         s = file.split(" ");
@@ -58,11 +58,17 @@ class Filereader {
  * Class for plagiarism.
  */
 class Plagiarism {
+    /**
+     * { var_description }.
+     */
     private HashMap<String, Integer> map;
     //
     // ArrayList<String> words;
     //
-    String[] words;
+    private String[] words;
+    /**
+     * Constructs the object.
+     */
     public Plagiarism(){
     }
     /**
