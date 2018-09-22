@@ -29,7 +29,7 @@ class Task {
      * { var_description }.
      */
     private String status;
-    public Task() {
+    Task() {
     }
     /**
      * Constructs the object.
@@ -40,8 +40,9 @@ class Task {
      * @param      importantt       The importantt
      * @param      urgentt          The urgentt
      * @param      statuss          The statuss
+     * @param      Exception        The exception
      */
-    public Task(final String titlee, final String assignedToo,
+    Task(final String titlee, final String assignedToo,
         final int timeToCompletee, final boolean importantt,
         final boolean urgentt, final String statuss) throws Exception {
             title = titlee;
@@ -59,9 +60,9 @@ class Task {
         }
         this.important = importantt;
         this.urgent = urgentt;
-            status = statuss;       
+            status = statuss;
         if (statuss.equals("todo") || statuss.equals("done")) {
-            this.status = statuss;      
+            this.status = statuss;
         } else {
             throw new Exception("Invalid status " + status);
         }
@@ -89,7 +90,7 @@ class Task {
         + urgval + ", " + status;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -97,7 +98,7 @@ class Task {
         return title;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -105,7 +106,7 @@ class Task {
         return assignedTo;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -165,18 +166,21 @@ class Todoist {
      * { var_description }.
      */
     private int size;
-    public Todoist() {
+    /**
+     * Constructs the object.
+     */
+    Todoist() {
         taskarr = new Task[TEN];
         size = 0;
     }
     /**
-     * { function_description }
+     * { function_description }.
      */
     public void resize() {
         taskarr = Arrays.copyOf(taskarr, 2 * taskarr.length);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -240,7 +244,7 @@ class Todoist {
         return task1;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -272,16 +276,30 @@ class Todoist {
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+class TodoistMain {
+    /**
+     * { var_description }.
+     */
     private static final int THR = 3;
+    /**
+     * { var_description }.
+     */
     private static final int FOU = 4;
+    /**
+     * { var_description }.
+     */
     private static final int FIV = 5;
+    /**
+     * { var_description }.
+     */
     private static final int SIX = 6;
     /**
      * Starts a test.
      */
-    public TodoistMain() {
-    }
+    
+    /**
+     * Starts a test.
+     */
     public static void startTest() {
         Todoist todo = new Todoist();
         Scanner s = new Scanner(System.in);
