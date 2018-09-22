@@ -1,153 +1,265 @@
 import java.util.Scanner;
 import java.util.Arrays;
 import java.lang.Boolean;
-
 /**
   * write your code below this comment
   */
 class Task {
-	private String title;
-	private String assignedTo;
-	private int timeToComplete;
-	private boolean important;
-	private boolean urgent;
-	private String status;
-	public Task() {
-	}
-	public Task(String titlee, String assignedToo, int timeToCompletee, boolean importantt, boolean urgentt, String statuss) throws Exception {
-			title = titlee;
-		if (titlee.length() > 0) {
-			this.title = titlee;
-		} else {
-			throw new Exception("Title not provided");
-		}
-		this.assignedTo = assignedToo;
-			timeToComplete = timeToCompletee;
-		if (timeToCompletee > 0) {
-			this.timeToComplete = timeToCompletee;
-		} else {
-			throw new Exception("Invalid timeToComplete " + timeToComplete);
-		}
-		this.important = importantt;
-		this.urgent = urgentt;
-			status = statuss;		
-		if (statuss.equals("todo") || statuss.equals("done")) {
-			this.status = statuss;		
-		} else {
-			throw new Exception("Invalid status " + status);
-		}
-	}
-	public String toString() {
-		String impval = "";
-		String urgval = "";
-		if (important) {
-			impval = "Important";
-		} else {
-			impval = "Not Important";
-		}
-		if (urgent) {
-			urgval = "Urgent";
-		} else {
-			urgval = "Not Urgent";
-		}
-		return title + ", " + assignedTo + ", " + timeToComplete + ", " + impval + ", " + urgval + ", " + status;
-	}
-	public String gettitle() {
-		return title;
-	}
-	public String getassignedTo() {
-		return assignedTo;
-	}
-	public int gettimetocomplete() {
-		return timeToComplete;
-	}
-	public String getImportant() {
-		String impval = "";
-		if (important) {
-			impval = "Important";
-		} else {
-			impval = "Not Important";
-		}
-		return impval;
-	}
-	public String getUrgent() {
-		String urgval = "";
-		if (urgent) {
-			urgval = "Urgent";
-		} else {
-			urgval = "Not Urgent";
-		}
-		return urgval;
-	}
-	public String getStatus() {
-		return status;
-	}
+    /**
+     * { var_description }.
+     */
+    private String title;
+    /**
+     * { var_description }.
+     */
+    private String assignedTo;
+    /**
+     * { var_description }.
+     */
+    private int timeToComplete;
+    /**
+     * { var_description }.
+     */
+    private boolean important;
+    /**
+     * { var_description }.
+     */
+    private boolean urgent;
+    /**
+     * { var_description }.
+     */
+    private String status;
+    public Task() {
+    }
+    /**
+     * Constructs the object.
+     *
+     * @param      titlee           The titlee
+     * @param      assignedToo      The assigned too
+     * @param      timeToCompletee  The time to completee
+     * @param      importantt       The importantt
+     * @param      urgentt          The urgentt
+     * @param      statuss          The statuss
+     */
+    public Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) throws Exception {
+            title = titlee;
+        if (titlee.length() > 0) {
+            this.title = titlee;
+        } else {
+            throw new Exception("Title not provided");
+        }
+        this.assignedTo = assignedToo;
+            timeToComplete = timeToCompletee;
+        if (timeToCompletee > 0) {
+            this.timeToComplete = timeToCompletee;
+        } else {
+            throw new Exception("Invalid timeToComplete " + timeToComplete);
+        }
+        this.important = importantt;
+        this.urgent = urgentt;
+            status = statuss;       
+        if (statuss.equals("todo") || statuss.equals("done")) {
+            this.status = statuss;      
+        } else {
+            throw new Exception("Invalid status " + status);
+        }
+    }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        String impval = "";
+        String urgval = "";
+        if (important) {
+            impval = "Important";
+        } else {
+            impval = "Not Important";
+        }
+        if (urgent) {
+            urgval = "Urgent";
+        } else {
+            urgval = "Not Urgent";
+        }
+        return title + ", " + assignedTo + ", " + timeToComplete + ", " + impval + ", " + urgval + ", " + status;
+    }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String gettitle() {
+        return title;
+    }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String getassignedTo() {
+        return assignedTo;
+    }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int gettimetocomplete() {
+        return timeToComplete;
+    }
+    /**
+     * Gets the important.
+     *
+     * @return     The important.
+     */
+    public String getImportant() {
+        String impval = "";
+        if (important) {
+            impval = "Important";
+        } else {
+            impval = "Not Important";
+        }
+        return impval;
+    }
+    /**
+     * Gets the urgent.
+     *
+     * @return     The urgent.
+     */
+    public String getUrgent() {
+        String urgval = "";
+        if (urgent) {
+            urgval = "Urgent";
+        } else {
+            urgval = "Not Urgent";
+        }
+        return urgval;
+    }
+    /**
+     * Gets the status.
+     *
+     * @return     The status.
+     */
+    public String getStatus() {
+        return status;
+    }
 }
+/**
+ * Class for todoist.
+ */
 class Todoist {
-	private static final int TEN = 10;
-	private Task[] taskarr;
-	private int size;
-	public Todoist() {
-		taskarr = new Task[TEN];
-		size = 0;
-	}
-	public void resize() {
-		taskarr = Arrays.copyOf(taskarr, 2 * taskarr.length);
-	}
-	public int size() {
-		return size;
-	}
-	public void addTask(Task task) {
-		if (size == taskarr.length) {
-			resize();
-		}
-		taskarr[size++] = task;
-	}
-	public Task getNextTask(String pername) {
-		for (int i = 0; i < size; i++) {
-			if (taskarr[i].getassignedTo().equals(pername)) {
-				if (taskarr[i].getStatus().equals("todo") && taskarr[i].getImportant().equals("Important") && taskarr[i].getUrgent().equals("Not Urgent")) {
-					return taskarr[i];
-				}
-			}
-		}
-		return null;
-	}
-	public Task[] getNextTask(String pername, Integer coutas) {
-		Task[] task1 = new Task[coutas];
-		int size1 = 0;
-		for (int i = 0; i < size; i++) {
-			if (taskarr[i].getassignedTo().equals(pername)) {
-				if (taskarr[i].getStatus().equals("todo") && taskarr[i].getImportant().equals("Important") && taskarr[i].getUrgent().equals("Not Urgent")) {
-					task1[size1] = taskarr[i];
-					size1++;
-					if (size1 == coutas) {
-						break;
-					}
-				}
-			}
-		}
-		return task1;
-	}
-	public int totalTime4Completion() {
-		int total = 0;
-		for (int i = 0; i < size; i++) {
-			if (taskarr[i].getStatus().equals("todo")) {
-				total += taskarr[i].gettimetocomplete();
-			}
-		}
-		return total;
-	}
-	public String toString() {
-		String s = "";
-		for (int i = 0; i < size; i++) {
-			s += taskarr[i].gettitle() + ", " + taskarr[i].getassignedTo() + ", " + taskarr[i].gettimetocomplete()
-			+ ", " + taskarr[i].getImportant() + ", " + taskarr[i].getUrgent()
-			+ ", " + taskarr[i].getStatus() + "\n";
-			
-		}
-		return s;
-	}
+    /**
+     * { var_description }.
+     */
+    private static final int TEN = 10;
+    /**
+     * { var_description }.
+     */
+    private Task[] taskarr;
+    /**
+     * { var_description }.
+     */
+    private int size;
+    public Todoist() {
+        taskarr = new Task[TEN];
+        size = 0;
+    }
+    /**
+     * { function_description }
+     */
+    public void resize() {
+        taskarr = Arrays.copyOf(taskarr, 2 * taskarr.length);
+    }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int size() {
+        return size;
+    }
+    /**
+     * Adds a task.
+     *
+     * @param      task  The task
+     */
+    public void addTask(final Task task) {
+        if (size == taskarr.length) {
+            resize();
+        }
+        taskarr[size++] = task;
+    }
+    /**
+     * Gets the next task.
+     *
+     * @param      pername  The pername
+     *
+     * @return     The next task.
+     */
+    public Task getNextTask(final String pername) {
+        for (int i = 0; i < size; i++) {
+            if (taskarr[i].getassignedTo().equals(pername)) {
+                if (taskarr[i].getStatus().equals("todo") && taskarr[i].getImportant().equals("Important") && taskarr[i].getUrgent().equals("Not Urgent")) {
+                    return taskarr[i];
+                }
+            }
+        }
+        return null;
+    }
+    /**
+     * Gets the next task.
+     *
+     * @param      pername  The pername
+     * @param      coutas   The coutas
+     *
+     * @return     The next task.
+     */
+    public Task[] getNextTask(final String pername, final Integer coutas) {
+        Task[] task1 = new Task[coutas];
+        int size1 = 0;
+        for (int i = 0; i < size; i++) {
+            if (taskarr[i].getassignedTo().equals(pername)) {
+                if (taskarr[i].getStatus().equals("todo") && taskarr[i].getImportant().equals("Important") && taskarr[i].getUrgent().equals("Not Urgent")) {
+                    task1[size1] = taskarr[i];
+                    size1++;
+                    if (size1 == coutas) {
+                        break;
+                    }
+                }
+            }
+        }
+        return task1;
+    }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int totalTime4Completion() {
+        int total = 0;
+        for (int i = 0; i < size; i++) {
+            if (taskarr[i].getStatus().equals("todo")) {
+                total += taskarr[i].gettimetocomplete();
+            }
+        }
+        return total;
+    }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        String s = "";
+        for (int i = 0; i < size; i++) {
+            s += taskarr[i].gettitle() + ", " + taskarr[i].getassignedTo() + ", " + taskarr[i].gettimetocomplete()
+            + ", " + taskarr[i].getImportant() + ", " + taskarr[i].getUrgent()
+            + ", " + taskarr[i].getStatus() + "\n";
+            
+        }
+        return s;
+    }
 
 }
 /**
@@ -168,7 +280,7 @@ public class TodoistMain {
                 try {
                     testTask(tokens);
                 } catch (Exception ex) {
-                	System.out.println(ex.getMessage());
+                    System.out.println(ex.getMessage());
                 }
                 break;
                 case "add-task":
