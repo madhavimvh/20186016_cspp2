@@ -29,6 +29,9 @@ class Task {
      * { var_description }.
      */
     private String status;
+    /**
+     * Constructs the object.
+     */
     Task() {
     }
     /**
@@ -40,7 +43,7 @@ class Task {
      * @param      importantt       The importantt
      * @param      urgentt          The urgentt
      * @param      statuss          The statuss
-     * @param      Exception        The exception
+     * @throws     Exception        The exception
      */
     Task(final String titlee, final String assignedToo,
         final int timeToCompletee, final boolean importantt,
@@ -296,7 +299,8 @@ class TodoistMain {
     /**
      * Starts a test.
      */
-    
+    private TodoistMain() {
+    }
     /**
      * Starts a test.
      */
