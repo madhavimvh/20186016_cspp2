@@ -1,8 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.lang.Boolean;
+// import java.lang.Boolean;
 /**
-  * write your code below this comment
+  * write your code below this comment.
   */
 class Task {
     /**
@@ -41,7 +41,9 @@ class Task {
      * @param      urgentt          The urgentt
      * @param      statuss          The statuss
      */
-    public Task(final String titlee, final String assignedToo, final int timeToCompletee, final boolean importantt, final boolean urgentt, final String statuss) throws Exception {
+    public Task(final String titlee, final String assignedToo,
+        final int timeToCompletee, final boolean importantt,
+        final boolean urgentt, final String statuss) throws Exception {
             title = titlee;
         if (titlee.length() > 0) {
             this.title = titlee;
@@ -82,7 +84,9 @@ class Task {
         } else {
             urgval = "Not Urgent";
         }
-        return title + ", " + assignedTo + ", " + timeToComplete + ", " + impval + ", " + urgval + ", " + status;
+        return title + ", " + assignedTo + ", "
+        + timeToComplete + ", " + impval + ", "
+        + urgval + ", " + status;
     }
     /**
      * { function_description }
@@ -200,7 +204,9 @@ class Todoist {
     public Task getNextTask(final String pername) {
         for (int i = 0; i < size; i++) {
             if (taskarr[i].getassignedTo().equals(pername)) {
-                if (taskarr[i].getStatus().equals("todo") && taskarr[i].getImportant().equals("Important") && taskarr[i].getUrgent().equals("Not Urgent")) {
+                if (taskarr[i].getStatus().equals("todo")
+                    && taskarr[i].getImportant().equals("Important")
+                    && taskarr[i].getUrgent().equals("Not Urgent")) {
                     return taskarr[i];
                 }
             }
@@ -220,7 +226,9 @@ class Todoist {
         int size1 = 0;
         for (int i = 0; i < size; i++) {
             if (taskarr[i].getassignedTo().equals(pername)) {
-                if (taskarr[i].getStatus().equals("todo") && taskarr[i].getImportant().equals("Important") && taskarr[i].getUrgent().equals("Not Urgent")) {
+                if (taskarr[i].getStatus().equals("todo")
+                    && taskarr[i].getImportant().equals("Important")
+                    && taskarr[i].getUrgent().equals("Not Urgent")) {
                     task1[size1] = taskarr[i];
                     size1++;
                     if (size1 == coutas) {
@@ -253,23 +261,27 @@ class Todoist {
     public String toString() {
         String s = "";
         for (int i = 0; i < size; i++) {
-            s += taskarr[i].gettitle() + ", " + taskarr[i].getassignedTo() + ", " + taskarr[i].gettimetocomplete()
+            s += taskarr[i].gettitle() + ", " + taskarr[i].getassignedTo()
+            + ", " + taskarr[i].gettimetocomplete()
             + ", " + taskarr[i].getImportant() + ", " + taskarr[i].getUrgent()
             + ", " + taskarr[i].getStatus() + "\n";
-            
         }
         return s;
     }
-
 }
 /**
  * Class for todoist main.
  */
 public class TodoistMain {
-
+    private static final int THR = 3;
+    private static final int FOU = 4;
+    private static final int FIV = 5;
+    private static final int SIX = 6;
     /**
      * Starts a test.
      */
+    public TodoistMain() {
+    }
     public static void startTest() {
         Todoist todo = new Todoist();
         Scanner s = new Scanner(System.in);
@@ -345,10 +357,10 @@ public class TodoistMain {
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[THR]);
+        boolean important = tokens[FOU].equals("y");
+        boolean urgent = tokens[FIV].equals("y");
+        String status = tokens[SIX];
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
