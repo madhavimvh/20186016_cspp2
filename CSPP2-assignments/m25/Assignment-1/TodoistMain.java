@@ -279,7 +279,7 @@ class Todoist {
 /**
  * Class for todoist main.
  */
-class TodoistMain {
+final class TodoistMain {
     /**
      * { var_description }.
      */
@@ -396,3 +396,4 @@ class TodoistMain {
         startTest();
     }
 }
+
