@@ -129,6 +129,15 @@ class Todoist {
 		}
 		return task1;
 	}
+	public int totalTime4Completion() {
+		int total = 0;
+		for (int i = 0; i < size; i++) {
+			if (taskarr[i].getStatus().equals("todo")) {
+				total += taskarr[i].gettimetocomplete();
+			}
+		}
+		return total;
+	}
 	public String toString() {
 		String s = "";
 		for (int i = 0; i < size; i++) {
