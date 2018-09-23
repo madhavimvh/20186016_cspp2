@@ -81,8 +81,8 @@ public final class Solution {
         String res = "         ";
         for (String eachFile : fileListAsString) {
             // res += eachFile + "\t";
-            int numberOfSpaces = THIRTEEN - eachFile.length();
-            for (int spindex = 0; spindex < numberOfSpaces; spindex++) {
+            int noOfSpaces = THIRTEEN - eachFile.length();
+            for (int spindex = 0; spindex < noOfSpaces; spindex++) {
                 res += " ";
             }
             res += eachFile;
@@ -91,9 +91,9 @@ public final class Solution {
             res += fileListAsString[i];
             for (int j = 0; j < fileListAsString.length; j++) {
                 // res += "\t" + matper[i][j] + "\t";
-                int numberOfSpaces = THIRTEEN - (matper[i][j] + "")
+                int noOfSpaces = THIRTEEN - (matper[i][j] + "")
                                      .length();
-                for (int spindex = 0; spindex < numberOfSpaces; spindex++) {
+                for (int spindex = 0; spindex < noOfSpaces; spindex++) {
                     res += " ";
                 }
                 res += matper[i][j] + "";
