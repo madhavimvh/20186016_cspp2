@@ -1,0 +1,17 @@
+Starting audit...
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:118:48: Expected @throws tag for 'Exception'. [JavadocMethod]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:118:57: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:237:56: Expected @throws tag for 'Exception'. [JavadocMethod]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:259:64: Expected @throws tag for 'Exception'. [JavadocMethod]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:291:5: Class 'List' looks like designed for extension (can be subclassed), but the method 'add' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'List' final or making the method 'add' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:291:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:314:5: Class 'List' looks like designed for extension (can be subclassed), but the method 'count' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'List' final or making the method 'count' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:314:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:366:24: 'catch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:410: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:411:24: 'catch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:425: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:426:24: 'catch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\mhynd\Desktop\assgnmnt\CSPP2\CSPP2-assignments\m15\Assignment-1\List.java:450: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 14 errors.
